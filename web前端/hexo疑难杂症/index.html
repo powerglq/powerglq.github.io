@@ -425,7 +425,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    224
+                    345
                 </div>
                 
 
@@ -480,9 +480,23 @@
 <p>项目属性改为公开 public<br>打开项目 &gt;&gt; settings &gt;&gt; 在页面最下找到 Change repository visibility &gt;&gt; Change visibility &gt;&gt; Make public</p>
 <p><img src="https://docs.github.com/assets/images/help/repository/repo-change-vis.png"></p>
 <hr>
-<h2 id><a href="#" class="headerlink" title></a></h2>
+<h2 id="突-丑-出-不-打-要-赏-脸"><a href="#突-丑-出-不-打-要-赏-脸" class="headerlink" title="突(丑)出(不)打(要)赏(脸)"></a>突(丑)出(不)打(要)赏(脸)</h2><ul>
+<li><p>修改hexo/themes/hexo-theme-matery/layout/_partial/reward.ejs中“赏”字及DIV样式<br><code>style=&quot;font-size:50px;width:100px;height:100px;line-height:100px;&quot;</code></p>
+</li>
+<li><p>修改hexo/themes/hexo-theme-matery/layout/_partial/post-detail.ejs中在版权信息上面添加打赏模块</p>
+</li>
+<li><p>打赏模块 hexo/themes/hexo-theme-matery/layout/_partial/wx2zfb.ejs</p>
+</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;reprint&quot; id=&quot;reprint-statement&quot; style=&quot;padding:20px;text-align:center;&quot;&gt;</span><br><span class="line">	&lt;img src=&quot;&lt;%- theme.jsDelivr.url %&gt;&lt;%- url_for(theme.reward.thanks) %&gt;&quot;&gt;&lt;/img&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
             </div>
             <hr/>
+
+            
+    <div class="reprint" id="reprint-statement" style="padding:20px;text-align:center;">
+		<img src="/medias/reward/thanks.gif"></img>
+    </div>
 
             
 
@@ -537,6 +551,7 @@
     </script>
 
 
+            
 
             <div class="tag_share" style="display: block;">
                 <div class="post-meta__tag-list" style="display: inline-block;">
@@ -660,7 +675,7 @@
 </style>
 
 <div id="reward">
-    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red" style="font-size:50px;width:100px;height:100px;line-height:100px;">赏</a>
 
     <!-- Modal Structure -->
     <div id="rewardModal" class="modal">
@@ -1006,7 +1021,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">349</span>&nbsp;字
+                class="white-color">470</span>&nbsp;字
             
             
             

@@ -70,7 +70,16 @@
 <p>项目属性改为公开 public<br>打开项目 &gt;&gt; settings &gt;&gt; 在页面最下找到 Change repository visibility &gt;&gt; Change visibility &gt;&gt; Make public</p>
 <p><img src="https://docs.github.com/assets/images/help/repository/repo-change-vis.png"></p>
 <hr>
-<h2 id><a href="#" class="headerlink" title></a></h2>]]></content>
+<h2 id="突-丑-出-不-打-要-赏-脸"><a href="#突-丑-出-不-打-要-赏-脸" class="headerlink" title="突(丑)出(不)打(要)赏(脸)"></a>突(丑)出(不)打(要)赏(脸)</h2><ul>
+<li><p>修改hexo/themes/hexo-theme-matery/layout/_partial/reward.ejs中“赏”字及DIV样式<br><code>style=&quot;font-size:50px;width:100px;height:100px;line-height:100px;&quot;</code></p>
+</li>
+<li><p>修改hexo/themes/hexo-theme-matery/layout/_partial/post-detail.ejs中在版权信息上面添加打赏模块</p>
+</li>
+<li><p>打赏模块 hexo/themes/hexo-theme-matery/layout/_partial/wx2zfb.ejs</p>
+</li>
+</ul>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">&lt;div class=&quot;reprint&quot; id=&quot;reprint-statement&quot; style=&quot;padding:20px;text-align:center;&quot;&gt;</span><br><span class="line">	&lt;img src=&quot;&lt;%- theme.jsDelivr.url %&gt;&lt;%- url_for(theme.reward.thanks) %&gt;&quot;&gt;&lt;/img&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+]]></content>
       <categories>
         <category>web前端</category>
       </categories>
