@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="第一篇文章, 敲黑板">
+    <meta name="keywords" content="hexo搭建, 敲黑板">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>第一篇文章 | 敲黑板</title>
+    <title>hexo搭建 | 敲黑板</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">第一篇文章</h1>
+                    <h1 class="description center-align post-title">hexo搭建</h1>
                 </div>
             </div>
         </div>
@@ -430,8 +430,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E4%BD%A0%E5%A5%BD%EF%BC%8C%E4%B8%96%E7%95%8C-hello/">
-                                <span class="chip bg-color">你好，世界/hello</span>
+                            <a href="/tags/hexo/">
+                                <span class="chip bg-color">hexo</span>
                             </a>
                         
                     </div>
@@ -460,7 +460,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    7
+                    103
                 </div>
                 
 
@@ -482,7 +482,24 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="很久很久以前"><a href="#很久很久以前" class="headerlink" title="很久很久以前"></a>很久很久以前</h2><h2 id="111111111"><a href="#111111111" class="headerlink" title="111111111"></a>111111111</h2><h1 id="longlongago"><a href="#longlongago" class="headerlink" title="longlongago"></a>longlongago</h1><h2 id="222222222222"><a href="#222222222222" class="headerlink" title="222222222222"></a>222222222222</h2>
+                <h2 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h2><p>访问 <a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">nodejs官网</a> 下载并安装nodejs</p>
+<blockquote>
+<p>cd /soft/bak<br>wget <a target="_blank" rel="noopener" href="https://nodejs.org/dist/v12.19.0/node-v12.19.0-linux-x64.tar.xz">https://nodejs.org/dist/v12.19.0/node-v12.19.0-linux-x64.tar.xz</a><br>tar xvf node-v12.19.0-linux-x64.tar.xz</p>
+</blockquote>
+<h2 id="添加环境变量"><a href="#添加环境变量" class="headerlink" title="添加环境变量"></a>添加环境变量</h2><blockquote>
+<p>vi /etc/profile<br>PATH=$PATH:/soft/nodejs/bin<br>source /etc/profile<br>node -v<br>npm -v</p>
+</blockquote>
+<h2 id="安装cnpm"><a href="#安装cnpm" class="headerlink" title="安装cnpm"></a>安装cnpm</h2><blockquote>
+<p>npm install -g cnpm –registry=<a target="_blank" rel="noopener" href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a><br>cnpm -v</p>
+</blockquote>
+<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><blockquote>
+<p>cd /www/hexo<br>cnpm install -g hexo-cli<br>hexo -v<br>hexo init</p>
+</blockquote>
+<h2 id="配置github"><a href="#配置github" class="headerlink" title="配置github"></a>配置github</h2><blockquote>
+<p>vi _config.yml<br>deploy:<br>  type: git<br>  repo: <a target="_blank" rel="noopener" href="https://github.com/powerglq/powerglq.github.io.git">https://github.com/powerglq/powerglq.github.io.git</a><br>  branch: master</p>
+</blockquote>
+<hr>
+
             </div>
             <hr/>
 
@@ -507,7 +524,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://powerglq.github.io/uncategorized/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/">https://powerglq.github.io/uncategorized/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</a>
+                    <a href="https://powerglq.github.io/uncategorized/hexo%E6%90%AD%E5%BB%BA/">https://powerglq.github.io/uncategorized/hexo%E6%90%AD%E5%BB%BA/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -545,8 +562,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E4%BD%A0%E5%A5%BD%EF%BC%8C%E4%B8%96%E7%95%8C-hello/">
-                                    <span class="chip bg-color">你好，世界/hello</span>
+                                <a href="/tags/hexo/">
+                                    <span class="chip bg-color">hexo</span>
                                 </a>
                             
                         </div>
@@ -994,7 +1011,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">85</span>&nbsp;字
+                class="white-color">181</span>&nbsp;字
             
             
             
