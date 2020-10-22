@@ -25,6 +25,15 @@
 ]]></content>
   </entry>
   <entry>
+    <title>nginx配置</title>
+    <url>/uncategorized/nginx%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<p>#11111111111<br>##2222222222222</p>
+]]></content>
+      <tags>
+        <tag>nginx</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo搭建</title>
     <url>/uncategorized/hexo%E6%90%AD%E5%BB%BA/</url>
     <content><![CDATA[<h2 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h2><p>访问 <a href="https://nodejs.org/en/download/">nodejs官网</a> 下载并安装nodejs</p>
@@ -41,21 +50,12 @@
 <blockquote>
 <p>cnpm install -g hexo-cli<br>hexo -v<br>hexo init</p>
 </blockquote>
-<h2 id="配置github"><a href="#配置github" class="headerlink" title="配置github"></a>配置github</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vi _config.yml</span><br></pre></td></tr></table></figure>
+<h2 id="配置github"><a href="#配置github" class="headerlink" title="配置github"></a>配置github</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">vi _config.yml</span><br></pre></td></tr></table></figure>
 
 <hr>
 ]]></content>
       <tags>
         <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>nginx配置</title>
-    <url>/uncategorized/nginx%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<p>#11111111111<br>##2222222222222</p>
-]]></content>
-      <tags>
-        <tag>nginx</tag>
       </tags>
   </entry>
   <entry>
