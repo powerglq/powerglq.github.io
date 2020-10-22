@@ -35,15 +35,6 @@
       </tags>
   </entry>
   <entry>
-    <title>nginx配置</title>
-    <url>/uncategorized/nginx%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<p>#11111111111<br>##2222222222222</p>
-]]></content>
-      <tags>
-        <tag>nginx</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>hexo疑难杂症</title>
     <url>/web%E5%89%8D%E7%AB%AF/hexo%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/</url>
     <content><![CDATA[<h2 id="标签页面不显示标签列表"><a href="#标签页面不显示标签列表" class="headerlink" title="标签页面不显示标签列表"></a>标签页面不显示标签列表</h2><h5 id="step-one"><a href="#step-one" class="headerlink" title="step one:"></a>step one:</h5><p>scaffolds/draft.md</p>
@@ -75,7 +66,9 @@
 <p>title: categories<br>date: 2020-10-22 19:00:59<br>type: “categories”<br>layout: “categories”</p>
 </blockquote>
 <hr>
-<h2 id="github-pages-绑定域名-显示-404-无法访问"><a href="#github-pages-绑定域名-显示-404-无法访问" class="headerlink" title="github pages 绑定域名 显示 404 无法访问"></a>github pages 绑定域名 显示 404 无法访问</h2><p>公开项目才能供大家访问<br>打开项目 &gt;&gt; settings &gt;&gt; 在页面最下找到 Change repository visibility &gt;&gt; Change visibility &gt;&gt; Make public<br><img src="https://docs.github.com/assets/images/help/repository/repo-change-vis.png"></p>
+<h2 id="github-pages-绑定域名-显示-404-无法访问"><a href="#github-pages-绑定域名-显示-404-无法访问" class="headerlink" title="github pages 绑定域名 显示 404 无法访问"></a>github pages 绑定域名 显示 404 无法访问</h2><p>公开项目才能供大家访问<br>打开项目 &gt;&gt; settings &gt;&gt; 在页面最下找到 Change repository visibility &gt;&gt; Change visibility &gt;&gt; Make public</p>
+<p>使用master分支<br>每次更新代码后域名需要重新绑定</p>
+<p><img src="https://docs.github.com/assets/images/help/repository/repo-change-vis.png"></p>
 <hr>
 <h2 id><a href="#" class="headerlink" title></a></h2>]]></content>
       <categories>
@@ -83,6 +76,15 @@
       </categories>
       <tags>
         <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>nginx配置</title>
+    <url>/uncategorized/nginx%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<p>#11111111111<br>##2222222222222</p>
+]]></content>
+      <tags>
+        <tag>nginx</tag>
       </tags>
   </entry>
 </search>
