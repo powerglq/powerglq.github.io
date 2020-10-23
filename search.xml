@@ -188,7 +188,21 @@ networks:
   <entry>
     <title>hexo优化-锦上添花</title>
     <url>/hexo-you-hua.html</url>
-    <content><![CDATA[<h4 id="robots-txt"><a href="#robots-txt" class="headerlink" title="robots.txt:"></a>robots.txt:</h4><p>robots.txt 是一种存放于网站根目录下的 ASCII 编码的文本文件，它的作用是告诉搜索引擎此网站中哪些内容是可以被爬取的，哪些是禁止爬取的。robots.txt 放在博客目录下的 source 文件夹中，博客生成后在站点目录 /public/ 下。<br>我的 robots.txt 文件内容如下：</p>
+    <content><![CDATA[<h4 id="搜索引擎食用方法"><a href="#搜索引擎食用方法" class="headerlink" title="搜索引擎食用方法"></a>搜索引擎食用方法</h4><p>首先给你的文章生成sitemap文件</p>
+<ul>
+<li>谷歌<br>npm install hexo-generator-sitemap –save #sitemap.xml适合提交给谷歌搜素引擎</li>
+<li>百度<br>npm install hexo-generator-baidu-sitemap –save #baidusitemap.xml适合提交百度搜索引擎<br>然后在站点配置文件_config.yml中添加以下代码<pre class="language-yml" data-language="yml"><code class="language-yml">#自动生成sitemap
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml</code></pre>
+最后修改站点配置文件_config.yml<pre class="language-yml" data-language="yml"><code class="language-yml"># URL
+## If your site is put in a subdirectory, set url as &#39;http:&#x2F;&#x2F;yoursite.com&#x2F;child&#39; and root as &#39;&#x2F;child&#x2F;&#39;
+url: http:&#x2F;&#x2F;你的网站</code></pre>
+每次hexo g后都会在/public目录下生成sitemap.xml和baidusitemap.xml，这就是你的站点地图。</li>
+</ul>
+<hr>
+<h4 id="robots-txt"><a href="#robots-txt" class="headerlink" title="robots.txt:"></a>robots.txt:</h4><p>robots.txt 是一种存放于网站根目录下的 ASCII 编码的文本文件，它的作用是告诉搜索引擎此网站中哪些内容是可以被爬取的，哪些是禁止爬取的。robots.txt 放在博客目录下的 source 文件夹中，博客生成后在站点目录 /public/ 下。<br>我的 robots.txt 文件内容如下：</p>
 <pre class="language-txt" data-language="txt"><code class="language-txt">User-agent: *
 Allow: &#x2F;
 Allow: &#x2F;archives&#x2F;
@@ -220,6 +234,91 @@ permalink: archives&#x2F;:abbrlink.html
 abbrlink:
   alg: crc32  # 算法：crc16(default) and crc32
   rep: hex    # 进制：dec(default) and hex</code></pre>]]></content>
+      <categories>
+        <category>web前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo搭建及必备插件</title>
+    <url>/hexo-da-jian.html</url>
+    <content><![CDATA[<h4 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h4><p>访问 <a href="https://nodejs.org/en/download/">nodejs官网</a> 下载并安装nodejs</p>
+<blockquote>
+<p>cd /soft/bak<br>wget <a href="https://nodejs.org/dist/v12.19.0/node-v12.19.0-linux-x64.tar.xz">https://nodejs.org/dist/v12.19.0/node-v12.19.0-linux-x64.tar.xz</a><br>tar xvf node-v12.19.0-linux-x64.tar.xz</p>
+</blockquote>
+<hr>
+<h4 id="添加环境变量"><a href="#添加环境变量" class="headerlink" title="添加环境变量"></a>添加环境变量</h4><pre class="language-sh" data-language="sh"><code class="language-sh">vi &#x2F;etc&#x2F;profile
+PATH&#x3D;$PATH:&#x2F;soft&#x2F;nodejs&#x2F;bin
+source &#x2F;etc&#x2F;profile
+node -v
+npm -v</code></pre>
+
+<hr>
+<h4 id="安装cnpm"><a href="#安装cnpm" class="headerlink" title="安装cnpm"></a>安装cnpm</h4><pre class="language-npm" data-language="npm"><code class="language-npm">npm install -g cnpm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org
+cnpm -v</code></pre>
+
+<hr>
+<h4 id="安装gulp"><a href="#安装gulp" class="headerlink" title="安装gulp"></a>安装gulp</h4><pre class="language-npm" data-language="npm"><code class="language-npm">npm install gulp -g
+npm install gulp gulp-htmlclean gulp-htmlmin gulp-minify-css gulp-uglify gulp-imagemin --save
+npm install gulp-debug gulp-clean-css gulp-changed gulp-if gulp-plumber gulp-babel babel-preset-es2015 del @babel&#x2F;core --save
+npm install hexo-neat --save</code></pre>
+
+<hr>
+<h4 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h4><blockquote>
+<p>cd /www/hexo<br>cnpm install -g hexo-cli<br>hexo -v<br>hexo init</p>
+</blockquote>
+<hr>
+<h4 id="安装git支持"><a href="#安装git支持" class="headerlink" title="安装git支持"></a>安装git支持</h4><pre class="language-npm" data-language="npm"><code class="language-npm">cnpm install --save fill-range@^7.0
+cnpm install --save hexo-deployer-git</code></pre>
+<pre class="language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+  <span class="token key atrule">type</span><span class="token punctuation">:</span> git
+  <span class="token key atrule">repo</span><span class="token punctuation">:</span>  https<span class="token punctuation">:</span>//github.com/powerglq/powerglq.github.io
+  <span class="token key atrule">branch</span><span class="token punctuation">:</span> master
+  <span class="token key atrule">message</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>message<span class="token punctuation">]</span></code></pre>
+
+<hr>
+<h4 id="代码高亮"><a href="#代码高亮" class="headerlink" title="代码高亮"></a>代码高亮</h4><pre class="language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">highlight</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+  <span class="token key atrule">line_number</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+  <span class="token key atrule">auto_detect</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">tab_replace</span><span class="token punctuation">:</span> <span class="token string">''</span>
+  <span class="token key atrule">wrap</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">hljs</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+<span class="token key atrule">prismjs</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">preprocess</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">line_number</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+  <span class="token key atrule">tab_replace</span><span class="token punctuation">:</span> <span class="token string">''</span></code></pre>
+
+<hr>
+<h4 id="安装matery主题"><a href="#安装matery主题" class="headerlink" title="安装matery主题"></a>安装matery主题</h4><pre class="language-sh" data-language="sh"><code class="language-sh">git clone https:&#x2F;&#x2F;github.com&#x2F;blinkfox&#x2F;hexo-theme-matery.git hexo-theme-matery</code></pre>
+<p><a href="https://lyes.xyz/2020/04/01/Centos7%E6%90%AD%E5%BB%BAHexo/">在主题配置文件中设置</a></p>
+<hr>
+<h4 id="配置github"><a href="#配置github" class="headerlink" title="配置github"></a>配置github</h4><p><code>vi _config.yml</code></p>
+<pre class="language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+	<span class="token key atrule">type</span><span class="token punctuation">:</span> git
+	<span class="token key atrule">repo</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//github.com/powerglq/powerglq.github.io.git
+	<span class="token key atrule">branch</span><span class="token punctuation">:</span> master
+	</code></pre>
+
+<hr>
+<h4 id="发布github"><a href="#发布github" class="headerlink" title="发布github"></a>发布github</h4><pre class="language-sh" data-language="sh"><code class="language-sh">hexo clean
+hexo g
+hexo d</code></pre>
+
+<hr>
+<h4 id="本地预览"><a href="#本地预览" class="headerlink" title="本地预览"></a>本地预览</h4><blockquote>
+<p>hexo s<br><a href="http://localhost:4000/">localhost:4000 预览</a></p>
+</blockquote>
+<hr>
+<h4 id="收藏的主题"><a href="#收藏的主题" class="headerlink" title="收藏的主题"></a>收藏的主题</h4><p>git clone <a href="https://gitee.com/songofseven/hexo-theme-next.git">https://gitee.com/songofseven/hexo-theme-next.git</a> themes/next<br>git clone git://github.com/shenliyang/hexo-theme-snippet.git themes/hexo-theme-snippet</p>
+<pre class="language-npm" data-language="npm"><code class="language-npm">npm install eslint@^4.12
+npm install ajv@^6.9</code></pre>
+<p>TypeError: Cannot read property ‘enable’ of undefined 删除modouls</p>
+]]></content>
       <categories>
         <category>web前端</category>
       </categories>
@@ -312,91 +411,6 @@ npm add hexo-symbols-count-time</code></pre>
 
 <hr>
 <h4 id="使用lazyload插件进行优化"><a href="#使用lazyload插件进行优化" class="headerlink" title="使用lazyload插件进行优化"></a>使用lazyload插件进行优化</h4><pre class="language-npm" data-language="npm"><code class="language-npm">npm install hexo-lazyload-image --save</code></pre>]]></content>
-      <categories>
-        <category>web前端</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo搭建及必备插件</title>
-    <url>/hexo-da-jian.html</url>
-    <content><![CDATA[<h4 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h4><p>访问 <a href="https://nodejs.org/en/download/">nodejs官网</a> 下载并安装nodejs</p>
-<blockquote>
-<p>cd /soft/bak<br>wget <a href="https://nodejs.org/dist/v12.19.0/node-v12.19.0-linux-x64.tar.xz">https://nodejs.org/dist/v12.19.0/node-v12.19.0-linux-x64.tar.xz</a><br>tar xvf node-v12.19.0-linux-x64.tar.xz</p>
-</blockquote>
-<hr>
-<h4 id="添加环境变量"><a href="#添加环境变量" class="headerlink" title="添加环境变量"></a>添加环境变量</h4><pre class="language-sh" data-language="sh"><code class="language-sh">vi &#x2F;etc&#x2F;profile
-PATH&#x3D;$PATH:&#x2F;soft&#x2F;nodejs&#x2F;bin
-source &#x2F;etc&#x2F;profile
-node -v
-npm -v</code></pre>
-
-<hr>
-<h4 id="安装cnpm"><a href="#安装cnpm" class="headerlink" title="安装cnpm"></a>安装cnpm</h4><pre class="language-npm" data-language="npm"><code class="language-npm">npm install -g cnpm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org
-cnpm -v</code></pre>
-
-<hr>
-<h4 id="安装gulp"><a href="#安装gulp" class="headerlink" title="安装gulp"></a>安装gulp</h4><pre class="language-npm" data-language="npm"><code class="language-npm">npm install gulp -g
-npm install gulp gulp-htmlclean gulp-htmlmin gulp-minify-css gulp-uglify gulp-imagemin --save
-npm install gulp-debug gulp-clean-css gulp-changed gulp-if gulp-plumber gulp-babel babel-preset-es2015 del @babel&#x2F;core --save
-npm install hexo-neat --save</code></pre>
-
-<hr>
-<h4 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h4><blockquote>
-<p>cd /www/hexo<br>cnpm install -g hexo-cli<br>hexo -v<br>hexo init</p>
-</blockquote>
-<hr>
-<h4 id="安装git支持"><a href="#安装git支持" class="headerlink" title="安装git支持"></a>安装git支持</h4><pre class="language-npm" data-language="npm"><code class="language-npm">cnpm install --save fill-range@^7.0
-cnpm install --save hexo-deployer-git</code></pre>
-<pre class="language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">deploy</span><span class="token punctuation">:</span>
-  <span class="token key atrule">type</span><span class="token punctuation">:</span> git
-  <span class="token key atrule">repo</span><span class="token punctuation">:</span>  https<span class="token punctuation">:</span>//github.com/powerglq/powerglq.github.io
-  <span class="token key atrule">branch</span><span class="token punctuation">:</span> master
-  <span class="token key atrule">message</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>message<span class="token punctuation">]</span></code></pre>
-
-<hr>
-<h4 id="代码高亮"><a href="#代码高亮" class="headerlink" title="代码高亮"></a>代码高亮</h4><pre class="language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">highlight</span><span class="token punctuation">:</span>
-  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
-  <span class="token key atrule">line_number</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
-  <span class="token key atrule">auto_detect</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
-  <span class="token key atrule">tab_replace</span><span class="token punctuation">:</span> <span class="token string">''</span>
-  <span class="token key atrule">wrap</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
-  <span class="token key atrule">hljs</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
-<span class="token key atrule">prismjs</span><span class="token punctuation">:</span>
-  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
-  <span class="token key atrule">preprocess</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
-  <span class="token key atrule">line_number</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
-  <span class="token key atrule">tab_replace</span><span class="token punctuation">:</span> <span class="token string">''</span></code></pre>
-
-<hr>
-<h4 id="安装matery主题"><a href="#安装matery主题" class="headerlink" title="安装matery主题"></a>安装matery主题</h4><pre class="language-sh" data-language="sh"><code class="language-sh">git clone https:&#x2F;&#x2F;github.com&#x2F;blinkfox&#x2F;hexo-theme-matery.git hexo-theme-matery</code></pre>
-<p><a href="https://lyes.xyz/2020/04/01/Centos7%E6%90%AD%E5%BB%BAHexo/">在主题配置文件中设置</a></p>
-<hr>
-<h4 id="配置github"><a href="#配置github" class="headerlink" title="配置github"></a>配置github</h4><p><code>vi _config.yml</code></p>
-<pre class="language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">deploy</span><span class="token punctuation">:</span>
-	<span class="token key atrule">type</span><span class="token punctuation">:</span> git
-	<span class="token key atrule">repo</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//github.com/powerglq/powerglq.github.io.git
-	<span class="token key atrule">branch</span><span class="token punctuation">:</span> master
-	</code></pre>
-
-<hr>
-<h4 id="发布github"><a href="#发布github" class="headerlink" title="发布github"></a>发布github</h4><pre class="language-sh" data-language="sh"><code class="language-sh">hexo clean
-hexo g
-hexo d</code></pre>
-
-<hr>
-<h4 id="本地预览"><a href="#本地预览" class="headerlink" title="本地预览"></a>本地预览</h4><blockquote>
-<p>hexo s<br><a href="http://localhost:4000/">localhost:4000 预览</a></p>
-</blockquote>
-<hr>
-<h4 id="收藏的主题"><a href="#收藏的主题" class="headerlink" title="收藏的主题"></a>收藏的主题</h4><p>git clone <a href="https://gitee.com/songofseven/hexo-theme-next.git">https://gitee.com/songofseven/hexo-theme-next.git</a> themes/next<br>git clone git://github.com/shenliyang/hexo-theme-snippet.git themes/hexo-theme-snippet</p>
-<pre class="language-npm" data-language="npm"><code class="language-npm">npm install eslint@^4.12
-npm install ajv@^6.9</code></pre>
-<p>TypeError: Cannot read property ‘enable’ of undefined 删除modouls</p>
-]]></content>
       <categories>
         <category>web前端</category>
       </categories>
@@ -672,6 +686,19 @@ php --modules  查看已启用的模块</code></pre>
       </tags>
   </entry>
   <entry>
+    <title>win10正确食用方法</title>
+    <url>/win10-shi-yong-fang-fa.html</url>
+    <content><![CDATA[<h4 id="win10正确食用方法"><a href="#win10正确食用方法" class="headerlink" title="win10正确食用方法"></a>win10正确食用方法</h4><pre class="language-cmd" data-language="cmd"><code class="language-cmd">slmgr &#x2F;ipk VK7JG-NPHTM-C97JM-9MPGT-3V66T
+slmgr &#x2F;skms kms.xspace.in
+slmgr &#x2F;ato</code></pre>
+<p>上面命令执行后等一会<br>执行下面命令查询激活状态</p>
+<pre class="language-cmd" data-language="cmd"><code class="language-cmd">slmgr.vbs -xpr</code></pre>]]></content>
+      <tags>
+        <tag>食用</tag>
+        <tag>win10</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>刷padavan固件</title>
     <url>/shua-padavan-gu-jian.html</url>
     <content><![CDATA[<h4 id="刷padavan固件"><a href="#刷padavan固件" class="headerlink" title="刷padavan固件"></a>刷padavan固件</h4><p><a href="shua-padavan-gu-jian/learn.docx">教程</a></p>
@@ -683,19 +710,6 @@ php --modules  查看已启用的模块</code></pre>
         <tag>padavan</tag>
         <tag>v2ray</tag>
         <tag>zerotier</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>win10正确食用方法</title>
-    <url>/win10-shi-yong-fang-fa.html</url>
-    <content><![CDATA[<h4 id="win10正确食用方法"><a href="#win10正确食用方法" class="headerlink" title="win10正确食用方法"></a>win10正确食用方法</h4><pre class="language-cmd" data-language="cmd"><code class="language-cmd">slmgr &#x2F;ipk VK7JG-NPHTM-C97JM-9MPGT-3V66T
-slmgr &#x2F;skms kms.xspace.in
-slmgr &#x2F;ato</code></pre>
-<p>上面命令执行后等一会<br>执行下面命令查询激活状态</p>
-<pre class="language-cmd" data-language="cmd"><code class="language-cmd">slmgr.vbs -xpr</code></pre>]]></content>
-      <tags>
-        <tag>食用</tag>
-        <tag>win10</tag>
       </tags>
   </entry>
   <entry>
@@ -927,6 +941,19 @@ pip3 <span class="token function">install</span> --upgrade pip
       </tags>
   </entry>
   <entry>
+    <title>安装v2ray</title>
+    <url>/an-zhuang-v2ray.html</url>
+    <content><![CDATA[<h4 id="安装v2ray"><a href="#安装v2ray" class="headerlink" title="安装v2ray"></a>安装v2ray</h4><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> /soft/bak
+<span class="token function">bash</span> <span class="token operator">&lt;</span><span class="token punctuation">(</span><span class="token function">curl</span> -L -s https://opt.cn2qq.com/opt-script/v2ray.sh<span class="token punctuation">)</span></code></pre>]]></content>
+      <categories>
+        <category>服务端</category>
+      </categories>
+      <tags>
+        <tag>v2ray</tag>
+        <tag>proxy</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>本地生成ssl证书</title>
     <url>/ben-di-sheng-cheng-ssl-zheng-shu.html</url>
     <content><![CDATA[<h4 id="安装redis5-0-9"><a href="#安装redis5-0-9" class="headerlink" title="安装redis5.0.9"></a>安装redis5.0.9</h4><pre class="language-bash" data-language="bash"><code class="language-bash">openssl genrsa -des3 -out server.key <span class="token number">2048</span>
@@ -940,19 +967,6 @@ openssl x509 -req -days <span class="token number">3650</span> -in server.csr -C
       <tags>
         <tag>openssl</tag>
         <tag>ssl证书</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>安装v2ray</title>
-    <url>/an-zhuang-v2ray.html</url>
-    <content><![CDATA[<h4 id="安装v2ray"><a href="#安装v2ray" class="headerlink" title="安装v2ray"></a>安装v2ray</h4><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> /soft/bak
-<span class="token function">bash</span> <span class="token operator">&lt;</span><span class="token punctuation">(</span><span class="token function">curl</span> -L -s https://opt.cn2qq.com/opt-script/v2ray.sh<span class="token punctuation">)</span></code></pre>]]></content>
-      <categories>
-        <category>服务端</category>
-      </categories>
-      <tags>
-        <tag>v2ray</tag>
-        <tag>proxy</tag>
       </tags>
   </entry>
   <entry>
