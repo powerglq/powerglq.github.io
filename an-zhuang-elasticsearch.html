@@ -412,7 +412,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    611
+                    609
                 </div>
                 
 
@@ -470,8 +470,8 @@ cnpm <span class="token function">install</span>
 <span class="token comment">#SPDX报错修改package.json找到license位置，原来的Apache内容修改为Apache-2.0</span></code></pre>
 
 <h4 id="Elasticsearch配置-允许跨域访问"><a href="#Elasticsearch配置-允许跨域访问" class="headerlink" title="Elasticsearch配置,允许跨域访问"></a>Elasticsearch配置,允许跨域访问</h4><p>vi elasticsearch-7.1.1/config/elasticsearch.yml<br>#添加如下配置，支持跨域访问</p>
-<pre class="language-yml" data-language="yml"><code class="language-yml">http.cors.enabled: true
-http.cors.allow-origin: &quot;*&quot;</code></pre>
+<pre class="language-yml" data-language="yml"><code class="language-yml"><span class="token key atrule">http.cors.enabled</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token key atrule">http.cors.allow-origin</span><span class="token punctuation">:</span> <span class="token string">"*"</span></code></pre>
 <pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> /soft/elasticsearch-head/
 <span class="token function">npm</span> <span class="token function">install</span>
 <span class="token function">nohup</span> <span class="token function">npm</span> run start <span class="token operator">&amp;</span></code></pre>
@@ -764,12 +764,12 @@ yum -y <span class="token function">install</span> fontconfig</code></pre>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/v2ray/">
-                        <span class="chip bg-color">v2ray</span>
-                    </a>
-                    
                     <a href="/tags/padavan/">
                         <span class="chip bg-color">padavan</span>
+                    </a>
+                    
+                    <a href="/tags/v2ray/">
+                        <span class="chip bg-color">v2ray</span>
                     </a>
                     
                     <a href="/tags/zerotier/">

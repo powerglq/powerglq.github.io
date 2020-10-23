@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="docker-composer, 敲黑板">
+    <meta name="keywords" content="win10正确食用方法, 敲黑板">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>docker-composer | 敲黑板</title>
+    <title>win10正确食用方法 | 敲黑板</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -264,12 +264,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">docker-composer</h1>
+                    <h1 class="description center-align post-title">win10正确食用方法</h1>
                 </div>
             </div>
         </div>
@@ -386,27 +386,18 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/docker/">
-                                <span class="chip bg-color">docker</span>
+                            <a href="/tags/%E9%A3%9F%E7%94%A8/">
+                                <span class="chip bg-color">食用</span>
                             </a>
                         
-                            <a href="/tags/docker-composer/">
-                                <span class="chip bg-color">docker-composer</span>
+                            <a href="/tags/win10/">
+                                <span class="chip bg-color">win10</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF/" class="post-category">
-                                服务端
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -429,14 +420,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    809
+                    48
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    1 分
                 </div>
                 
 
@@ -451,97 +442,11 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="docker-composer"><a href="#docker-composer" class="headerlink" title="docker-composer"></a>docker-composer</h4><pre class="language-bash" data-language="bash"><code class="language-bash">yum <span class="token function">install</span> docker
-<span class="token comment">#安装pip</span>
-yum -y <span class="token function">install</span> epel-release
-yum <span class="token function">install</span> python-pip
-pip <span class="token function">install</span> --upgrade pip
-
-pip <span class="token function">install</span> docker-compose
-<span class="token function">ln</span> -s /usr/bin/docker-compose /usr/local/bin/
-docker-composer version
-systemctl start docker
-docker-compose up
-<span class="token comment">#*一但关联了软件的配置文件至宿主机，镜像中可能被删除</span>
-<span class="token comment">#docker-compose中注释可能会因为编码（gb/utf8）失效 pip安装则不会存在该问题</span>
-<span class="token comment">#需要将nginx/mysql/php配置文件提前copy出来 否则容器会报错一直重启</span>
-<span class="token comment">#查看所有容器ip</span>
-<span class="token comment">#docker inspect --format='&#123;&#123;.Name&#125;&#125; - &#123;&#123;range .NetworkSettings.Networks&#125;&#125;&#123;&#123;.IPAddress&#125;&#125;&#123;&#123;end&#125;&#125;' $(docker ps -aq)</span></code></pre>
-<p>docker-composer.yaml</p>
-<pre class="language-bash" data-language="bash"><code class="language-bash">version: <span class="token string">'3'</span>
-networks:
-lnmp-net:
-driver: bridge
-services:
-mariadb:
-container_name: mariadb
-image: mariadb:10.4
-ports:
-- <span class="token number">3306</span>:3306
-environment:
-MYSQL_ROOT_PASSWORD: <span class="token string">'@powerglq'</span>
-volumes:
-- /docker-service/mariadb/db:/var/lib/mysql
-- /docker-service/mariadb/conf:/etc/mysql
-- /docker-service/mariadb/log:/var/log/mariadb
-restart: always
-networks:
-- lnmp-net
-nginx:
-container_name: nginx
-image: nginx:stable
-ports:
-- <span class="token number">80</span>:80
-- <span class="token number">443</span>:443
-volumes:
-- /docker-service/www:/usr/share/nginx/html
-- /docker-service/nginx/nginx:/etc/nginx
-- /docker-service/nginx/log:/var/log/nginx
-depends_on:
-- mariadb
-- redis
-- php
-environment:
-- <span class="token assign-left variable">TZ</span><span class="token operator">=</span>Asia/Shanghai
-restart: always
-networks:
-- lnmp-net
-php:
-container_name: php
-image: php:7.3-fpm
-volumes:
-- /docker-service/www:/usr/share/nginx/html
-- /docker-service/php/php:/usr/local/etc
-- /docker-service/php/log:/usr/local/var/log
-stdin_open: <span class="token boolean">true</span>
-tty: <span class="token boolean">true</span>
-environment:
-- <span class="token assign-left variable">TZ</span><span class="token operator">=</span>Asia/Shanghai
-restart: always
-networks:
-- lnmp-net
-redis:
-container_name: redis
-image: redis:5.0.7
-ports:
-- <span class="token number">6379</span>:6379
-volumes:
-- /docker-service/redis/db:/var/lib/redis
-- /docker-service/redis/log:/var/log/redis
-- /docker-service/redis/redis:/usr/local/bin
-command: /bin/bash -c <span class="token string">"redis-server /usr/local/bin/redis.conf"</span>
-environment:
-- <span class="token assign-left variable">TZ</span><span class="token operator">=</span>Asia/Shanghai
-restart: always
-networks:
-- lnmp-net</code></pre>
-
-<h4 id="修改容器映射端口"><a href="#修改容器映射端口" class="headerlink" title="修改容器映射端口"></a>修改容器映射端口</h4><p>宿主机/var/lib/docker/containers/容器名称/hostconfig.json 修改hostport</p>
-<p>nginx<br>nginx/conf.d/default.conf配置<br>location ~ .php$ {<br>root           /usr/share/nginx/html;<br>fastcgi_pass   php:9000;<br>fastcgi_index  index.php;<br>fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;<br>include        fastcgi_params;<br>}</p>
-<h4 id="php"><a href="#php" class="headerlink" title="php"></a>php</h4><p>设置php.ini<br>mv /docker-service/php/php/php/php.ini-production /docker-service/php/php/php<br>docker-php添加扩展<br>docker exec -it 999 /bin/bash<br>docker-php-ext-install pdo_mysql<br>#pecl install igbinary<br>#在php.ini添加 extension=igbinary.so<br>pecl install redis &amp;&amp; docker-php-ext-enable redis<br>询问是否开启扩展支持 输入no<br>在php.ini添加 extension=/usr/local/lib/php/extensions/no-debug-non-zts-20180731/igbinary.so<br>在php.ini添加 extension=/usr/local/lib/php/extensions/no-debug-non-zts-20180731/redis.so</p>
-<h4 id="mariadb"><a href="#mariadb" class="headerlink" title="mariadb"></a>mariadb</h4><p>配置文件位置<br>/etc/mysql/my.cnf  数据库配置文件<br>查看端口命令 show global variables like ‘port’;<br>/etc/mysql/conf.d/docker.cnf 可用于忘记密码<br>忘记密码<br>docker cp mariadb:/etc/mysql/conf.d/docker.cnf ./docker.cnf<br>在docker.cnf添加skip-grant-tables<br>docker cp ./docker.cnf mariadb:/etc/mysql/conf.d/docker.cnf<br>登录mariadb mysql -uroot -p 无密码登录<br>flush privileges;<br>alter user ‘root’@’localhost’ identified by ‘123456’;<br>flush privileges;<br>在docker.cnf删除skip-grant-tables<br>docker-compose restart mariadb</p>
-<h4 id="主主配置（双主）"><a href="#主主配置（双主）" class="headerlink" title="主主配置（双主）"></a>主主配置（双主）</h4><p>主机/从机分别在配置文件my.cnf中添加：<br>server-id=145 ##或者147不同主机的id唯一标识   docker每次重启可能从机都需要修改<br>log_bin =mysql-bin<br>relay-log = relay-mysql #开启二进制日志<br>relay-log-index =relay-mysql.index #开启中继日志<br>log_slave_updates=on<br>auto-increment-increment = 2<br>auto-increment-offset = 1 #从1开始 或者2开始 为避免id冲突 两台主机的起步要不同<br>在主机从机添加互访同步账号 分别执行<br>GRANT REPLICATION SLAVE ON <em>.</em> to ‘slave’@’%’ identified by ‘000000’;<br>分别执行<br>stop slave;<br>reset master;<br>reset slave;<br>show master status;<br>主机执行<br>change master to master_host=’172.31.0.5’,master_port=3306,master_user=’slave’,master_password=’000000’,master_log_file=’mariadb-slave-bin.000001’,master_log_pos=336;<br>从机执行<br>change master to master_host=’172.31.0.2’,master_port=3306,master_user=’slave’,master_password=’000000’,master_log_file=’mariadb-master-bin.000001’,master_log_pos=337;<br>分别执行<br>START SLAVE;<br>查看连接状态<br>show slave status \G;</p>
-
+                <h4 id="win10正确食用方法"><a href="#win10正确食用方法" class="headerlink" title="win10正确食用方法"></a>win10正确食用方法</h4><pre class="language-cmd" data-language="cmd"><code class="language-cmd">slmgr &#x2F;ipk VK7JG-NPHTM-C97JM-9MPGT-3V66T
+slmgr &#x2F;skms kms.xspace.in
+slmgr &#x2F;ato</code></pre>
+<p>上面命令执行后等一会<br>执行下面命令查询激活状态</p>
+<pre class="language-cmd" data-language="cmd"><code class="language-cmd">slmgr.vbs -xpr</code></pre>
             </div>
             <hr/>
 
@@ -571,7 +476,7 @@ networks:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://www.qiaoheiban.tk/docker-composer.html">https://www.qiaoheiban.tk/docker-composer.html</a>
+                    <a href="https://www.qiaoheiban.tk/win10-shi-yong-fang-fa.html">https://www.qiaoheiban.tk/win10-shi-yong-fang-fa.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -610,12 +515,12 @@ networks:
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/docker/">
-                                    <span class="chip bg-color">docker</span>
+                                <a href="/tags/%E9%A3%9F%E7%94%A8/">
+                                    <span class="chip bg-color">食用</span>
                                 </a>
                             
-                                <a href="/tags/docker-composer/">
-                                    <span class="chip bg-color">docker-composer</span>
+                                <a href="/tags/win10/">
+                                    <span class="chip bg-color">win10</span>
                                 </a>
                             
                         </div>
@@ -783,57 +688,51 @@ networks:
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/bu-shu-ss.html">
+                <a href="/win10-shi-yong-fang-fa.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="部署ss">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="win10正确食用方法">
                         
-                        <span class="card-title">部署ss</span>
+                        <span class="card-title">win10正确食用方法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            部署sscurl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
-python get-pip.py
-yum install python3-pip
-pip install --
+                            win10正确食用方法slmgr &#x2F;ipk VK7JG-NPHTM-C97JM-9MPGT-3V66T
+slmgr &#x2F;skms kms.xspace.in
+slmgr &#x2F;ato
+上面命令执行后等一会执行下面命令
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-23
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-23
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF/" class="post-category">
-                                    服务端
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            GLQ
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/ss/">
-                        <span class="chip bg-color">ss</span>
+                    <a href="/tags/%E9%A3%9F%E7%94%A8/">
+                        <span class="chip bg-color">食用</span>
                     </a>
                     
-                    <a href="/tags/%E5%BD%B1%E6%A2%AD/">
-                        <span class="chip bg-color">影梭</span>
-                    </a>
-                    
-                    <a href="/tags/shadowsorcks/">
-                        <span class="chip bg-color">shadowsorcks</span>
+                    <a href="/tags/win10/">
+                        <span class="chip bg-color">win10</span>
                     </a>
                     
                 </div>
@@ -847,19 +746,20 @@ pip install --
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/idea-quan-jia-tong-shi-yong-po-jie-fang-fa.html">
+                <a href="/shua-padavan-gu-jian.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="idea全家桶食用(破解)方法">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="刷padavan固件">
                         
-                        <span class="card-title">idea全家桶食用(破解)方法</span>
+                        <span class="card-title">刷padavan固件</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            用idea编辑bin目录下的xxx64.exe.vmoptions在最下面添加-javaagent:E:\Program Files\JAVAIDEA\lib\jetbrains-agent.jar确保lib目录下有jetbrains-ag
+                            刷padavan固件教程
+
                         
                     </div>
                     <div class="publish-info">
@@ -870,8 +770,8 @@ pip install --
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E9%A3%9F%E7%94%A8%E6%96%B9%E6%B3%95/" class="post-category">
-                                    食用方法
+                            <a href="/categories/%E8%B7%AF%E7%94%B1/" class="post-category">
+                                    路由
                                 </a>
                             
                             
@@ -881,28 +781,16 @@ pip install --
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/idea/">
-                        <span class="chip bg-color">idea</span>
+                    <a href="/tags/padavan/">
+                        <span class="chip bg-color">padavan</span>
                     </a>
                     
-                    <a href="/tags/IntelliJ-IDEA/">
-                        <span class="chip bg-color">IntelliJ IDEA</span>
+                    <a href="/tags/v2ray/">
+                        <span class="chip bg-color">v2ray</span>
                     </a>
                     
-                    <a href="/tags/WebStorm/">
-                        <span class="chip bg-color">WebStorm</span>
-                    </a>
-                    
-                    <a href="/tags/PhpStorm/">
-                        <span class="chip bg-color">PhpStorm</span>
-                    </a>
-                    
-                    <a href="/tags/PyCharm/">
-                        <span class="chip bg-color">PyCharm</span>
-                    </a>
-                    
-                    <a href="/tags/%E9%A3%9F%E7%94%A8/">
-                        <span class="chip bg-color">食用</span>
+                    <a href="/tags/zerotier/">
+                        <span class="chip bg-color">zerotier</span>
                     </a>
                     
                 </div>
