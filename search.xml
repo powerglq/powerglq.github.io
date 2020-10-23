@@ -186,49 +186,6 @@ networks:
       </tags>
   </entry>
   <entry>
-    <title>hexo优化-锦上添花</title>
-    <url>/hexo-you-hua.html</url>
-    <content><![CDATA[<h4 id="robots-txt"><a href="#robots-txt" class="headerlink" title="robots.txt:"></a>robots.txt:</h4><p>robots.txt 是一种存放于网站根目录下的 ASCII 编码的文本文件，它的作用是告诉搜索引擎此网站中哪些内容是可以被爬取的，哪些是禁止爬取的。robots.txt 放在博客目录下的 source 文件夹中，博客生成后在站点目录 /public/ 下。<br>我的 robots.txt 文件内容如下：</p>
-<pre class="language-txt" data-language="txt"><code class="language-txt">User-agent: *
-Allow: &#x2F;
-Allow: &#x2F;archives&#x2F;
-Allow: &#x2F;categories&#x2F;
-Allow: &#x2F;about&#x2F;
-Disallow: &#x2F;js&#x2F;
-Disallow: &#x2F;css&#x2F;
-Disallow: &#x2F;fonts&#x2F;
-Disallow: &#x2F;vendors&#x2F;</code></pre>
-<p>robots.txt 文件更新至网站后可进入 Google Search Console - 抓取 - robots.txt 测试工具进行测试。</p>
-<hr>
-<h4 id="其他SEO优化"><a href="#其他SEO优化" class="headerlink" title="其他SEO优化"></a>其他SEO优化</h4><p>SEO优化应该说是一个收益延迟的行为，可能你做的优化短期内看不到什么效果，但是一定要坚持，seo优化也是有很深的可以研究的东西，从我们最初的网站设计，和最基础的标签的选择都有很大的关系，网站设计就如我们刚刚说的，要让用户点击三次可以到达网站的任何一个页面，要增加高质量的外链，增加相关推荐（比如说我们经常见到右侧本站的最高阅读的排名列表），然后就是给每一个页面加上keyword和描述</p>
-<p>在代码中，我们应该写出能让浏览器识别的语义化HTML，这样有助于爬虫抓取更多的有效信息：爬虫依赖于标签来确定上下文和各个关键字的权重；并且对外链设置nofollow标签，避免spider爬着爬着就爬出去了（减少网站的跳出率），并且我们要尽量在一些比较大的网站增加我们站点的曝光率，因为spider会经常访问大站，比如我们在掘金等技术社区发表文章中带有我们的站点，这样spider是很有可能爬到我们中的站点的，所以说,重要的还是:</p>
-<p>网站外链的推广度、数量和质量<br>网站的内链足够强大<br>网站的原创质量<br>网站的年龄时间<br>网站的更新频率（更新次数越多越好）<br>网站的服务器<br>网站的流量：流量越高网站的权重越高<br>网站的关键词排名：关键词排名越靠前，网站的权重越高<br>网站的收录数量：网站百度收录数量越多，网站百度权重越高<br>网站的浏览量及深度：用户体验越好，网站的百度权重越高</p>
-<hr>
-<h4 id="每篇文字独立生成文件夹"><a href="#每篇文字独立生成文件夹" class="headerlink" title="每篇文字独立生成文件夹"></a>每篇文字独立生成文件夹</h4><pre class="language-npm" data-language="npm"><code class="language-npm">npm install https:&#x2F;&#x2F;github.com&#x2F;CodeFalling&#x2F;hexo-asset-image --save</code></pre>
-
-<hr>
-<h4 id="优化hexo的url"><a href="#优化hexo的url" class="headerlink" title="优化hexo的url"></a>优化hexo的url</h4><p>SEO搜索引擎优化认为，网站的最佳结构是用户从首页点击三次就可以到达任何一个页面，但是我们使用hexo编译的站点打开文章的url是：sitename/year/mounth/day/title四层的结构，这样的url结构很不利于seo，爬虫就会经常爬不到我们的文章，于是，我们需要优化一下网站文章url<br>方案一：<br>我们可以将url直接改成sitename/title的形式，并且title最好是用英文，在根目录的配置文件下修改permalink如下：</p>
-<pre class="language-YAML" data-language="YAML"><code class="language-YAML">url: https:&#x2F;&#x2F;www.zdyn.cn
-root: &#x2F;
-permalink: :title.html
-permalink_defaults:</code></pre>
-<p>方案二：<br>使用插件优化url<br>插件hexo-abbrlink实现了这个功能，它将原来的URL地址重新进行了进制转换和再编码。<br>安装hexo-abbrlink:</p>
-<pre class="language-npm" data-language="npm"><code class="language-npm">npm install hexo-abbrlink --save</code></pre>
-<p>配置博客根目录下的_config.yml文件:</p>
-<pre class="language-YAML" data-language="YAML"><code class="language-YAML"># permalink: :title&#x2F;
-permalink: archives&#x2F;:abbrlink.html
-abbrlink:
-  alg: crc32  # 算法：crc16(default) and crc32
-  rep: hex    # 进制：dec(default) and hex</code></pre>]]></content>
-      <categories>
-        <category>web前端</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>hexo推荐插件</title>
     <url>/hexo-tui-jian-cha-jian.html</url>
     <content><![CDATA[<h4 id="安装搜索插件"><a href="#安装搜索插件" class="headerlink" title="安装搜索插件"></a>安装搜索插件</h4><pre class="language-npm" data-language="npm"><code class="language-npm">npm install hexo-generator-search --save</code></pre>
@@ -312,6 +269,49 @@ npm add hexo-symbols-count-time</code></pre>
 
 <hr>
 <h4 id="使用lazyload插件进行优化"><a href="#使用lazyload插件进行优化" class="headerlink" title="使用lazyload插件进行优化"></a>使用lazyload插件进行优化</h4><pre class="language-npm" data-language="npm"><code class="language-npm">npm install hexo-lazyload-image --save</code></pre>]]></content>
+      <categories>
+        <category>web前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo优化-锦上添花</title>
+    <url>/hexo-you-hua.html</url>
+    <content><![CDATA[<h4 id="robots-txt"><a href="#robots-txt" class="headerlink" title="robots.txt:"></a>robots.txt:</h4><p>robots.txt 是一种存放于网站根目录下的 ASCII 编码的文本文件，它的作用是告诉搜索引擎此网站中哪些内容是可以被爬取的，哪些是禁止爬取的。robots.txt 放在博客目录下的 source 文件夹中，博客生成后在站点目录 /public/ 下。<br>我的 robots.txt 文件内容如下：</p>
+<pre class="language-txt" data-language="txt"><code class="language-txt">User-agent: *
+Allow: &#x2F;
+Allow: &#x2F;archives&#x2F;
+Allow: &#x2F;categories&#x2F;
+Allow: &#x2F;about&#x2F;
+Disallow: &#x2F;js&#x2F;
+Disallow: &#x2F;css&#x2F;
+Disallow: &#x2F;fonts&#x2F;
+Disallow: &#x2F;vendors&#x2F;</code></pre>
+<p>robots.txt 文件更新至网站后可进入 Google Search Console - 抓取 - robots.txt 测试工具进行测试。</p>
+<hr>
+<h4 id="其他SEO优化"><a href="#其他SEO优化" class="headerlink" title="其他SEO优化"></a>其他SEO优化</h4><p>SEO优化应该说是一个收益延迟的行为，可能你做的优化短期内看不到什么效果，但是一定要坚持，seo优化也是有很深的可以研究的东西，从我们最初的网站设计，和最基础的标签的选择都有很大的关系，网站设计就如我们刚刚说的，要让用户点击三次可以到达网站的任何一个页面，要增加高质量的外链，增加相关推荐（比如说我们经常见到右侧本站的最高阅读的排名列表），然后就是给每一个页面加上keyword和描述</p>
+<p>在代码中，我们应该写出能让浏览器识别的语义化HTML，这样有助于爬虫抓取更多的有效信息：爬虫依赖于标签来确定上下文和各个关键字的权重；并且对外链设置nofollow标签，避免spider爬着爬着就爬出去了（减少网站的跳出率），并且我们要尽量在一些比较大的网站增加我们站点的曝光率，因为spider会经常访问大站，比如我们在掘金等技术社区发表文章中带有我们的站点，这样spider是很有可能爬到我们中的站点的，所以说,重要的还是:</p>
+<p>网站外链的推广度、数量和质量<br>网站的内链足够强大<br>网站的原创质量<br>网站的年龄时间<br>网站的更新频率（更新次数越多越好）<br>网站的服务器<br>网站的流量：流量越高网站的权重越高<br>网站的关键词排名：关键词排名越靠前，网站的权重越高<br>网站的收录数量：网站百度收录数量越多，网站百度权重越高<br>网站的浏览量及深度：用户体验越好，网站的百度权重越高</p>
+<hr>
+<h4 id="每篇文字独立生成文件夹"><a href="#每篇文字独立生成文件夹" class="headerlink" title="每篇文字独立生成文件夹"></a>每篇文字独立生成文件夹</h4><pre class="language-npm" data-language="npm"><code class="language-npm">npm install https:&#x2F;&#x2F;github.com&#x2F;CodeFalling&#x2F;hexo-asset-image --save</code></pre>
+
+<hr>
+<h4 id="优化hexo的url"><a href="#优化hexo的url" class="headerlink" title="优化hexo的url"></a>优化hexo的url</h4><p>SEO搜索引擎优化认为，网站的最佳结构是用户从首页点击三次就可以到达任何一个页面，但是我们使用hexo编译的站点打开文章的url是：sitename/year/mounth/day/title四层的结构，这样的url结构很不利于seo，爬虫就会经常爬不到我们的文章，于是，我们需要优化一下网站文章url<br>方案一：<br>我们可以将url直接改成sitename/title的形式，并且title最好是用英文，在根目录的配置文件下修改permalink如下：</p>
+<pre class="language-YAML" data-language="YAML"><code class="language-YAML">url: https:&#x2F;&#x2F;www.zdyn.cn
+root: &#x2F;
+permalink: :title.html
+permalink_defaults:</code></pre>
+<p>方案二：<br>使用插件优化url<br>插件hexo-abbrlink实现了这个功能，它将原来的URL地址重新进行了进制转换和再编码。<br>安装hexo-abbrlink:</p>
+<pre class="language-npm" data-language="npm"><code class="language-npm">npm install hexo-abbrlink --save</code></pre>
+<p>配置博客根目录下的_config.yml文件:</p>
+<pre class="language-YAML" data-language="YAML"><code class="language-YAML"># permalink: :title&#x2F;
+permalink: archives&#x2F;:abbrlink.html
+abbrlink:
+  alg: crc32  # 算法：crc16(default) and crc32
+  rep: hex    # 进制：dec(default) and hex</code></pre>]]></content>
       <categories>
         <category>web前端</category>
       </categories>
@@ -452,6 +452,27 @@ npm install ajv@^6.9</code></pre>
       </tags>
   </entry>
   <entry>
+    <title>idea全家桶食用(破解)方法</title>
+    <url>/idea-quan-jia-tong-shi-yong-po-jie-fang-fa.html</url>
+    <content><![CDATA[<p>用idea编辑bin目录下的xxx64.exe.vmoptions<br>在最下面添加<br><code>-javaagent:E:\Program Files\JAVAIDEA\lib\jetbrains-agent.jar</code><br>确保lib目录下有jetbrains-agent.jar文件</p>
+<p>激活码</p>
+<pre class="language-conf" data-language="conf"><code class="language-conf">A82DEE284F-eyJsaWNlbnNlSWQiOiJBODJERUUyODRGIiwibGljZW5zZWVOYW1lIjoiaHR0cHM6Ly96aGlsZS5pbyIsImFzc2lnbmVlTmFtZSI6IiIsImFzc2lnbmVlRW1haWwiOiIiLCJsaWNlbnNlUmVzdHJpY3Rpb24iOiJVbmxpbWl0ZWQgbGljZW5zZSB0aWxsIGVuZCBvZiB0aGUgY2VudHVyeS4iLCJjaGVja0NvbmN1cnJlbnRVc2UiOmZhbHNlLCJwcm9kdWN0cyI6W3siY29kZSI6IklJIiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In0seyJjb2RlIjoiUlMwIiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In0seyJjb2RlIjoiV1MiLCJwYWlkVXBUbyI6IjIwODktMDctMDcifSx7ImNvZGUiOiJSRCIsInBhaWRVcFRvIjoiMjA4OS0wNy0wNyJ9LHsiY29kZSI6IlJDIiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In0seyJjb2RlIjoiREMiLCJwYWlkVXBUbyI6IjIwODktMDctMDcifSx7ImNvZGUiOiJEQiIsInBhaWRVcFRvIjoiMjA4OS0wNy0wNyJ9LHsiY29kZSI6IlJNIiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In0seyJjb2RlIjoiRE0iLCJwYWlkVXBUbyI6IjIwODktMDctMDcifSx7ImNvZGUiOiJBQyIsInBhaWRVcFRvIjoiMjA4OS0wNy0wNyJ9LHsiY29kZSI6IkRQTiIsInBhaWRVcFRvIjoiMjA4OS0wNy0wNyJ9LHsiY29kZSI6IkdPIiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In0seyJjb2RlIjoiUFMiLCJwYWlkVXBUbyI6IjIwODktMDctMDcifSx7ImNvZGUiOiJDTCIsInBhaWRVcFRvIjoiMjA4OS0wNy0wNyJ9LHsiY29kZSI6IlBDIiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In0seyJjb2RlIjoiUlNVIiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In1dLCJoYXNoIjoiODkwNzA3MC8wIiwiZ3JhY2VQZXJpb2REYXlzIjowLCJhdXRvUHJvbG9uZ2F0ZWQiOmZhbHNlLCJpc0F1dG9Qcm9sb25nYXRlZCI6ZmFsc2V9-5epo90Xs7KIIBb8ckoxnB&#x2F;AZQ8Ev7rFrNqwFhBAsQYsQyhvqf1FcYdmlecFWJBHSWZU9b41kvsN4bwAHT5PiznOTmfvGv1MuOzMO0VOXZlc+edepemgpt+t3GUHvfGtzWFYeKeyCk+CLA9BqUzHRTgl2uBoIMNqh5izlDmejIwUHLl39QOyzHiTYNehnVN7GW5+QUeimTr&#x2F;koVUgK8xofu59Tv8rcdiwIXwTo71LcU2z2P+T3R81fwKkt34evy7kRch4NIQUQUno&#x2F;&#x2F;Pl3V0rInm3B2oFq9YBygPUdBUbdH&#x2F;KHROyohZRD8SaZJO6kUT0BNvtDPKF4mCT1saWM38jkw&#x3D;&#x3D;-MIIElTCCAn2gAwIBAgIBCTANBgkqhkiG9w0BAQsFADAYMRYwFAYDVQQDDA1KZXRQcm9maWxlIENBMB4XDTE4MTEwMTEyMjk0NloXDTIwMTEwMjEyMjk0NlowaDELMAkGA1UEBhMCQ1oxDjAMBgNVBAgMBU51c2xlMQ8wDQYDVQQHDAZQcmFndWUxGTAXBgNVBAoMEEpldEJyYWlucyBzLnIuby4xHTAbBgNVBAMMFHByb2QzeS1mcm9tLTIwMTgxMTAxMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5ndaik1GD0nyTdqkZgURQZGW+RGxCdBITPXIwpjhhaD0SXGa4XSZBEBoiPdY6XV6pOfUJeyfi9dXsY4MmT0D+sKoST3rSw96xaf9FXPvOjn4prMTdj3Ji3CyQrGWeQU2nzYqFrp1QYNLAbaViHRKuJrYHI6GCvqCbJe0LQ8qqUiVMA9wG&#x2F;PQwScpNmTF9Kp2Iej+Z5OUxF33zzm+vg&#x2F;nYV31HLF7fJUAplI&#x2F;1nM+ZG8K+AXWgYKChtknl3sW9PCQa3a3imPL9GVToUNxc0wcuTil8mqveWcSQCHYxsIaUajWLpFzoO2AhK4mfYBSStAqEjoXRTuj17mo8Q6M2SHOcwIDAQABo4GZMIGWMAkGA1UdEwQCMAAwHQYDVR0OBBYEFGEpG9oZGcfLMGNBkY7SgHiMGgTcMEgGA1UdIwRBMD+AFKOetkhnQhI2Qb1t4Lm0oFKLl&#x2F;GzoRykGjAYMRYwFAYDVQQDDA1KZXRQcm9maWxlIENBggkA0myxg7KDeeEwEwYDVR0lBAwwCgYIKwYBBQUHAwEwCwYDVR0PBAQDAgWgMA0GCSqGSIb3DQEBCwUAA4ICAQBonMu8oa3vmNAa4RQP8gPGlX3SQaA3WCRUAj6Zrlk8AesKV1YSkh5D2l+yUk6njysgzfr1bIR5xF8eup5xXc4&#x2F;G7NtVYRSMvrd6rfQcHOyK5UFJLm+8utmyMIDrZOzLQuTsT8NxFpbCVCfV5wNRu4rChrCuArYVGaKbmp9ymkw1PU6+HoO5i2wU3ikTmRv8IRjrlSStyNzXpnPTwt7bja19ousk56r40SmlmC04GdDHErr0ei2UbjUua5kw71Qn9g02tL9fERI2sSRjQrvPbn9INwRWl5+k05mlKekbtbu2ev2woJFZK4WEXAd&#x2F;GaAdeZZdumv8T2idDFL7cAirJwcrbfpawPeXr52oKTPnXfi0l5+g9Gnt&#x2F;wfiXCrPElX6ycTR6iL3GC2VR4jTz6YatT4Ntz59&#x2F;THOT7NJQhr6AyLkhhJCdkzE2cob&#x2F;KouVp4ivV7Q3Fc6HX7eepHAAF&#x2F;DpxwgOrg9smX6coXLgfp0b1RU2u&#x2F;tUNID04rpNxTMueTtrT8WSskqvaJd3RH8r7cnRj6Y2hltkja82HlpDURDxDTRvv+krbwMr26SB&#x2F;40BjpMUrDRCeKuiBahC0DCoU&#x2F;4+ze1l94wVUhdkCfL0GpJrMSCDEK+XEurU18Hb7WT+ThXbkdl6VpFdHsRvqAnhR2g4b+Qzgidmuky5NUZVfEaZqV&#x2F;g&#x3D;&#x3D;</code></pre>
+
+<p><a href="https://juejin.im/post/6844904111234613262">传送门</a><br><a href="http://taojingling.cn/Jet/cdkey.html#%E4%B8%80%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%81%E6%BF%80%E6%B4%BB">传送后门</a></p>
+]]></content>
+      <categories>
+        <category>食用方法</category>
+      </categories>
+      <tags>
+        <tag>idea</tag>
+        <tag>IntelliJ IDEA</tag>
+        <tag>WebStorm</tag>
+        <tag>PhpStorm</tag>
+        <tag>PyCharm</tag>
+        <tag>食用</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo部署到云服务器</title>
     <url>/hexo-bu-shu-dao-yun-fu-wu-qi.html</url>
     <content><![CDATA[<p>解决速度过慢<br>由于GitHub服务器没有在国内，而hexo博客部署是默认在GitHub上，访问速度特别慢，一个小网页也要加载很久，这时候我便想能不能放在自己的云服务器上，查阅了很多资料后便发现这种想法是可以的。<br>首先，需要一台云服务器和一个已经备案的域名（没有备案的直接用公网IP进行访问），我的服务器是centos7的，第一步就是配置ssh公钥登陆（避免每次更新文章都要输入密码）。</p>
@@ -490,27 +511,6 @@ npm install ajv@^6.9</code></pre>
       <tags>
         <tag>前端</tag>
         <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>idea全家桶食用(破解)方法</title>
-    <url>/idea-quan-jia-tong-shi-yong-po-jie-fang-fa.html</url>
-    <content><![CDATA[<p>用idea编辑bin目录下的xxx64.exe.vmoptions<br>在最下面添加<br><code>-javaagent:E:\Program Files\JAVAIDEA\lib\jetbrains-agent.jar</code><br>确保lib目录下有jetbrains-agent.jar文件</p>
-<p>激活码</p>
-<pre class="language-conf" data-language="conf"><code class="language-conf">A82DEE284F-eyJsaWNlbnNlSWQiOiJBODJERUUyODRGIiwibGljZW5zZWVOYW1lIjoiaHR0cHM6Ly96aGlsZS5pbyIsImFzc2lnbmVlTmFtZSI6IiIsImFzc2lnbmVlRW1haWwiOiIiLCJsaWNlbnNlUmVzdHJpY3Rpb24iOiJVbmxpbWl0ZWQgbGljZW5zZSB0aWxsIGVuZCBvZiB0aGUgY2VudHVyeS4iLCJjaGVja0NvbmN1cnJlbnRVc2UiOmZhbHNlLCJwcm9kdWN0cyI6W3siY29kZSI6IklJIiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In0seyJjb2RlIjoiUlMwIiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In0seyJjb2RlIjoiV1MiLCJwYWlkVXBUbyI6IjIwODktMDctMDcifSx7ImNvZGUiOiJSRCIsInBhaWRVcFRvIjoiMjA4OS0wNy0wNyJ9LHsiY29kZSI6IlJDIiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In0seyJjb2RlIjoiREMiLCJwYWlkVXBUbyI6IjIwODktMDctMDcifSx7ImNvZGUiOiJEQiIsInBhaWRVcFRvIjoiMjA4OS0wNy0wNyJ9LHsiY29kZSI6IlJNIiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In0seyJjb2RlIjoiRE0iLCJwYWlkVXBUbyI6IjIwODktMDctMDcifSx7ImNvZGUiOiJBQyIsInBhaWRVcFRvIjoiMjA4OS0wNy0wNyJ9LHsiY29kZSI6IkRQTiIsInBhaWRVcFRvIjoiMjA4OS0wNy0wNyJ9LHsiY29kZSI6IkdPIiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In0seyJjb2RlIjoiUFMiLCJwYWlkVXBUbyI6IjIwODktMDctMDcifSx7ImNvZGUiOiJDTCIsInBhaWRVcFRvIjoiMjA4OS0wNy0wNyJ9LHsiY29kZSI6IlBDIiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In0seyJjb2RlIjoiUlNVIiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In1dLCJoYXNoIjoiODkwNzA3MC8wIiwiZ3JhY2VQZXJpb2REYXlzIjowLCJhdXRvUHJvbG9uZ2F0ZWQiOmZhbHNlLCJpc0F1dG9Qcm9sb25nYXRlZCI6ZmFsc2V9-5epo90Xs7KIIBb8ckoxnB&#x2F;AZQ8Ev7rFrNqwFhBAsQYsQyhvqf1FcYdmlecFWJBHSWZU9b41kvsN4bwAHT5PiznOTmfvGv1MuOzMO0VOXZlc+edepemgpt+t3GUHvfGtzWFYeKeyCk+CLA9BqUzHRTgl2uBoIMNqh5izlDmejIwUHLl39QOyzHiTYNehnVN7GW5+QUeimTr&#x2F;koVUgK8xofu59Tv8rcdiwIXwTo71LcU2z2P+T3R81fwKkt34evy7kRch4NIQUQUno&#x2F;&#x2F;Pl3V0rInm3B2oFq9YBygPUdBUbdH&#x2F;KHROyohZRD8SaZJO6kUT0BNvtDPKF4mCT1saWM38jkw&#x3D;&#x3D;-MIIElTCCAn2gAwIBAgIBCTANBgkqhkiG9w0BAQsFADAYMRYwFAYDVQQDDA1KZXRQcm9maWxlIENBMB4XDTE4MTEwMTEyMjk0NloXDTIwMTEwMjEyMjk0NlowaDELMAkGA1UEBhMCQ1oxDjAMBgNVBAgMBU51c2xlMQ8wDQYDVQQHDAZQcmFndWUxGTAXBgNVBAoMEEpldEJyYWlucyBzLnIuby4xHTAbBgNVBAMMFHByb2QzeS1mcm9tLTIwMTgxMTAxMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5ndaik1GD0nyTdqkZgURQZGW+RGxCdBITPXIwpjhhaD0SXGa4XSZBEBoiPdY6XV6pOfUJeyfi9dXsY4MmT0D+sKoST3rSw96xaf9FXPvOjn4prMTdj3Ji3CyQrGWeQU2nzYqFrp1QYNLAbaViHRKuJrYHI6GCvqCbJe0LQ8qqUiVMA9wG&#x2F;PQwScpNmTF9Kp2Iej+Z5OUxF33zzm+vg&#x2F;nYV31HLF7fJUAplI&#x2F;1nM+ZG8K+AXWgYKChtknl3sW9PCQa3a3imPL9GVToUNxc0wcuTil8mqveWcSQCHYxsIaUajWLpFzoO2AhK4mfYBSStAqEjoXRTuj17mo8Q6M2SHOcwIDAQABo4GZMIGWMAkGA1UdEwQCMAAwHQYDVR0OBBYEFGEpG9oZGcfLMGNBkY7SgHiMGgTcMEgGA1UdIwRBMD+AFKOetkhnQhI2Qb1t4Lm0oFKLl&#x2F;GzoRykGjAYMRYwFAYDVQQDDA1KZXRQcm9maWxlIENBggkA0myxg7KDeeEwEwYDVR0lBAwwCgYIKwYBBQUHAwEwCwYDVR0PBAQDAgWgMA0GCSqGSIb3DQEBCwUAA4ICAQBonMu8oa3vmNAa4RQP8gPGlX3SQaA3WCRUAj6Zrlk8AesKV1YSkh5D2l+yUk6njysgzfr1bIR5xF8eup5xXc4&#x2F;G7NtVYRSMvrd6rfQcHOyK5UFJLm+8utmyMIDrZOzLQuTsT8NxFpbCVCfV5wNRu4rChrCuArYVGaKbmp9ymkw1PU6+HoO5i2wU3ikTmRv8IRjrlSStyNzXpnPTwt7bja19ousk56r40SmlmC04GdDHErr0ei2UbjUua5kw71Qn9g02tL9fERI2sSRjQrvPbn9INwRWl5+k05mlKekbtbu2ev2woJFZK4WEXAd&#x2F;GaAdeZZdumv8T2idDFL7cAirJwcrbfpawPeXr52oKTPnXfi0l5+g9Gnt&#x2F;wfiXCrPElX6ycTR6iL3GC2VR4jTz6YatT4Ntz59&#x2F;THOT7NJQhr6AyLkhhJCdkzE2cob&#x2F;KouVp4ivV7Q3Fc6HX7eepHAAF&#x2F;DpxwgOrg9smX6coXLgfp0b1RU2u&#x2F;tUNID04rpNxTMueTtrT8WSskqvaJd3RH8r7cnRj6Y2hltkja82HlpDURDxDTRvv+krbwMr26SB&#x2F;40BjpMUrDRCeKuiBahC0DCoU&#x2F;4+ze1l94wVUhdkCfL0GpJrMSCDEK+XEurU18Hb7WT+ThXbkdl6VpFdHsRvqAnhR2g4b+Qzgidmuky5NUZVfEaZqV&#x2F;g&#x3D;&#x3D;</code></pre>
-
-<p><a href="https://juejin.im/post/6844904111234613262">传送门</a><br><a href="http://taojingling.cn/Jet/cdkey.html#%E4%B8%80%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%81%E6%BF%80%E6%B4%BB">传送后门</a></p>
-]]></content>
-      <categories>
-        <category>食用方法</category>
-      </categories>
-      <tags>
-        <tag>idea</tag>
-        <tag>IntelliJ IDEA</tag>
-        <tag>WebStorm</tag>
-        <tag>PhpStorm</tag>
-        <tag>PyCharm</tag>
-        <tag>食用</tag>
       </tags>
   </entry>
   <entry>
@@ -927,19 +927,6 @@ pip3 <span class="token function">install</span> --upgrade pip
       </tags>
   </entry>
   <entry>
-    <title>安装v2ray</title>
-    <url>/an-zhuang-v2ray.html</url>
-    <content><![CDATA[<h4 id="安装v2ray"><a href="#安装v2ray" class="headerlink" title="安装v2ray"></a>安装v2ray</h4><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> /soft/bak
-<span class="token function">bash</span> <span class="token operator">&lt;</span><span class="token punctuation">(</span><span class="token function">curl</span> -L -s https://opt.cn2qq.com/opt-script/v2ray.sh<span class="token punctuation">)</span></code></pre>]]></content>
-      <categories>
-        <category>服务端</category>
-      </categories>
-      <tags>
-        <tag>v2ray</tag>
-        <tag>proxy</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>本地生成ssl证书</title>
     <url>/ben-di-sheng-cheng-ssl-zheng-shu.html</url>
     <content><![CDATA[<h4 id="安装redis5-0-9"><a href="#安装redis5-0-9" class="headerlink" title="安装redis5.0.9"></a>安装redis5.0.9</h4><pre class="language-bash" data-language="bash"><code class="language-bash">openssl genrsa -des3 -out server.key <span class="token number">2048</span>
@@ -953,6 +940,19 @@ openssl x509 -req -days <span class="token number">3650</span> -in server.csr -C
       <tags>
         <tag>openssl</tag>
         <tag>ssl证书</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>安装v2ray</title>
+    <url>/an-zhuang-v2ray.html</url>
+    <content><![CDATA[<h4 id="安装v2ray"><a href="#安装v2ray" class="headerlink" title="安装v2ray"></a>安装v2ray</h4><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> /soft/bak
+<span class="token function">bash</span> <span class="token operator">&lt;</span><span class="token punctuation">(</span><span class="token function">curl</span> -L -s https://opt.cn2qq.com/opt-script/v2ray.sh<span class="token punctuation">)</span></code></pre>]]></content>
+      <categories>
+        <category>服务端</category>
+      </categories>
+      <tags>
+        <tag>v2ray</tag>
+        <tag>proxy</tag>
       </tags>
   </entry>
   <entry>
