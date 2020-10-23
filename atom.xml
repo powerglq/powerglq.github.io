@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>敲黑板</title>
+  
+  <subtitle>划重点</subtitle>
+  <link href="https://www.qiaoheiban.tk/atom.xml" rel="self"/>
+  
+  <link href="https://www.qiaoheiban.tk/"/>
+  <updated>2020-10-23T09:24:38.207Z</updated>
+  <id>https://www.qiaoheiban.tk/</id>
+  
+  <author>
+    <name>GLQ</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>win10正确食用方法</title>
+    <link href="https://www.qiaoheiban.tk/win10-shi-yong-fang-fa.html"/>
+    <id>https://www.qiaoheiban.tk/win10-shi-yong-fang-fa.html</id>
+    <published>2020-10-23T09:23:30.000Z</published>
+    <updated>2020-10-23T09:24:38.207Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;win10正确食用方法&quot;&gt;&lt;a href=&quot;#win10正确食用方法&quot; class=&quot;headerlink&quot; title=&quot;win10正确食用方法&quot;&gt;&lt;/a&gt;win10正确食用方法&lt;/h4&gt;&lt;pre class=&quot;language-cmd&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="win10" scheme="https://www.qiaoheiban.tk/tags/win10/"/>
+    
+    <category term="食用" scheme="https://www.qiaoheiban.tk/tags/%E9%A3%9F%E7%94%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>刷padavan固件</title>
+    <link href="https://www.qiaoheiban.tk/shua-padavan-gu-jian.html"/>
+    <id>https://www.qiaoheiban.tk/shua-padavan-gu-jian.html</id>
+    <published>2020-10-23T09:12:16.000Z</published>
+    <updated>2020-10-23T09:22:12.659Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;刷padavan固件&quot;&gt;&lt;a href=&quot;#刷padavan固件&quot; class=&quot;headerlink&quot; title=&quot;刷padavan固件&quot;&gt;&lt;/a&gt;刷padavan固件&lt;/h4&gt;&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="路由" scheme="https://www.qiaoheiban.tk/categories/%E8%B7%AF%E7%94%B1/"/>
+    
+    
+    <category term="v2ray" scheme="https://www.qiaoheiban.tk/tags/v2ray/"/>
+    
+    <category term="padavan" scheme="https://www.qiaoheiban.tk/tags/padavan/"/>
+    
+    <category term="zerotier" scheme="https://www.qiaoheiban.tk/tags/zerotier/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>调教padavan</title>
+    <link href="https://www.qiaoheiban.tk/diao-jiao-padavan.html"/>
+    <id>https://www.qiaoheiban.tk/diao-jiao-padavan.html</id>
+    <published>2020-10-23T09:05:28.000Z</published>
+    <updated>2020-10-23T09:08:15.214Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;调教padavan&quot;&gt;&lt;a href=&quot;#调教padavan&quot; class=&quot;headerlink&quot; title=&quot;调教padavan&quot;&gt;&lt;/a&gt;调教padavan&lt;/h4&gt;&lt;p&gt;将u盘格式化为ext4&lt;br&gt;df -h 查看优盘是否被加载</summary>
+        
+      
+    
+    
+    
+    <category term="路由" scheme="https://www.qiaoheiban.tk/categories/%E8%B7%AF%E7%94%B1/"/>
+    
+    
+    <category term="v2ray" scheme="https://www.qiaoheiban.tk/tags/v2ray/"/>
+    
+    <category term="padavan" scheme="https://www.qiaoheiban.tk/tags/padavan/"/>
+    
+    <category term="zerotier" scheme="https://www.qiaoheiban.tk/tags/zerotier/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>安装elasticsearch</title>
+    <link href="https://www.qiaoheiban.tk/an-zhuang-elasticsearch.html"/>
+    <id>https://www.qiaoheiban.tk/an-zhuang-elasticsearch.html</id>
+    <published>2020-10-23T08:49:08.000Z</published>
+    <updated>2020-10-23T09:01:53.334Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;安装elasticsearch&quot;&gt;&lt;a href=&quot;#安装elasticsearch&quot; class=&quot;headerlink&quot; title=&quot;安装elasticsearch&quot;&gt;&lt;/a&gt;安装elasticsearch&lt;/h4&gt;&lt;p&gt;默认端口：9200&lt;br&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>安装rsync</title>
+    <link href="https://www.qiaoheiban.tk/an-zhuang-rsync.html"/>
+    <id>https://www.qiaoheiban.tk/an-zhuang-rsync.html</id>
+    <published>2020-10-23T08:46:23.000Z</published>
+    <updated>2020-10-23T08:48:23.624Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;安装rsync&quot;&gt;&lt;a href=&quot;#安装rsync&quot; class=&quot;headerlink&quot; title=&quot;安装rsync&quot;&gt;&lt;/a&gt;安装rsync&lt;/h4&gt;&lt;pre class=&quot;language-bash&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="服务端" scheme="https://www.qiaoheiban.tk/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF/"/>
+    
+    
+    <category term="rsync" scheme="https://www.qiaoheiban.tk/tags/rsync/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>安装v2ray</title>
+    <link href="https://www.qiaoheiban.tk/an-zhuang-v2ray.html"/>
+    <id>https://www.qiaoheiban.tk/an-zhuang-v2ray.html</id>
+    <published>2020-10-23T08:43:51.000Z</published>
+    <updated>2020-10-23T08:45:22.678Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;安装v2ray&quot;&gt;&lt;a href=&quot;#安装v2ray&quot; class=&quot;headerlink&quot; title=&quot;安装v2ray&quot;&gt;&lt;/a&gt;安装v2ray&lt;/h4&gt;&lt;pre class=&quot;language-bash&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="服务端" scheme="https://www.qiaoheiban.tk/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF/"/>
+    
+    
+    <category term="proxy" scheme="https://www.qiaoheiban.tk/tags/proxy/"/>
+    
+    <category term="v2ray" scheme="https://www.qiaoheiban.tk/tags/v2ray/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>部署ss</title>
+    <link href="https://www.qiaoheiban.tk/bu-shu-ss.html"/>
+    <id>https://www.qiaoheiban.tk/bu-shu-ss.html</id>
+    <published>2020-10-23T08:41:01.000Z</published>
+    <updated>2020-10-23T08:43:17.621Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;部署ss&quot;&gt;&lt;a href=&quot;#部署ss&quot; class=&quot;headerlink&quot; title=&quot;部署ss&quot;&gt;&lt;/a&gt;部署ss&lt;/h4&gt;&lt;pre class=&quot;language-bash&quot; data-language=&quot;bash&quot;&gt;&lt;code</summary>
+        
+      
+    
+    
+    
+    <category term="服务端" scheme="https://www.qiaoheiban.tk/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF/"/>
+    
+    
+    <category term="ss" scheme="https://www.qiaoheiban.tk/tags/ss/"/>
+    
+    <category term="影梭" scheme="https://www.qiaoheiban.tk/tags/%E5%BD%B1%E6%A2%AD/"/>
+    
+    <category term="shadowsorcks" scheme="https://www.qiaoheiban.tk/tags/shadowsorcks/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>docker-composer</title>
+    <link href="https://www.qiaoheiban.tk/docker-composer.html"/>
+    <id>https://www.qiaoheiban.tk/docker-composer.html</id>
+    <published>2020-10-23T08:29:32.000Z</published>
+    <updated>2020-10-23T08:32:54.954Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;docker-composer&quot;&gt;&lt;a href=&quot;#docker-composer&quot; class=&quot;headerlink&quot; title=&quot;docker-composer&quot;&gt;&lt;/a&gt;docker-composer&lt;/h4&gt;&lt;pre</summary>
+        
+      
+    
+    
+    
+    <category term="服务端" scheme="https://www.qiaoheiban.tk/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF/"/>
+    
+    
+    <category term="docker" scheme="https://www.qiaoheiban.tk/tags/docker/"/>
+    
+    <category term="docker-composer" scheme="https://www.qiaoheiban.tk/tags/docker-composer/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>idea全家桶食用(破解)方法</title>
+    <link href="https://www.qiaoheiban.tk/idea-quan-jia-tong-shi-yong-po-jie-fang-fa.html"/>
+    <id>https://www.qiaoheiban.tk/idea-quan-jia-tong-shi-yong-po-jie-fang-fa.html</id>
+    <published>2020-10-23T08:21:11.000Z</published>
+    <updated>2020-10-23T09:25:17.685Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;用idea编辑bin目录下的xxx64.exe.vmoptions&lt;br&gt;在最下面添加&lt;br&gt;&lt;code&gt;-javaagent:E:\Program</summary>
+        
+      
+    
+    
+    
+    <category term="食用方法" scheme="https://www.qiaoheiban.tk/categories/%E9%A3%9F%E7%94%A8%E6%96%B9%E6%B3%95/"/>
+    
+    
+    <category term="idea" scheme="https://www.qiaoheiban.tk/tags/idea/"/>
+    
+    <category term="IntelliJ IDEA" scheme="https://www.qiaoheiban.tk/tags/IntelliJ-IDEA/"/>
+    
+    <category term="WebStorm" scheme="https://www.qiaoheiban.tk/tags/WebStorm/"/>
+    
+    <category term="PhpStorm" scheme="https://www.qiaoheiban.tk/tags/PhpStorm/"/>
+    
+    <category term="PyCharm" scheme="https://www.qiaoheiban.tk/tags/PyCharm/"/>
+    
+    <category term="食用" scheme="https://www.qiaoheiban.tk/tags/%E9%A3%9F%E7%94%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>本地生成ssl证书</title>
+    <link href="https://www.qiaoheiban.tk/ben-di-sheng-cheng-ssl-zheng-shu.html"/>
+    <id>https://www.qiaoheiban.tk/ben-di-sheng-cheng-ssl-zheng-shu.html</id>
+    <published>2020-10-23T08:18:38.000Z</published>
+    <updated>2020-10-23T08:19:32.481Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;安装redis5-0-9&quot;&gt;&lt;a href=&quot;#安装redis5-0-9&quot; class=&quot;headerlink&quot; title=&quot;安装redis5.0.9&quot;&gt;&lt;/a&gt;安装redis5.0.9&lt;/h4&gt;&lt;pre class=&quot;language-bash&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="服务端" scheme="https://www.qiaoheiban.tk/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF/"/>
+    
+    
+    <category term="openssl" scheme="https://www.qiaoheiban.tk/tags/openssl/"/>
+    
+    <category term="ssl证书" scheme="https://www.qiaoheiban.tk/tags/ssl%E8%AF%81%E4%B9%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VPS初始化</title>
+    <link href="https://www.qiaoheiban.tk/vps-chu-shi-hua.html"/>
+    <id>https://www.qiaoheiban.tk/vps-chu-shi-hua.html</id>
+    <published>2020-10-23T08:14:29.000Z</published>
+    <updated>2020-10-23T09:03:44.088Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;VPS初始化&quot;&gt;&lt;a href=&quot;#VPS初始化&quot; class=&quot;headerlink&quot; title=&quot;VPS初始化&quot;&gt;&lt;/a&gt;VPS初始化&lt;/h4&gt;&lt;pre class=&quot;language-bash&quot; data-language=&quot;bash&quot;&gt;&lt;code</summary>
+        
+      
+    
+    
+    
+    <category term="服务端" scheme="https://www.qiaoheiban.tk/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF/"/>
+    
+    
+    <category term="vps" scheme="https://www.qiaoheiban.tk/tags/vps/"/>
+    
+    <category term="服务器" scheme="https://www.qiaoheiban.tk/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>部署酸酸乳</title>
+    <link href="https://www.qiaoheiban.tk/bu-shu-suan-suan-ru.html"/>
+    <id>https://www.qiaoheiban.tk/bu-shu-suan-suan-ru.html</id>
+    <published>2020-10-23T08:11:05.000Z</published>
+    <updated>2020-10-23T08:13:53.720Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;部署酸酸乳&quot;&gt;&lt;a href=&quot;#部署酸酸乳&quot; class=&quot;headerlink&quot; title=&quot;部署酸酸乳&quot;&gt;&lt;/a&gt;部署酸酸乳&lt;/h4&gt;&lt;pre class=&quot;language-bash&quot; data-language=&quot;bash&quot;&gt;&lt;code</summary>
+        
+      
+    
+    
+    
+    <category term="服务端" scheme="https://www.qiaoheiban.tk/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF/"/>
+    
+    
+    <category term="ssr" scheme="https://www.qiaoheiban.tk/tags/ssr/"/>
+    
+    <category term="酸酸乳" scheme="https://www.qiaoheiban.tk/tags/%E9%85%B8%E9%85%B8%E4%B9%B3/"/>
+    
+    <category term="proxy" scheme="https://www.qiaoheiban.tk/tags/proxy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>安装redis5.0.9</title>
+    <link href="https://www.qiaoheiban.tk/an-zhuang-redis5-0-9.html"/>
+    <id>https://www.qiaoheiban.tk/an-zhuang-redis5-0-9.html</id>
+    <published>2020-10-23T08:06:13.000Z</published>
+    <updated>2020-10-23T08:07:37.995Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;安装redis5-0-9&quot;&gt;&lt;a href=&quot;#安装redis5-0-9&quot; class=&quot;headerlink&quot; title=&quot;安装redis5.0.9&quot;&gt;&lt;/a&gt;安装redis5.0.9&lt;/h4&gt;&lt;p&gt;6.0需要升级gcc 避免麻烦</summary>
+        
+      
+    
+    
+    
+    <category term="服务端" scheme="https://www.qiaoheiban.tk/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF/"/>
+    
+    
+    <category term="redis" scheme="https://www.qiaoheiban.tk/tags/redis/"/>
+    
+    <category term="redis5.0.9" scheme="https://www.qiaoheiban.tk/tags/redis5-0-9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>安装mariadb10.4</title>
+    <link href="https://www.qiaoheiban.tk/an-zhuang-mariadb10-4.html"/>
+    <id>https://www.qiaoheiban.tk/an-zhuang-mariadb10-4.html</id>
+    <published>2020-10-23T08:00:55.000Z</published>
+    <updated>2020-10-23T08:10:09.374Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;安装mariadb10-4&quot;&gt;&lt;a href=&quot;#安装mariadb10-4&quot; class=&quot;headerlink&quot; title=&quot;安装mariadb10.4&quot;&gt;&lt;/a&gt;安装mariadb10.4&lt;/h4&gt;&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="服务端" scheme="https://www.qiaoheiban.tk/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF/"/>
+    
+    
+    <category term="mariadb" scheme="https://www.qiaoheiban.tk/tags/mariadb/"/>
+    
+    <category term="mariadb10.4" scheme="https://www.qiaoheiban.tk/tags/mariadb10-4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>安装python3</title>
+    <link href="https://www.qiaoheiban.tk/an-zhuang-python3.html"/>
+    <id>https://www.qiaoheiban.tk/an-zhuang-python3.html</id>
+    <published>2020-10-23T07:59:32.000Z</published>
+    <updated>2020-10-23T08:00:37.815Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;安装python3&quot;&gt;&lt;a href=&quot;#安装python3&quot; class=&quot;headerlink&quot; title=&quot;安装python3&quot;&gt;&lt;/a&gt;安装python3&lt;/h4&gt;&lt;pre class=&quot;language-bash&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="python3" scheme="https://www.qiaoheiban.tk/categories/python3/"/>
+    
+    
+    <category term="python3" scheme="https://www.qiaoheiban.tk/tags/python3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>安装php-composer</title>
+    <link href="https://www.qiaoheiban.tk/an-zhuang-php-composer.html"/>
+    <id>https://www.qiaoheiban.tk/an-zhuang-php-composer.html</id>
+    <published>2020-10-23T07:57:40.000Z</published>
+    <updated>2020-10-23T07:59:07.900Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;安装php-composer&quot;&gt;&lt;a href=&quot;#安装php-composer&quot; class=&quot;headerlink&quot; title=&quot;安装php-composer&quot;&gt;&lt;/a&gt;安装php-composer&lt;/h4&gt;&lt;pre</summary>
+        
+      
+    
+    
+    
+    <category term="扩展" scheme="https://www.qiaoheiban.tk/categories/%E6%89%A9%E5%B1%95/"/>
+    
+    
+    <category term="php" scheme="https://www.qiaoheiban.tk/tags/php/"/>
+    
+    <category term="composer" scheme="https://www.qiaoheiban.tk/tags/composer/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>安装php-mongodb扩展</title>
+    <link href="https://www.qiaoheiban.tk/an-zhuang-php-mongodb-kuo-zhan.html"/>
+    <id>https://www.qiaoheiban.tk/an-zhuang-php-mongodb-kuo-zhan.html</id>
+    <published>2020-10-23T07:53:16.000Z</published>
+    <updated>2020-10-23T07:56:48.639Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;安装php-mongodb扩展&quot;&gt;&lt;a href=&quot;#安装php-mongodb扩展&quot; class=&quot;headerlink&quot; title=&quot;安装php-mongodb扩展&quot;&gt;&lt;/a&gt;安装php-mongodb扩展&lt;/h4&gt;&lt;pre</summary>
+        
+      
+    
+    
+    
+    <category term="服务端" scheme="https://www.qiaoheiban.tk/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF/"/>
+    
+    
+    <category term="php" scheme="https://www.qiaoheiban.tk/tags/php/"/>
+    
+    <category term="php-mongodb" scheme="https://www.qiaoheiban.tk/tags/php-mongodb/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>php安装redis扩展</title>
+    <link href="https://www.qiaoheiban.tk/an-zhuang-php-redis-kuo-zhan.html"/>
+    <id>https://www.qiaoheiban.tk/an-zhuang-php-redis-kuo-zhan.html</id>
+    <published>2020-10-23T07:50:57.000Z</published>
+    <updated>2020-10-23T07:57:09.682Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;安装php-redis扩展&quot;&gt;&lt;a href=&quot;#安装php-redis扩展&quot; class=&quot;headerlink&quot; title=&quot;安装php-redis扩展&quot;&gt;&lt;/a&gt;安装php-redis扩展&lt;/h4&gt;&lt;pre class=&quot;language-bash&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="服务端" scheme="https://www.qiaoheiban.tk/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF/"/>
+    
+    
+    <category term="php" scheme="https://www.qiaoheiban.tk/tags/php/"/>
+    
+    <category term="php-redis" scheme="https://www.qiaoheiban.tk/tags/php-redis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>php7.2安装</title>
+    <link href="https://www.qiaoheiban.tk/php7-2-an-zhuang.html"/>
+    <id>https://www.qiaoheiban.tk/php7-2-an-zhuang.html</id>
+    <published>2020-10-23T07:48:54.000Z</published>
+    <updated>2020-10-23T07:50:29.313Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;php7-2安装&quot;&gt;&lt;a href=&quot;#php7-2安装&quot; class=&quot;headerlink&quot; title=&quot;php7.2安装&quot;&gt;&lt;/a&gt;php7.2安装&lt;/h4&gt;&lt;pre class=&quot;language-bash&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="服务端" scheme="https://www.qiaoheiban.tk/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF/"/>
+    
+    
+    <category term="php" scheme="https://www.qiaoheiban.tk/tags/php/"/>
+    
+    <category term="php7.2" scheme="https://www.qiaoheiban.tk/tags/php7-2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>php7.4安装</title>
+    <link href="https://www.qiaoheiban.tk/php7.4-an-zhuang.html"/>
+    <id>https://www.qiaoheiban.tk/php7.4-an-zhuang.html</id>
+    <published>2020-10-23T07:44:15.000Z</published>
+    <updated>2020-10-23T07:48:27.036Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;php7-4安装&quot;&gt;&lt;a href=&quot;#php7-4安装&quot; class=&quot;headerlink&quot; title=&quot;php7.4安装&quot;&gt;&lt;/a&gt;php7.4安装&lt;/h4&gt;&lt;pre class=&quot;language-bash&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="服务端" scheme="https://www.qiaoheiban.tk/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF/"/>
+    
+    
+    <category term="php" scheme="https://www.qiaoheiban.tk/tags/php/"/>
+    
+    <category term="php7.4" scheme="https://www.qiaoheiban.tk/tags/php7-4/"/>
+    
+  </entry>
+  
+</feed>

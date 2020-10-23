@@ -2,6 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.qiaoheiban.tk/hexo-yi-nan-za-zheng.html</loc>
+    
+    <lastmod>2020-10-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.qiaoheiban.tk/hexo-tui-jian-cha-jian.html</loc>
+    
+    <lastmod>2020-10-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.qiaoheiban.tk/hexo-da-jian.html</loc>
+    
+    <lastmod>2020-10-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.qiaoheiban.tk/contact/index.html</loc>
+    
+    <lastmod>2020-10-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.qiaoheiban.tk/friends/index.html</loc>
+    
+    <lastmod>2020-10-23</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.qiaoheiban.tk/hexo-you-hua.html</loc>
     
     <lastmod>2020-10-23</lastmod>
@@ -170,27 +205,6 @@
   </url>
   
   <url>
-    <loc>https://www.qiaoheiban.tk/hexo-yi-nan-za-zheng.html</loc>
-    
-    <lastmod>2020-10-23</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.qiaoheiban.tk/hexo-tui-jian-cha-jian.html</loc>
-    
-    <lastmod>2020-10-23</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.qiaoheiban.tk/hexo-da-jian.html</loc>
-    
-    <lastmod>2020-10-23</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.qiaoheiban.tk/about/index.html</loc>
     
     <lastmod>2020-10-22</lastmod>
@@ -218,20 +232,6 @@
     
   </url>
   
-  <url>
-    <loc>https://www.qiaoheiban.tk/friends/index.html</loc>
-    
-    <lastmod>2020-09-13</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.qiaoheiban.tk/contact/index.html</loc>
-    
-    <lastmod>2020-09-13</lastmod>
-    
-  </url>
-  
 
   <url>
     <loc>https://www.qiaoheiban.tk/</loc>
@@ -240,6 +240,125 @@
     <priority>1.0</priority>
   </url>
 
+  
+  <url>
+    <loc>https://www.qiaoheiban.tk/tags/%E5%89%8D%E7%AB%AF/</loc>
+    <lastmod>2020-10-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.qiaoheiban.tk/tags/hexo/</loc>
+    <lastmod>2020-10-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.qiaoheiban.tk/tags/nginx/</loc>
+    <lastmod>2020-10-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.qiaoheiban.tk/tags/php/</loc>
+    <lastmod>2020-10-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.qiaoheiban.tk/tags/php7-4/</loc>
+    <lastmod>2020-10-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.qiaoheiban.tk/tags/php7-2/</loc>
+    <lastmod>2020-10-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.qiaoheiban.tk/tags/php-redis/</loc>
+    <lastmod>2020-10-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.qiaoheiban.tk/tags/php-mongodb/</loc>
+    <lastmod>2020-10-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.qiaoheiban.tk/tags/composer/</loc>
+    <lastmod>2020-10-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.qiaoheiban.tk/tags/python3/</loc>
+    <lastmod>2020-10-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.qiaoheiban.tk/tags/mariadb/</loc>
+    <lastmod>2020-10-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.qiaoheiban.tk/tags/mariadb10-4/</loc>
+    <lastmod>2020-10-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.qiaoheiban.tk/tags/redis/</loc>
+    <lastmod>2020-10-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.qiaoheiban.tk/tags/redis5-0-9/</loc>
+    <lastmod>2020-10-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.qiaoheiban.tk/tags/ssr/</loc>
+    <lastmod>2020-10-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.qiaoheiban.tk/tags/%E9%85%B8%E9%85%B8%E4%B9%B3/</loc>
+    <lastmod>2020-10-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.qiaoheiban.tk/tags/proxy/</loc>
+    <lastmod>2020-10-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
   
   <url>
     <loc>https://www.qiaoheiban.tk/tags/vps/</loc>
@@ -256,28 +375,14 @@
   </url>
   
   <url>
-    <loc>https://www.qiaoheiban.tk/tags/docker/</loc>
+    <loc>https://www.qiaoheiban.tk/tags/openssl/</loc>
     <lastmod>2020-10-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.qiaoheiban.tk/tags/docker-composer/</loc>
-    <lastmod>2020-10-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.qiaoheiban.tk/tags/%E5%89%8D%E7%AB%AF/</loc>
-    <lastmod>2020-10-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.qiaoheiban.tk/tags/hexo/</loc>
+    <loc>https://www.qiaoheiban.tk/tags/ssl%E8%AF%81%E4%B9%A6/</loc>
     <lastmod>2020-10-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -319,147 +424,14 @@
   </url>
   
   <url>
-    <loc>https://www.qiaoheiban.tk/tags/%E9%A3%9F%E7%94%A8/</loc>
+    <loc>https://www.qiaoheiban.tk/tags/docker/</loc>
     <lastmod>2020-10-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.qiaoheiban.tk/tags/nginx/</loc>
-    <lastmod>2020-10-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.qiaoheiban.tk/tags/php/</loc>
-    <lastmod>2020-10-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.qiaoheiban.tk/tags/php7-2/</loc>
-    <lastmod>2020-10-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.qiaoheiban.tk/tags/php7-4/</loc>
-    <lastmod>2020-10-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.qiaoheiban.tk/tags/win10/</loc>
-    <lastmod>2020-10-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.qiaoheiban.tk/tags/padavan/</loc>
-    <lastmod>2020-10-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.qiaoheiban.tk/tags/v2ray/</loc>
-    <lastmod>2020-10-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.qiaoheiban.tk/tags/zerotier/</loc>
-    <lastmod>2020-10-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.qiaoheiban.tk/tags/mariadb/</loc>
-    <lastmod>2020-10-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.qiaoheiban.tk/tags/mariadb10-4/</loc>
-    <lastmod>2020-10-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.qiaoheiban.tk/tags/composer/</loc>
-    <lastmod>2020-10-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.qiaoheiban.tk/tags/php-mongodb/</loc>
-    <lastmod>2020-10-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.qiaoheiban.tk/tags/php-redis/</loc>
-    <lastmod>2020-10-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.qiaoheiban.tk/tags/python3/</loc>
-    <lastmod>2020-10-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.qiaoheiban.tk/tags/redis/</loc>
-    <lastmod>2020-10-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.qiaoheiban.tk/tags/redis5-0-9/</loc>
-    <lastmod>2020-10-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.qiaoheiban.tk/tags/rsync/</loc>
-    <lastmod>2020-10-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.qiaoheiban.tk/tags/proxy/</loc>
-    <lastmod>2020-10-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.qiaoheiban.tk/tags/openssl/</loc>
-    <lastmod>2020-10-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.qiaoheiban.tk/tags/ssl%E8%AF%81%E4%B9%A6/</loc>
+    <loc>https://www.qiaoheiban.tk/tags/docker-composer/</loc>
     <lastmod>2020-10-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -487,27 +459,48 @@
   </url>
   
   <url>
-    <loc>https://www.qiaoheiban.tk/tags/ssr/</loc>
+    <loc>https://www.qiaoheiban.tk/tags/v2ray/</loc>
     <lastmod>2020-10-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.qiaoheiban.tk/tags/%E9%85%B8%E9%85%B8%E4%B9%B3/</loc>
+    <loc>https://www.qiaoheiban.tk/tags/rsync/</loc>
+    <lastmod>2020-10-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.qiaoheiban.tk/tags/padavan/</loc>
+    <lastmod>2020-10-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.qiaoheiban.tk/tags/zerotier/</loc>
+    <lastmod>2020-10-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.qiaoheiban.tk/tags/win10/</loc>
+    <lastmod>2020-10-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.qiaoheiban.tk/tags/%E9%A3%9F%E7%94%A8/</loc>
     <lastmod>2020-10-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
 
-  
-  <url>
-    <loc>https://www.qiaoheiban.tk/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF/</loc>
-    <lastmod>2020-10-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
   
   <url>
     <loc>https://www.qiaoheiban.tk/categories/web%E5%89%8D%E7%AB%AF/</loc>
@@ -517,14 +510,7 @@
   </url>
   
   <url>
-    <loc>https://www.qiaoheiban.tk/categories/%E9%A3%9F%E7%94%A8%E6%96%B9%E6%B3%95/</loc>
-    <lastmod>2020-10-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.qiaoheiban.tk/categories/%E8%B7%AF%E7%94%B1/</loc>
+    <loc>https://www.qiaoheiban.tk/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF/</loc>
     <lastmod>2020-10-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -539,6 +525,20 @@
   
   <url>
     <loc>https://www.qiaoheiban.tk/categories/python3/</loc>
+    <lastmod>2020-10-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.qiaoheiban.tk/categories/%E9%A3%9F%E7%94%A8%E6%96%B9%E6%B3%95/</loc>
+    <lastmod>2020-10-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.qiaoheiban.tk/categories/%E8%B7%AF%E7%94%B1/</loc>
     <lastmod>2020-10-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
