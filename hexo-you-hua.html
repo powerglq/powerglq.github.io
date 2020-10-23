@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="hexo优化-锦上添花, 敲黑板,划重点,资源分享,食用方法,程序开发,,网络技术,软件推荐">
-    <meta name="description" content="记录工作与生活">
+    <meta name="description" content="敲黑板,划重点,记录工作与生活">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -121,7 +121,7 @@
         <div class="logo-name">敲黑板</div>
         <div class="logo-desc">
             
-            记录工作与生活
+            敲黑板,划重点,记录工作与生活
             
         </div>
     </div>
@@ -429,14 +429,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    3.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    14 分
                 </div>
                 
 
@@ -451,10 +451,181 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="搜索引擎食用方法"><a href="#搜索引擎食用方法" class="headerlink" title="搜索引擎食用方法"></a>搜索引擎食用方法</h4><p>首先给你的文章生成sitemap文件</p>
+                <h4 id="关键词与描述"><a href="#关键词与描述" class="headerlink" title="关键词与描述"></a>关键词与描述</h4><p>搜索引擎除了主要抓取标题外，页面的关键词和描述也会抓取。<br>在\scaffolds\post.md中添加如下代码，用于生成的文章中添加关键字和描述。</p>
+<pre class="language-md" data-language="md"><code class="language-md">keywords: 
+description: </code></pre>
+
+<hr>
+<h4 id="开启压缩文件"><a href="#开启压缩文件" class="headerlink" title="开启压缩文件"></a>开启压缩文件</h4><p>因为hexo生成的文件是静态html，里面占用了大量的空白符。使用gulp进行压缩接口提高访问速度并且降低内存。</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> gulp -g
+<span class="token function">npm</span> <span class="token function">install</span> gulp-minify-css gulp-uglify gulp-htmlmin gulp-htmlclean gulp --save
+<span class="token function">npm</span> <span class="token function">install</span> gulp-concat
+<span class="token function">npm</span> <span class="token function">install</span> gulp-imagemin</code></pre>
+<p>在hexo blog文件夹下创建gulpfile.js:</p>
+<pre class="language-js" data-language="js"><code class="language-js"><span class="token keyword">var</span> gulp <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'gulp'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    uglify <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'gulp-uglify'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    cssmin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'gulp-minify-css'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    imagemin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'gulp-imagemin'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    htmlmin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'gulp-htmlmin'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    htmlclean <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'gulp-htmlclean'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    concat <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'gulp-concat'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//JS压缩</span>
+gulp<span class="token punctuation">.</span><span class="token function">task</span><span class="token punctuation">(</span><span class="token string">'uglify'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> gulp<span class="token punctuation">.</span><span class="token function">src</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'./public/js/**/.js'</span><span class="token punctuation">,</span><span class="token string">'!./public/js/**/*min.js'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token comment">//只是排除min.js文件还是不严谨，一般不会有问题，根据自己博客的修改我的修改为return gulp.src(['./public/**/*.js','!./public/zuoxi/**/*.js',,'!./public/radio/**/*.js'])</span>
+        <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span><span class="token function">uglify</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span>gulp<span class="token punctuation">.</span><span class="token function">dest</span><span class="token punctuation">(</span><span class="token string">'./public/js'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//对应修改为./public即可</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//public-fancybox-js压缩</span>
+gulp<span class="token punctuation">.</span><span class="token function">task</span><span class="token punctuation">(</span><span class="token string">'fancybox:js'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> gulp<span class="token punctuation">.</span><span class="token function">src</span><span class="token punctuation">(</span><span class="token string">'./public/vendors/fancybox/source/jquery.fancybox.js'</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span><span class="token function">uglify</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span>gulp<span class="token punctuation">.</span><span class="token function">dest</span><span class="token punctuation">(</span><span class="token string">'./public/vendors/fancybox/source/'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 合并 JS</span>
+gulp<span class="token punctuation">.</span><span class="token function">task</span><span class="token punctuation">(</span><span class="token string">'jsall'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> gulp<span class="token punctuation">.</span><span class="token function">src</span><span class="token punctuation">(</span><span class="token string">'./public/**/*.js'</span><span class="token punctuation">)</span>
+    <span class="token comment">// 压缩后重命名</span>
+        <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span><span class="token function">concat</span><span class="token punctuation">(</span><span class="token string">'app.js'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span>gulp<span class="token punctuation">.</span><span class="token function">dest</span><span class="token punctuation">(</span><span class="token string">'./public'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//public-fancybox-css压缩</span>
+gulp<span class="token punctuation">.</span><span class="token function">task</span><span class="token punctuation">(</span><span class="token string">'fancybox:css'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> gulp<span class="token punctuation">.</span><span class="token function">src</span><span class="token punctuation">(</span><span class="token string">'./public/vendors/fancybox/source/jquery.fancybox.css'</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span><span class="token function">cssmin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span>gulp<span class="token punctuation">.</span><span class="token function">dest</span><span class="token punctuation">(</span><span class="token string">'./public/vendors/fancybox/source/'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//CSS压缩</span>
+gulp<span class="token punctuation">.</span><span class="token function">task</span><span class="token punctuation">(</span><span class="token string">'cssmin'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> gulp<span class="token punctuation">.</span><span class="token function">src</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'./public/css/main.css'</span><span class="token punctuation">,</span><span class="token string">'!./public/css/*min.css'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>   
+        <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span><span class="token function">cssmin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span>gulp<span class="token punctuation">.</span><span class="token function">dest</span><span class="token punctuation">(</span><span class="token string">'./public/css/'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//图片压缩</span>
+gulp<span class="token punctuation">.</span><span class="token function">task</span><span class="token punctuation">(</span><span class="token string">'images'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    gulp<span class="token punctuation">.</span><span class="token function">src</span><span class="token punctuation">(</span><span class="token string">'./public/uploads/*.*'</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span><span class="token function">imagemin</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+            progressive<span class="token operator">:</span> <span class="token boolean">false</span>
+        <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span>gulp<span class="token punctuation">.</span><span class="token function">dest</span><span class="token punctuation">(</span><span class="token string">'./public/uploads/'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 压缩 public 目录 html文件 public/**/*.hmtl 表示public下所有文件夹中html，包括当前目录</span>
+    gulp<span class="token punctuation">.</span><span class="token function">task</span><span class="token punctuation">(</span><span class="token string">'minify-html'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token keyword">return</span> gulp<span class="token punctuation">.</span><span class="token function">src</span><span class="token punctuation">(</span><span class="token string">'./public/**/*.html'</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span><span class="token function">htmlclean</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span><span class="token function">htmlmin</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+             removeComments<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+             minifyJS<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+             minifyCSS<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+             minifyURLs<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span>gulp<span class="token punctuation">.</span><span class="token function">dest</span><span class="token punctuation">(</span><span class="token string">'./public'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+gulp<span class="token punctuation">.</span><span class="token function">task</span><span class="token punctuation">(</span><span class="token string">'build'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'uglify'</span><span class="token punctuation">,</span> <span class="token string">'cssmin'</span><span class="token punctuation">,</span> <span class="token string">'fancybox:js'</span><span class="token punctuation">,</span> <span class="token string">'fancybox:css'</span><span class="token punctuation">,</span> <span class="token string">'jsall'</span><span class="token punctuation">,</span><span class="token string">'images'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//, 'minify-html'</span></code></pre>
+<p>在根目录下的package.json文件中生成写入scripts</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token string">"scripts"</span><span class="token builtin class-name">:</span> <span class="token punctuation">&#123;</span>
+  <span class="token string">"build"</span><span class="token builtin class-name">:</span> <span class="token string">"hexo clean &amp;&amp; hexo g &amp;&amp; gulp build"</span>
+<span class="token punctuation">&#125;</span></code></pre>
+<p>这样每次输入 <code>npm run build</code> 就会自动清理上次生成的文件，然后生成新的文件，最后压缩文件</p>
+<hr>
+<h4 id="开启推送"><a href="#开启推送" class="headerlink" title="开启推送"></a>开启推送</h4><p>将网站链接提交到百度，<a target="_blank" rel="noopener external nofollow noreferrer" href="http://www.sousuoyinqingtijiao.com/baidu/tijiao/">百度搜索引擎提交入口</a> ,然后验证你的网站，这一点网上有很详细的教程我就不复述了，验证确认你的网站后，继续验证你的网站的robots.txt和sitemap文件是否可用，一般都是可用的。</p>
+<p>然后就可以开始推送了，基本上推送有三种方式：主动推送&gt;自动推送&gt;sitemap三种，一般主动提交比手动提交效果好。</p>
+<p>自动推送<br>把下面的代码放到D:\hexo\themes\next\source\js\src目录下，文件名为bai.js</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token operator">&lt;</span>script<span class="token operator">></span>
+<span class="token punctuation">(</span><span class="token function-name function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+    var bp <span class="token operator">=</span> document.createElement<span class="token punctuation">(</span><span class="token string">'script'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    bp.src <span class="token operator">=</span> <span class="token string">'//push.zhanzhang.baidu.com/push.js'</span><span class="token punctuation">;</span>
+    var s <span class="token operator">=</span> document.getElementsByTagName<span class="token punctuation">(</span><span class="token string">"script"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    s.parentNode.insertBefore<span class="token punctuation">(</span>bp, s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span>/script<span class="token operator">></span></code></pre>
+<p>然后在D:\hexo\scaffolds目录下的post.md文件（模板文件中加入这么一行）<br><code>&lt;script type=&quot;text/javascript&quot; src=&quot;/js/src/bai.js&quot;&gt;&lt;/script&gt;</code><br>这样只要访问你的这个页面，就会自动向百度推送你的这个网页。</p>
+<h4 id="手动推送"><a href="#手动推送" class="headerlink" title="手动推送"></a>手动推送</h4><p>用Python写了一个自动推送的脚本，首先你要在百度站长平台获取你的网址的token</p>
+<pre class="language-python" data-language="python"><code class="language-python"><span class="token comment">#coding:utf-8</span>
+<span class="token keyword">import</span> requests
+<span class="token keyword">import</span> time
+<span class="token keyword">from</span> bs4 <span class="token keyword">import</span> BeautifulSoup <span class="token keyword">as</span> bp
+
+<span class="token keyword">print</span> <span class="token builtin">unicode</span><span class="token punctuation">(</span><span class="token string">'Langzi.Fun 自动推送开启....'</span><span class="token punctuation">,</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span>
+time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">0.5</span><span class="token punctuation">)</span>
+site_url <span class="token operator">=</span> <span class="token string">'http://www.这里改写成你的网站.com/baidusitemap.xml'</span>
+
+<span class="token keyword">try</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span> <span class="token builtin">unicode</span><span class="token punctuation">(</span><span class="token string">'Langzi.Fun 获取sitemap链接....'</span><span class="token punctuation">,</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span>
+    data_ <span class="token operator">=</span> bp<span class="token punctuation">(</span>requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>site_url<span class="token punctuation">)</span><span class="token punctuation">.</span>content<span class="token punctuation">,</span><span class="token string">'lxml'</span><span class="token punctuation">)</span>
+<span class="token keyword">except</span> Exception<span class="token punctuation">.</span>e<span class="token punctuation">:</span>
+    <span class="token keyword">print</span> e
+
+list_url<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span>
+
+<span class="token keyword">def</span> <span class="token function">get_</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    headers<span class="token operator">=</span><span class="token punctuation">&#123;</span><span class="token string">'User-Agent'</span><span class="token punctuation">:</span><span class="token string">'curl/7.12.1 '</span><span class="token punctuation">,</span>
+             <span class="token string">'Content-Type'</span><span class="token punctuation">:</span><span class="token string">'text/plain '</span><span class="token punctuation">&#125;</span>
+    <span class="token keyword">try</span><span class="token punctuation">:</span>
+        r <span class="token operator">=</span> requests<span class="token punctuation">.</span>post<span class="token punctuation">(</span>url<span class="token operator">=</span><span class="token string">'http://data.zz.baidu.com/urls?site=www.这里改写成你的网站.com&amp;token=这里改写成你的token'</span><span class="token punctuation">,</span>data<span class="token operator">=</span>data<span class="token punctuation">)</span>
+        <span class="token keyword">print</span> r<span class="token punctuation">.</span>status_code
+        <span class="token keyword">print</span> r<span class="token punctuation">.</span>content
+    <span class="token keyword">except</span> Exception<span class="token punctuation">,</span>e<span class="token punctuation">:</span>
+        <span class="token keyword">print</span> e
+
+<span class="token keyword">print</span> <span class="token string">'---------------------------------'</span>
+<span class="token keyword">for</span> x<span class="token punctuation">,</span>y <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>data_<span class="token punctuation">.</span>find_all<span class="token punctuation">(</span><span class="token string">'loc'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span> x<span class="token punctuation">,</span>y<span class="token punctuation">.</span>string
+    list_url<span class="token punctuation">.</span>append<span class="token punctuation">(</span>y<span class="token punctuation">.</span>string<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'http://'</span><span class="token punctuation">,</span><span class="token string">'http://www.'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span> <span class="token string">'---------------------------------'</span>
+
+<span class="token keyword">print</span> <span class="token builtin">unicode</span><span class="token punctuation">(</span><span class="token string">'Langzi.Fun 开始推送....'</span><span class="token punctuation">,</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> x <span class="token keyword">in</span> list_url<span class="token punctuation">:</span>
+    <span class="token keyword">print</span> <span class="token builtin">unicode</span><span class="token punctuation">(</span><span class="token string">'Langzi.Fun 当前推送条目为:'</span><span class="token punctuation">,</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span> <span class="token operator">+</span> x
+    get_<span class="token punctuation">(</span>x<span class="token punctuation">)</span></code></pre>
+<p>修改完后双击启动一次即可，每次写完文章后，都启动推送一次。已经使用主动推送的站点，依然可以部署自动推送的JS代码，二者一起使用。</p>
+<hr>
+<h4 id="获取关键词"><a href="#获取关键词" class="headerlink" title="获取关键词"></a>获取关键词</h4><p>现在搜关键词全是广告，其实百度已经提供了一个接口，每次使用过百度搜索的时候下面的下拉条会出现一堆相关的关键词，这下关键词的权重是非常高的，采集这些关键词然后用在自己的文章中效果还可以，但是要记住不能堆砌关键词。</p>
+<p>接口：<br><code>https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=</code><br>例如:<br><code>https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=敲黑板</code><br>搜过结果：<br>window.baidu.sug({q:”langzi”,p:false,s:[“浪子彦”,”朗姿女装”,”朗姿”,”朗姿唯品会”,”浪子彦直播”,”浪子心声”,”浪子”,”浪子回头”,”朗姿股份”,”浪子燕青”]});<br>一般回显10个关键词</p>
+<p>提取代码如下：</p>
+<pre class="language-python" data-language="python"><code class="language-python"><span class="token comment">#coding:utf-8</span>
+<span class="token keyword">import</span> requests
+<span class="token keyword">import</span> time
+
+<span class="token keyword">print</span> <span class="token builtin">unicode</span><span class="token punctuation">(</span><span class="token string">'Langzi.Fun 关键词采集开启....'</span><span class="token punctuation">,</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span>
+<span class="token comment">#time.sleep(0.5)</span>
+
+key <span class="token operator">=</span> <span class="token builtin">raw_input</span><span class="token punctuation">(</span><span class="token builtin">unicode</span><span class="token punctuation">(</span><span class="token string">'输入关键词:'</span><span class="token punctuation">,</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+site_url <span class="token operator">=</span> <span class="token string">'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd='</span> <span class="token operator">+</span> <span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+r <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>site_url<span class="token punctuation">)</span>
+<span class="token keyword">print</span> r<span class="token punctuation">.</span>content<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'window.baidu.sug(&#123;q:'</span><span class="token punctuation">,</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'&#125;);'</span><span class="token punctuation">,</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">',p:false,s:'</span><span class="token punctuation">,</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'"'</span><span class="token punctuation">,</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">''</span><span class="token punctuation">)</span></code></pre>
+<p>网上也有很多百度下拉框工具，可以去找一下。</p>
+<hr>
+<h4 id="title优化"><a href="#title优化" class="headerlink" title="title优化"></a>title优化</h4><p>搜索引擎在抓取网页时，最先读取的就是网页标题，所以title是否正确设置极其重要。title一般不超过80个字符，而且词语间要用英文“-”隔开，因为计算机只对英语的敏感性较高，对汉语的敏感性不高。<br><code>用法：&lt;title&gt;网站标题&lt;/title&gt;</code></p>
+<p>注意点：</p>
+<p>首页title写法：首页的title写法格式一般是“总标题-特别重要的关键词或者一句话含有特别重要关键词的描述”。注意这里的“-”是英文，要问我为什么呢?这个因为互联网不是我们国内开发的，汉语不是标准，计算机只对英语敏感性较高，而对汉语敏感性不太高。<br>栏目页title写法：栏目页title的写法有两种，关键词名称命名写法是“栏目名称-总名称”，非关键词命名写法是：“栏目名称 栏目关键词-总名称”。<br>分类列表页的title写法：用关键词为这个栏目起名，然后按照下列顺序填写便可了“分类列表页名称-栏目名称-总名称”。<br>注意事项：</p>
+<p>每个标题应该是根据当前内容设置的独特不重复的。<br>字数限制。不能太长，要不然搜索引擎结果列表会显示不全。最好不超过 25 个中文字。最好是在 10~20 之间。<br>切勿堆砌关键词。这是很多人常犯的错误<br>关键词最好出现在最前面<br>标题有吸引力。毕竟有吸引力的标题才能让用户点击<br>连词符的使用。可以使用 |-&gt;<br>不要使用没有意义的句子</p>
+<hr>
+<h4 id="keywords优化"><a href="#keywords优化" class="headerlink" title="keywords优化"></a>keywords优化</h4><p>主要作用是告诉搜索引擎，这个网站内容是什么。因为，好多站长在keywords堆砌关键词，所以好多搜索引擎不太重视keywords了。建议大家还是认真填写keywords，有的搜索引擎还是很重视的，由于现在词频和密度对于 SEO 影响不大，所以只要保持你的正文中出现 4~6 次关键词就可以了。千万不能堆砌关键词。</p>
+<p>注意点：</p>
+<p>首页keywords写法：首页keywords按照选定的栏目名称，在首页的keywords中加入总名称、栏目名称和一两个关键词。<br>栏目keywords写法：栏目的keywords其栏目下所有分类列表的名称列出，加上栏目关键字，写法是“栏目名称,栏目关键字,栏目分类列表名称”<br>分类列表页keywords写法：将你这个栏目中的主要关键字写入。</p>
+<hr>
+<h4 id="Description优化"><a href="#Description优化" class="headerlink" title="Description优化"></a>Description优化</h4><p>功能让搜索引擎是判断整个页面内容的，当中要写入的内容是你页面内容的简介。description一般不超过100个字符。对于个人站点而言，描述标签最好是一句通顺的句子，如果不能的话，则宁可不要。</p>
+<p>注意点：</p>
+<p>首页description写法：description的写法就是将首页的标题、关键词和一些特殊栏目的内容融合到里面，写成简单的介绍形式，不要只写关键词。<br>栏目description写法：将栏目的标题、关键字、分类列表名称，尽量的写入description中，仍是尽量写成介绍形式。<br>分类description写法：是将你这个栏目中的主要关键字写入。</p>
+<hr>
+<h4 id="H标签优化"><a href="#H标签优化" class="headerlink" title="H标签优化"></a>H标签优化</h4><p>H 标签的重要性可能是仅次与页面标签。H1-&gt;H6 的重要性依次降低。</p>
+<p>所以建议在页面的 H1 和 H2 标签中混入关键词</p>
+<hr>
+<h4 id="图片-ALT-文字优化"><a href="#图片-ALT-文字优化" class="headerlink" title="图片 ALT 文字优化"></a>图片 ALT 文字优化</h4><p>插入图片的时候会提示输入文字，这个不能敷衍。图片 ALT 文字出现的关键词对页面相关性也有一定的影响。同样的，也不要在 ALT 上堆砌关键词。</p>
+<hr>
+<h4 id="内部链接及锚文字优化"><a href="#内部链接及锚文字优化" class="headerlink" title="内部链接及锚文字优化"></a>内部链接及锚文字优化</h4><p>内部链接对于爬行和收录具有很重要的意义。内部链接对页面关键词相关性也有影响，最主要的就是在内部链接中使用锚文字。</p>
+<p>锚文字是告诉搜索引擎被链接页面主题内容的最重要依据之一。我们有时候可能无法控制外部链接的锚文字，但是对于站内的内部链接锚文字我们可以控制。不过有几点需要注意：</p>
+<p>适当出现匹配关键词的锚文字<br>锚文字不能集中导航或者页尾，要分散在正文中<br>不要过度优化锚文字，要不然有可能会被搜索引擎惩罚</p>
+<hr>
+<h4 id="搜索引擎食用方法"><a href="#搜索引擎食用方法" class="headerlink" title="搜索引擎食用方法"></a>搜索引擎食用方法</h4><p>首先给你的文章生成sitemap文件</p>
 <ul>
 <li>谷歌<br>npm install hexo-generator-sitemap –save #sitemap.xml适合提交给谷歌搜素引擎</li>
-<li>百度<br>npm install hexo-generator-baidu-sitemap –save #baidusitemap.xml适合提交百度搜索引擎<br>然后在站点配置文件_config.yml中添加以下代码<pre class="language-yml" data-language="yml"><code class="language-yml">#自动生成sitemap
+<li>百度<br>npm install hexo-generator-baidu-sitemap –save #baidusitemap.xml适合提交百度搜索引擎<br>然后在站点配置文件_config.yml中添加以下代码<pre class="language-yml" data-language="yml"><code class="language-yml">自动生成sitemap
 sitemap:
   path: sitemap.xml
 baidusitemap:
@@ -1038,7 +1209,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">7.4k</span>&nbsp;字
+                class="white-color">9.9k</span>&nbsp;字
             
             
             
