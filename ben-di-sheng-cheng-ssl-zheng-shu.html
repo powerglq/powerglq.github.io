@@ -474,7 +474,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    58
+                    60
                 </div>
                 
 
@@ -496,7 +496,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="安装redis5-0-9"><a href="#安装redis5-0-9" class="headerlink" title="安装redis5.0.9"></a>安装redis5.0.9</h4><pre class="language-bash" data-language="bash"><code class="language-bash">openssl genrsa -des3 -out server.key <span class="token number">2048</span>
+                <h4 id="本地生成ssl证书"><a href="#本地生成ssl证书" class="headerlink" title="本地生成ssl证书"></a>本地生成ssl证书</h4><pre class="language-bash" data-language="bash"><code class="language-bash">openssl genrsa -des3 -out server.key <span class="token number">2048</span>
 openssl rsa -in server.key -out server.key
 openssl req -new -key server.key -out server.csr
 openssl req -new -x509 -key server.key -out ca.crt -days <span class="token number">3650</span>
