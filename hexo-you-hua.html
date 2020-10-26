@@ -671,13 +671,13 @@ r <span class="token operator">=</span> requests<span class="token punctuation">
 <ul>
 <li>谷歌<br>npm install hexo-generator-sitemap –save #sitemap.xml适合提交给谷歌搜素引擎</li>
 <li>百度<br>npm install hexo-generator-baidu-sitemap –save #baidusitemap.xml适合提交百度搜索引擎<br>然后在站点配置文件_config.yml中添加以下代码<pre class="language-yml" data-language="yml"><code class="language-yml">自动生成sitemap
-sitemap:
-  path: sitemap.xml
-baidusitemap:
-  path: baidusitemap.xml</code></pre>
-最后修改站点配置文件_config.yml<pre class="language-yml" data-language="yml"><code class="language-yml"># URL
-## If your site is put in a subdirectory, set url as &#39;http:&#x2F;&#x2F;yoursite.com&#x2F;child&#39; and root as &#39;&#x2F;child&#x2F;&#39;
-url: http:&#x2F;&#x2F;你的网站</code></pre>
+<span class="token key atrule">sitemap</span><span class="token punctuation">:</span>
+  <span class="token key atrule">path</span><span class="token punctuation">:</span> sitemap.xml
+<span class="token key atrule">baidusitemap</span><span class="token punctuation">:</span>
+  <span class="token key atrule">path</span><span class="token punctuation">:</span> baidusitemap.xml</code></pre>
+最后修改站点配置文件_config.yml<pre class="language-yml" data-language="yml"><code class="language-yml"><span class="token comment"># URL</span>
+<span class="token comment">## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</span>
+<span class="token key atrule">url</span><span class="token punctuation">:</span> http<span class="token punctuation">:</span>//你的网站</code></pre>
 每次hexo g后都会在/public目录下生成sitemap.xml和baidusitemap.xml，这就是你的站点地图。</li>
 </ul>
 <hr>
@@ -1247,7 +1247,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">12.9k</span>&nbsp;字
+                class="white-color">13.7k</span>&nbsp;字
             
             
             

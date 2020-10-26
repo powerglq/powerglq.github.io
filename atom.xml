@@ -35,9 +35,9 @@
     
     
     
-    <category term="win10" scheme="https://www.qiaoheiban.tk/tags/win10/"/>
-    
     <category term="食用" scheme="https://www.qiaoheiban.tk/tags/%E9%A3%9F%E7%94%A8/"/>
+    
+    <category term="win10" scheme="https://www.qiaoheiban.tk/tags/win10/"/>
     
   </entry>
   
@@ -62,9 +62,9 @@
     <category term="路由" scheme="https://www.qiaoheiban.tk/categories/%E8%B7%AF%E7%94%B1/"/>
     
     
-    <category term="v2ray" scheme="https://www.qiaoheiban.tk/tags/v2ray/"/>
-    
     <category term="padavan" scheme="https://www.qiaoheiban.tk/tags/padavan/"/>
+    
+    <category term="v2ray" scheme="https://www.qiaoheiban.tk/tags/v2ray/"/>
     
     <category term="zerotier" scheme="https://www.qiaoheiban.tk/tags/zerotier/"/>
     
@@ -91,9 +91,9 @@
     <category term="路由" scheme="https://www.qiaoheiban.tk/categories/%E8%B7%AF%E7%94%B1/"/>
     
     
-    <category term="v2ray" scheme="https://www.qiaoheiban.tk/tags/v2ray/"/>
-    
     <category term="padavan" scheme="https://www.qiaoheiban.tk/tags/padavan/"/>
+    
+    <category term="v2ray" scheme="https://www.qiaoheiban.tk/tags/v2ray/"/>
     
     <category term="zerotier" scheme="https://www.qiaoheiban.tk/tags/zerotier/"/>
     
@@ -166,9 +166,9 @@
     <category term="服务端" scheme="https://www.qiaoheiban.tk/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF/"/>
     
     
-    <category term="proxy" scheme="https://www.qiaoheiban.tk/tags/proxy/"/>
-    
     <category term="v2ray" scheme="https://www.qiaoheiban.tk/tags/v2ray/"/>
+    
+    <category term="proxy" scheme="https://www.qiaoheiban.tk/tags/proxy/"/>
     
   </entry>
   
@@ -338,11 +338,11 @@
     <category term="服务端" scheme="https://www.qiaoheiban.tk/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF/"/>
     
     
+    <category term="proxy" scheme="https://www.qiaoheiban.tk/tags/proxy/"/>
+    
     <category term="ssr" scheme="https://www.qiaoheiban.tk/tags/ssr/"/>
     
     <category term="酸酸乳" scheme="https://www.qiaoheiban.tk/tags/%E9%85%B8%E9%85%B8%E4%B9%B3/"/>
-    
-    <category term="proxy" scheme="https://www.qiaoheiban.tk/tags/proxy/"/>
     
   </entry>
   
@@ -538,14 +538,14 @@
     <link href="https://www.qiaoheiban.tk/php7.4-an-zhuang.html"/>
     <id>https://www.qiaoheiban.tk/php7.4-an-zhuang.html</id>
     <published>2020-10-23T07:44:15.000Z</published>
-    <updated>2020-10-23T07:48:27.036Z</updated>
+    <updated>2020-10-26T11:33:57.356Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h4 id=&quot;php7-4安装&quot;&gt;&lt;a href=&quot;#php7-4安装&quot; class=&quot;headerlink&quot; title=&quot;php7.4安装&quot;&gt;&lt;/a&gt;php7.4安装&lt;/h4&gt;&lt;pre class=&quot;language-bash&quot;</summary>
+    <summary type="html">&lt;h4 id=&quot;php7-4安装-方法一&quot;&gt;&lt;a href=&quot;#php7-4安装-方法一&quot; class=&quot;headerlink&quot; title=&quot;php7.4安装 (方法一)&quot;&gt;&lt;/a&gt;php7.4安装 (方法一)&lt;/h4&gt;&lt;pre class=&quot;language-bash&quot;</summary>
         
       
     

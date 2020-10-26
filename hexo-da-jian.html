@@ -481,7 +481,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    16 分
+                    15 分
                 </div>
                 
 
@@ -590,9 +590,9 @@ categories:</code></pre>
 <p>原来的主题没有404页面，加一个也不是什么难事。首先在/source/404目录下新建一个<code>index.md</code>，内容如下：</p>
 <pre class="language-md" data-language="md"><code class="language-md">title: 404
 date: 2020-07-19 16:41:10
-type: &quot;404&quot;
-layout: &quot;404&quot;
-description: &quot;你来到了没有知识的荒原 :(&quot;</code></pre>
+type: "404"
+layout: "404"
+description: "你来到了没有知识的荒原 :("</code></pre>
 <p>然后在/themes/matery/layout/目录下新建一个404.ejs文件，内容如下：</p>
 <pre class="language-js" data-language="js"><code class="language-js"><span class="token operator">&lt;</span>style type<span class="token operator">=</span><span class="token string">"text/css"</span><span class="token operator">></span> 
 	<span class="token comment">/* don't remove. */</span> 
@@ -755,52 +755,52 @@ description: &quot;你来到了没有知识的荒原 :(&quot;</code></pre>
 <hr>
 <h4 id="新建友情链接-friends-页"><a href="#新建友情链接-friends-页" class="headerlink" title="新建友情链接 friends 页"></a>新建友情链接 friends 页</h4><p>friends 页是用来展示友情链接信息的页面，如果在你的博客 <code>source</code> 目录下还没有 <code>friends/index.md</code> 文件，那么你就需要新建一个，命令如下：</p>
 <p><code>hexo new page &quot;friends&quot;</code><br>编辑你刚刚新建的页面文件 <code>/source/friends/index.md</code>，至少需要以下内容：</p>
-<pre class="language-md" data-language="md"><code class="language-md">---
+<pre class="language-md" data-language="md"><code class="language-md"><span class="token hr punctuation">---</span>
 title: friends
 date: 2018-12-12 21:25:30
-type: &quot;friends&quot;
-layout: &quot;friends&quot;
----</code></pre>
+type: "friends"
+<span class="token title important">layout: "friends"
+<span class="token punctuation">---</span></span></code></pre>
 <p>同时，在你的博客 <code>source</code> 目录下新建 <code>_data</code> 目录，在 <code>_data</code> 目录中新建 <code>friends.json</code> 文件，文件内容如下所示：</p>
 <p>[{<br>    “avatar”: “<a target="_blank" rel="noopener external nofollow noreferrer" href="http://image.luokangyuan.com/1_qq_27922023.jpg&quot;">http://image.luokangyuan.com/1_qq_27922023.jpg&quot;</a>,<br>    “name”: “码酱”,<br>    “introduction”: “我不是大佬，只是在追寻大佬的脚步”,<br>    “url”: “<a target="_blank" rel="noopener external nofollow noreferrer" href="http://luokangyuan.com/&quot;">http://luokangyuan.com/&quot;</a>,<br>    “title”: “前去学习”<br>}, {<br>    “avatar”: “<a target="_blank" rel="noopener external nofollow noreferrer" href="http://image.luokangyuan.com/4027734.jpeg&quot;">http://image.luokangyuan.com/4027734.jpeg&quot;</a>,<br>    “name”: “闪烁之狐”,<br>    “introduction”: “编程界大佬，技术牛，人还特别好，不懂的都可以请教大佬”,<br>    “url”: “<a target="_blank" rel="noopener external nofollow noreferrer" href="https://blinkfox.github.io/&quot;">https://blinkfox.github.io/&quot;</a>,<br>    “title”: “前去学习”<br>}, {<br>    “avatar”: “<a target="_blank" rel="noopener external nofollow noreferrer" href="http://image.luokangyuan.com/avatar.jpg&quot;">http://image.luokangyuan.com/avatar.jpg&quot;</a>,<br>    “name”: “ja_rome”,<br>    “introduction”: “平凡的脚步也可以走出伟大的行程”,<br>    “url”: “<a target="_blank" rel="noopener external nofollow noreferrer" href="https://me.csdn.net/jlh912008548&quot;">https://me.csdn.net/jlh912008548&quot;</a>,<br>    “title”: “前去学习”<br>}]</p>
 <hr>
 <h4 id="新建留言板-contact-页"><a href="#新建留言板-contact-页" class="headerlink" title="新建留言板 contact 页"></a>新建留言板 contact 页</h4><p>contact 页是用来展示留言板信息的页面，如果在你的博客 <code>source</code> 目录下还没有 <code>contact/index.md</code> 文件，那么你就需要新建一个，命令如下：</p>
 <p><code>hexo new page &quot;contact&quot;</code><br>编辑你刚刚新建的页面文件 <code>/source/contact/index.md</code>，至少需要以下内容：</p>
-<pre class="language-md" data-language="md"><code class="language-md">---
+<pre class="language-md" data-language="md"><code class="language-md"><span class="token hr punctuation">---</span>
 title: contact
 date: 2018-09-30 17:25:30
-type: &quot;contact&quot;
-layout: &quot;contact&quot;
----</code></pre>
+type: "contact"
+<span class="token title important">layout: "contact"
+<span class="token punctuation">---</span></span></code></pre>
 <p>注：本留言板功能依赖于第三方评论系统，请激活你的评论系统才有效果。并且在主题的 _config.yml 文件中，第 19 至 21 行的“菜单”配置，取消关于留言板的注释即可。</p>
 <hr>
 <h4 id="新建关于我-about-页"><a href="#新建关于我-about-页" class="headerlink" title="新建关于我 about 页"></a>新建关于我 about 页</h4><p><code>about</code> 页是用来展示关于我和我的博客信息的页面，如果在你的博客 <code>source</code> 目录下还没有 <code>about/index.md</code> 文件，那么你就需要新建一个，命令如下：<br><code>hexo new page &quot;about&quot;</code><br>编辑你刚刚新建的页面文件 <code>/source/about/index.md</code>，至少需要以下内容：</p>
-<pre class="language-md" data-language="md"><code class="language-md">---
+<pre class="language-md" data-language="md"><code class="language-md"><span class="token hr punctuation">---</span>
 title: about
 date: 2018-09-30 17:25:30
-type: &quot;about&quot;
-layout: &quot;about&quot;
----</code></pre>
+type: "about"
+<span class="token title important">layout: "about"
+<span class="token punctuation">---</span></span></code></pre>
 
 <hr>
 <h4 id="新建分类-categories-页"><a href="#新建分类-categories-页" class="headerlink" title="新建分类 categories 页"></a>新建分类 categories 页</h4><p><code>categories</code> 页是用来展示所有分类的页面，如果在你的博客 <code>source</code> 目录下还没有 <code>categories/index.md</code> 文件，那么你就需要新建一个，命令如下：</p>
 <p><code>hexo new page &quot;categories&quot;</code><br>编辑你刚刚新建的页面文件 <code>/source/categories/index.md</code>，至少需要以下内容：</p>
-<pre class="language-md" data-language="md"><code class="language-md">---
+<pre class="language-md" data-language="md"><code class="language-md"><span class="token hr punctuation">---</span>
 title: categories
 date: 2018-09-30 17:25:30
-type: &quot;categories&quot;
-layout: &quot;categories&quot;
----</code></pre>
+type: "categories"
+<span class="token title important">layout: "categories"
+<span class="token punctuation">---</span></span></code></pre>
 
 <hr>
 <h4 id="新建标签-tags-页"><a href="#新建标签-tags-页" class="headerlink" title="新建标签 tags 页"></a>新建标签 tags 页</h4><p><code>tags</code> 页是用来展示所有标签的页面，如果在你的博客 <code>source</code> 目录下还没有 <code>tags/index.md</code> 文件，那么你就需要新建一个，命令如下：</p>
 <p><code>hexo new page &quot;tags&quot;</code><br>编辑你刚刚新建的页面文件 <code>/source/tags/index.md</code>，至少需要以下内容：</p>
-<pre class="language-md" data-language="md"><code class="language-md">---
+<pre class="language-md" data-language="md"><code class="language-md"><span class="token hr punctuation">---</span>
 title: tags
 date: 2018-09-30 18:23:38
-type: &quot;tags&quot;
-layout: &quot;tags&quot;
----</code></pre>
+type: "tags"
+<span class="token title important">layout: "tags"
+<span class="token punctuation">---</span></span></code></pre>
 
 <hr>
 
@@ -1338,7 +1338,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">12.9k</span>&nbsp;字
+                class="white-color">13.7k</span>&nbsp;字
             
             
             
