@@ -354,6 +354,13 @@
   </url>
   
   <url>
+    <loc>https://www.qiaoheiban.tk/tags/win10/</loc>
+    <lastmod>2020-10-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.qiaoheiban.tk/tags/padavan/</loc>
     <lastmod>2020-10-26</lastmod>
     <changefreq>daily</changefreq>
@@ -369,13 +376,6 @@
   
   <url>
     <loc>https://www.qiaoheiban.tk/tags/zerotier/</loc>
-    <lastmod>2020-10-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.qiaoheiban.tk/tags/win10/</loc>
     <lastmod>2020-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -403,14 +403,14 @@
   </url>
   
   <url>
-    <loc>https://www.qiaoheiban.tk/tags/php-redis/</loc>
+    <loc>https://www.qiaoheiban.tk/tags/php-mongodb/</loc>
     <lastmod>2020-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.qiaoheiban.tk/tags/php-mongodb/</loc>
+    <loc>https://www.qiaoheiban.tk/tags/php-redis/</loc>
     <lastmod>2020-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
