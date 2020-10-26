@@ -474,7 +474,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    949
+                    911
                 </div>
                 
 
@@ -510,7 +510,7 @@ php --modules  查看已启用的模块</code></pre>
 <hr>
 <h4 id="php7-4编译安装-方法二"><a href="#php7-4编译安装-方法二" class="headerlink" title="php7.4编译安装 (方法二)"></a>php7.4编译安装 (方法二)</h4><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> /soft/bak
 <span class="token function">wget</span> https://www.php.net/distributions/php-7.4.0.tar.gz
-yum <span class="token function">install</span> -y gcc gcc-c++ <span class="token function">make</span> cmake bison autoconf <span class="token function">wget</span> lrzsz libtool libtool-ltdl-devel freetype-devel libjpeg.x86_64 libjpeg-devel libpng-devel gd-devel python-devel patch <span class="token function">sudo</span> openssl* openssl openssl-devel ncurses-devel bzip* <span class="token function">bzip2</span> <span class="token function">unzip</span> zlib-devel libevent* libxml* libxml2-devel libcurl* curl-devel readline-devel sqlite-devel libsodium-devel https://dl.fedoraproject.org/pub/epel/7/x86_64/Packages/o/oniguruma-5.9.5-3.el7.x86_64.rpm https://dl.fedoraproject.org/pub/epel/7/x86_64/Packages/o/oniguruma-devel-5.9.5-3.el7.x86_64.rpm
+yum <span class="token function">install</span> -y gcc gcc-c++ <span class="token function">make</span> cmake bison autoconf <span class="token function">wget</span> lrzsz libtool libtool-ltdl-devel freetype-devel libjpeg.x86_64 libjpeg-devel libpng-devel gd-devel python-devel patch <span class="token function">sudo</span> openssl* openssl openssl-devel ncurses-devel bzip* <span class="token function">bzip2</span> <span class="token function">unzip</span> zlib-devel libevent* libxml* libxml2-devel libcurl* curl-devel readline-devel sqlite-devel  oniguruma oniguruma-devel
 <span class="token builtin class-name">cd</span> php-7.4.0
 ./configure --prefix<span class="token operator">=</span>/soft/php <span class="token punctuation">\</span>
   --with-config-file-scan-dir<span class="token operator">=</span>/soft/php/etc/ <span class="token punctuation">\</span>
@@ -529,7 +529,7 @@ yum <span class="token function">install</span> -y gcc gcc-c++ <span class="toke
   --enable-session --with-curl <span class="token punctuation">\</span>
   --enable-opcache --enable-fpm <span class="token punctuation">\</span>
   --without-gdbm --enable-fast-install <span class="token punctuation">\</span>
-  --disable-fileinfo --with-sodium
+  --disable-fileinfo
 <span class="token function">make</span> <span class="token operator">&amp;&amp;</span> <span class="token function">make</span> <span class="token function">install</span>
 <span class="token function">cp</span> ~/php-7.4.0/php.ini-production /soft/php/etc/php.ini
 <span class="token function">cp</span> /soft/php/etc/php-fpm.conf.default /soft/php/etc/php-fpm.conf
