@@ -1130,9 +1130,9 @@ pip3 <span class="token function">install</span> --upgrade pip
   <entry>
     <title>搭建ETH矿池</title>
     <url>/da-jian-eth-kuang-chi.html</url>
-    <content><![CDATA[<h4 id="搭建ETH矿池"><a href="#搭建ETH矿池" class="headerlink" title="搭建ETH矿池"></a>搭建ETH矿池</h4><p>####预备知识<br>懂一点Linux 操作<br>懂一点BlockChain<br>懂一点Programming<br>如果你都不懂也还是可以，知其然不知其所以然罢了。</p>
-<p>####前置准备<br>一台至少1GB RAM跟至少50GB (取决于Blockchain帐本大小)的Server。<br>OS选择Ubunutu 16.04 LTS。</p>
-<p>####建置流程<br>开一台Ubuntu 16.04。<br>安装必要的套件。</p>
+    <content><![CDATA[<h4 id="搭建ETH矿池"><a href="#搭建ETH矿池" class="headerlink" title="搭建ETH矿池"></a>搭建ETH矿池</h4><h4 id="预备知识"><a href="#预备知识" class="headerlink" title="预备知识"></a>预备知识</h4><p>懂一点Linux 操作<br>懂一点BlockChain<br>懂一点Programming<br>如果你都不懂也还是可以，知其然不知其所以然罢了。</p>
+<h4 id="前置准备"><a href="#前置准备" class="headerlink" title="前置准备"></a>前置准备</h4><p>一台至少1GB RAM跟至少50GB (取决于Blockchain帐本大小)的Server。<br>OS选择Ubunutu 16.04 LTS。</p>
+<h4 id="建置流程"><a href="#建置流程" class="headerlink" title="建置流程"></a>建置流程</h4><p>开一台Ubuntu 16.04。<br>安装必要的套件。</p>
 <pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">apt</span> update
 <span class="token function">apt</span> <span class="token function">install</span> <span class="token function">git</span>
 <span class="token function">apt</span> <span class="token function">install</span> build-essential libtool autotools-dev autoconf pkg-config libssl-dev
