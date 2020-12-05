@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="nginx安装, 敲黑板,划重点,资源分享,食用方法,程序开发,,网络技术,软件推荐">
+    <meta name="keywords" content="搭建ETH矿池, 敲黑板,划重点,资源分享,食用方法,程序开发,,网络技术,软件推荐">
     <meta name="description" content="敲黑板,划重点,记录工作与生活">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>nginx安装 | 敲黑板</title>
+    <title>搭建ETH矿池 | 敲黑板</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">nginx安装</h1>
+                    <h1 class="description center-align post-title">搭建ETH矿池</h1>
                 </div>
             </div>
         </div>
@@ -431,8 +431,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/nginx/">
-                                <span class="chip bg-color">nginx</span>
+                            <a href="/tags/padavan/">
+                                <span class="chip bg-color">padavan</span>
+                            </a>
+                        
+                            <a href="/tags/v2ray/">
+                                <span class="chip bg-color">v2ray</span>
+                            </a>
+                        
+                            <a href="/tags/zerotier/">
+                                <span class="chip bg-color">zerotier</span>
                             </a>
                         
                     </div>
@@ -443,8 +451,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF/" class="post-category">
-                                服务端
+                            <a href="/categories/%E8%B7%AF%E7%94%B1/" class="post-category">
+                                路由
                             </a>
                         
                     </div>
@@ -456,28 +464,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-10-23
+                    2020-12-05
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-10-23
+                    2020-12-05
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    310
+                    482
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -492,46 +500,58 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="安装openssl-nginx开启tsl1-3"><a href="#安装openssl-nginx开启tsl1-3" class="headerlink" title="安装openssl nginx开启tsl1.3"></a>安装openssl nginx开启tsl1.3</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://ilouis.cn/centos/upgrade_openssl.html">参考1</a>   <a target="_blank" rel="noopener external nofollow noreferrer" href="https://ilouis.cn/practice/nginx_enable_tls_1_3.html">参考2</a></p>
-<pre class="language-bash" data-language="bash"><code class="language-bash">yum <span class="token function">install</span> -y gcc gcc-c++ perl pcre-devel openssl openssl-devel
-<span class="token builtin class-name">cd</span> /soft/bak
-<span class="token function">wget</span> https://www.openssl.org/source/openssl-1.1.1g.tar.gz
-<span class="token function">tar</span> zxvf openssl-1.1.1g.tar.gz
-<span class="token function">mv</span> openssl-1.1.1g /soft/openssl
-<span class="token builtin class-name">cd</span> /soft/openssl
-./config
-<span class="token function">make</span> <span class="token operator">&amp;&amp;</span> <span class="token function">make</span> <span class="token function">install</span>
-<span class="token function">ln</span> -s /usr/local/lib64/libssl.so.1.1 /usr/lib64/
-<span class="token function">ln</span> -s /usr/local/lib64/libcrypto.so.1.1 /usr/lib64/
-openssl version</code></pre>
+                <h4 id="搭建ETH矿池"><a href="#搭建ETH矿池" class="headerlink" title="搭建ETH矿池"></a>搭建ETH矿池</h4><p>####预备知识<br>懂一点Linux 操作<br>懂一点BlockChain<br>懂一点Programming<br>如果你都不懂也还是可以，知其然不知其所以然罢了。</p>
+<p>####前置准备<br>一台至少1GB RAM跟至少50GB (取决于Blockchain帐本大小)的Server。<br>OS选择Ubunutu 16.04 LTS。</p>
+<p>####建置流程<br>开一台Ubuntu 16.04。<br>安装必要的套件。</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">apt</span> update
+<span class="token function">apt</span> <span class="token function">install</span> <span class="token function">git</span>
+<span class="token function">apt</span> <span class="token function">install</span> build-essential libtool autotools-dev autoconf pkg-config libssl-dev
+<span class="token function">apt</span> <span class="token function">install</span> libboost-all-dev <span class="token function">git</span> <span class="token function">npm</span> nodejs nodejs-legacy libminiupnpc-dev redis-server
+<span class="token function">apt</span> <span class="token function">install</span> libdb4.8-dev libdb4.8++-dev
+<span class="token function">apt</span> <span class="token function">install</span> golang
+<span class="token function">apt</span> <span class="token function">install</span> nginx
+<span class="token function">apt</span> <span class="token function">install</span> <span class="token function">npm</span></code></pre>
+<p>根据你要架设的矿池装对应的钱包同步套件clone 回来，以ETH 来说那就是：</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> clone https://github.com/ethereum/go-ethereum</code></pre>
+<p>接着把套件装起来。</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> go-ethereum
+<span class="token function">make</span> geth</code></pre>
+<p>装好后运行build/bin/geth待节点同步完成就可以使用了，你也可以用他产生钱包、挖矿、开发等，更详细的操作可以去Wiki查看。</p>
+<p>现在，设定好了节点，接下来就是把矿池架起来。</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> config --global http.https://gopkg.in.followRedirects <span class="token boolean">true</span>
+<span class="token function">git</span> clone https://github.com/sammy007/open-ethereum-pool.git
+<span class="token builtin class-name">cd</span> open-ethereum-pool
+<span class="token function">make</span></code></pre>
 
-<hr>
-<h4 id="安装ngx-brotli"><a href="#安装ngx-brotli" class="headerlink" title="安装ngx_brotli"></a>安装ngx_brotli</h4><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> /soft
-<span class="token function">git</span> clone https://github.com/google/ngx_brotli.git
-<span class="token builtin class-name">cd</span> /soft/ngx_brotli
-<span class="token function">git</span> submodule update --init</code></pre>
+<p>安装redis。</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">apt</span> <span class="token function">install</span> redis</code></pre>
+<p>然后把矿池跑起来。</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash">./build/bin/open-ethereum-pool config.json</code></pre>
+<p>config.json可以参考目录底下的config.example.json作相对应的修改。<br>你可以查看Wiki来对矿池做更多的修正。</p>
+<p>有了矿池的后端，现在你还需要一个前端的页面让使用者看。</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> www</code></pre>
+<p>对www/config/environment.js做任何你想要的修改。<br>里面的ApiUrl: ‘//example.net/‘请务必更改为你的矿池网址。</p>
+<p>接着将前端install 起来。</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">apt</span> <span class="token function">install</span> python-software-properties
+add-apt-repository ppa:gias-kay-lee/npm
+<span class="token function">apt</span> update
+<span class="token function">apt</span> <span class="token function">install</span> <span class="token function">npm</span>
+<span class="token function">npm</span> <span class="token function">install</span> -g ember-cli@2.9.1
+<span class="token function">npm</span> <span class="token function">install</span> -g bower
+<span class="token function">npm</span> <span class="token function">install</span>
+bower <span class="token function">install</span>
+./build.sh</code></pre>
+<p>最后的最后，把nginx 设定好。</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash">upstream api <span class="token punctuation">&#123;</span>
+    server <span class="token number">127.0</span>.0.1:8080<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
 
-<hr>
-<h4 id="安装nginx"><a href="#安装nginx" class="headerlink" title="安装nginx"></a>安装nginx</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.nginx.cn/install">官方安装方法</a><br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.cnblogs.com/jinjiyese153/p/13396918.html">安装TSL1.3 泛域名证书</a><br>分别为每个域名手工生成证书<br><code>certbot certonly --nginx --nginx-server-root=/soft/nginx/conf</code><br>尽量保证页面中全部连接使用https 例如js/css等 否则在监控台和地址栏证书位置可能会报错<br>-j2表示两个线程并行 提高编译效率 但是对makefile文件有要求 必须依赖关系明确 否则某一线程会找不到依赖</p>
-<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> /soft/bak
-<span class="token function">wget</span> http://nginx.org/download/nginx-1.18.0.tar.gz
-<span class="token function">tar</span> -zxvf nginx-1.18.0.tar.gz
-<span class="token builtin class-name">cd</span> /soft/bak/nginx-1.18.0
-./configure  --prefix<span class="token operator">=</span>/soft/nginx <span class="token punctuation">\</span>
---with-http_gzip_static_module <span class="token punctuation">\</span>
---with-http_stub_status_module <span class="token punctuation">\</span>
---with-http_v2_module <span class="token punctuation">\</span>
---with-file-aio <span class="token punctuation">\</span>
---with-http_realip_module <span class="token punctuation">\</span>
---with-http_ssl_module <span class="token punctuation">\</span>
---with-openssl<span class="token operator">=</span>/soft/openssl <span class="token punctuation">\</span>
---with-openssl-opt<span class="token operator">=</span>enable-tls1_3 <span class="token punctuation">\</span>
---add-module<span class="token operator">=</span>/soft/ngx_brotli
-<span class="token function">make</span> -j2<span class="token operator">&amp;&amp;</span> <span class="token function">make</span> <span class="token function">install</span>
-<span class="token function">mv</span> /www/conf.d /soft/nginx/web</code></pre>
-<p>vi /etc/profile</p>
-<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token environment constant">$PATH</span>:/soft/nginx/sbin</code></pre>
-<p>source /etc/profile</p>
+location /api <span class="token punctuation">&#123;</span>
+    proxy_pass http://api<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code></pre>
+
+<p>这样，一个简单的矿池就架起来啰！</p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/sammy007/open-ethereum-pool">官网</a></p>
 
             </div>
             <hr/>
@@ -562,7 +582,7 @@ openssl version</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://www.qiaoheiban.tk/nginx-an-zhuang.html">https://www.qiaoheiban.tk/nginx-an-zhuang.html</a>
+                    <a href="https://www.qiaoheiban.tk/da-jian-eth-kuang-chi.html">https://www.qiaoheiban.tk/da-jian-eth-kuang-chi.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -601,8 +621,16 @@ openssl version</code></pre>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/nginx/">
-                                    <span class="chip bg-color">nginx</span>
+                                <a href="/tags/padavan/">
+                                    <span class="chip bg-color">padavan</span>
+                                </a>
+                            
+                                <a href="/tags/v2ray/">
+                                    <span class="chip bg-color">v2ray</span>
+                                </a>
+                            
+                                <a href="/tags/zerotier/">
+                                    <span class="chip bg-color">zerotier</span>
                                 </a>
                             
                         </div>
@@ -770,52 +798,57 @@ openssl version</code></pre>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/php7.4-an-zhuang.html">
+                <a href="/da-jian-eth-kuang-chi.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="php7.4安装">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="搭建ETH矿池">
                         
-                        <span class="card-title">php7.4安装</span>
+                        <span class="card-title">搭建ETH矿池</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            php7.4安装 (方法一)yum install -y yum-plugin-priorities dnf
-dnf update
-yum install -y https://rpms.remirepo.net/enterprise/re
+                            搭建ETH矿池####预备知识懂一点Linux 操作懂一点BlockChain懂一点Programming如果你都不懂也还是可以，知其然不知其所以然罢了。
+####前置准备一台至少1GB RAM跟至少50GB (取决于Blockchain帐
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-23
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-05
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF/" class="post-category">
-                                    服务端
+                            <a href="/categories/%E8%B7%AF%E7%94%B1/" class="post-category">
+                                    路由
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/php/">
-                        <span class="chip bg-color">php</span>
+                    <a href="/tags/padavan/">
+                        <span class="chip bg-color">padavan</span>
                     </a>
                     
-                    <a href="/tags/php7-4/">
-                        <span class="chip bg-color">php7.4</span>
+                    <a href="/tags/v2ray/">
+                        <span class="chip bg-color">v2ray</span>
+                    </a>
+                    
+                    <a href="/tags/zerotier/">
+                        <span class="chip bg-color">zerotier</span>
                     </a>
                     
                 </div>
@@ -829,19 +862,22 @@ yum install -y https://rpms.remirepo.net/enterprise/re
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/hexo-bu-shu-dao-yun-fu-wu-qi.html">
+                <a href="/win10-shi-yong-fang-fa.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="hexo部署到云服务器">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="win10正确食用方法">
                         
-                        <span class="card-title">hexo部署到云服务器</span>
+                        <span class="card-title">win10正确食用方法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            解决速度过慢由于GitHub服务器没有在国内，而hexo博客部署是默认在GitHub上，访问速度特别慢，一个小网页也要加载很久，这时候我便想能不能放在自己的云服务器上，查阅了很多资料后便发现这种想法是可以的。首先，需要一台云服务器和一个已经
+                            win10正确食用方法slmgr &#x2F;ipk VK7JG-NPHTM-C97JM-9MPGT-3V66T
+slmgr &#x2F;skms kms.xspace.in
+slmgr &#x2F;ato
+上面命令执行后等一会执行下面命令
                         
                     </div>
                     <div class="publish-info">
@@ -850,12 +886,8 @@ yum install -y https://rpms.remirepo.net/enterprise/re
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF/" class="post-category">
-                                    服务端
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            GLQ
                             
                         </span>
                     </div>
@@ -863,12 +895,12 @@ yum install -y https://rpms.remirepo.net/enterprise/re
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
-                        <span class="chip bg-color">前端</span>
+                    <a href="/tags/%E9%A3%9F%E7%94%A8/">
+                        <span class="chip bg-color">食用</span>
                     </a>
                     
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
+                    <a href="/tags/win10/">
+                        <span class="chip bg-color">win10</span>
                     </a>
                     
                 </div>
