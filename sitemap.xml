@@ -298,20 +298,6 @@
   </url>
   
   <url>
-    <loc>https://www.qiaoheiban.tk/tags/kali/</loc>
-    <lastmod>2020-12-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.qiaoheiban.tk/tags/wifi/</loc>
-    <lastmod>2020-12-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.qiaoheiban.tk/tags/idea/</loc>
     <lastmod>2020-12-17</lastmod>
     <changefreq>daily</changefreq>
@@ -354,6 +340,20 @@
   </url>
   
   <url>
+    <loc>https://www.qiaoheiban.tk/tags/kali/</loc>
+    <lastmod>2020-12-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.qiaoheiban.tk/tags/wifi/</loc>
+    <lastmod>2020-12-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.qiaoheiban.tk/tags/nginx/</loc>
     <lastmod>2020-12-17</lastmod>
     <changefreq>daily</changefreq>
@@ -368,14 +368,14 @@
   </url>
   
   <url>
-    <loc>https://www.qiaoheiban.tk/tags/php7-4/</loc>
+    <loc>https://www.qiaoheiban.tk/tags/php7-2/</loc>
     <lastmod>2020-12-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.qiaoheiban.tk/tags/php7-2/</loc>
+    <loc>https://www.qiaoheiban.tk/tags/php7-4/</loc>
     <lastmod>2020-12-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -466,14 +466,14 @@
   </url>
   
   <url>
-    <loc>https://www.qiaoheiban.tk/tags/proxy/</loc>
+    <loc>https://www.qiaoheiban.tk/tags/rsync/</loc>
     <lastmod>2020-12-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.qiaoheiban.tk/tags/rsync/</loc>
+    <loc>https://www.qiaoheiban.tk/tags/proxy/</loc>
     <lastmod>2020-12-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -566,14 +566,14 @@
   </url>
   
   <url>
-    <loc>https://www.qiaoheiban.tk/categories/kali/</loc>
+    <loc>https://www.qiaoheiban.tk/categories/%E9%A3%9F%E7%94%A8%E6%96%B9%E6%B3%95/</loc>
     <lastmod>2020-12-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.qiaoheiban.tk/categories/%E9%A3%9F%E7%94%A8%E6%96%B9%E6%B3%95/</loc>
+    <loc>https://www.qiaoheiban.tk/categories/kali/</loc>
     <lastmod>2020-12-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

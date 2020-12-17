@@ -552,27 +552,6 @@ npm add hexo-symbols-count-time</code></pre>
       </tags>
   </entry>
   <entry>
-    <title>kali无线相关</title>
-    <url>/kali-wu-xian-xiang-guan.html</url>
-    <content><![CDATA[<h4 id="安装vmware"><a href="#安装vmware" class="headerlink" title="安装vmware"></a>安装vmware</h4><ul>
-<li>1.主程序</li>
-<li>2.开启桥接/nat无线网卡</li>
-<li>3.开启USB服务<br>win10确认开启vmware相关服务<br><img src="/kali-wu-xian-xiang-guan.htm/1.jpg" alt="info"><br>虚拟机 -&gt; 可移动设备 -&gt; 选择无线网卡 -&gt; 连接 -&gt; 虚拟机出现WIFI列表<br><img src="/kali-wu-xian-xiang-guan.htm/2.jpg" alt="info"><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">ifconfig</span> //显示无线网卡</code></pre>
-<img src="/kali-wu-xian-xiang-guan.htm/3.jpg" alt="info"></li>
-</ul>
-<hr>
-<h4 id="使用airmon-ng"><a href="#使用airmon-ng" class="headerlink" title="使用airmon-ng"></a>使用airmon-ng</h4><pre class="language-bash" data-language="bash"><code class="language-bash">airmon-ng start wlan0</code></pre>
-<p><img src="/kali-wu-xian-xiang-guan.htm/4.jpg" alt="info"><br>输入iwconfig命令查看网卡信息， wlan0mon网卡名加了mon则表示成功<br><img src="/kali-wu-xian-xiang-guan.htm/5.jpg" alt="info"></p>
-]]></content>
-      <categories>
-        <category>kali</category>
-      </categories>
-      <tags>
-        <tag>kali</tag>
-        <tag>wifi</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>hexo部署到云服务器</title>
     <url>/hexo-bu-shu-dao-yun-fu-wu-qi.html</url>
     <content><![CDATA[<p>解决速度过慢<br>由于GitHub服务器没有在国内，而hexo博客部署是默认在GitHub上，访问速度特别慢，一个小网页也要加载很久，这时候我便想能不能放在自己的云服务器上，查阅了很多资料后便发现这种想法是可以的。<br>首先，需要一台云服务器和一个已经备案的域名（没有备案的直接用公网IP进行访问），我的服务器是centos7的，第一步就是配置ssh公钥登陆（避免每次更新文章都要输入密码）。</p>
@@ -635,54 +614,24 @@ npm add hexo-symbols-count-time</code></pre>
       </tags>
   </entry>
   <entry>
-    <title>nginx安装</title>
-    <url>/nginx-an-zhuang.html</url>
-    <content><![CDATA[<h4 id="安装openssl-nginx开启tsl1-3"><a href="#安装openssl-nginx开启tsl1-3" class="headerlink" title="安装openssl nginx开启tsl1.3"></a>安装openssl nginx开启tsl1.3</h4><p><a href="https://ilouis.cn/centos/upgrade_openssl.html">参考1</a>   <a href="https://ilouis.cn/practice/nginx_enable_tls_1_3.html">参考2</a></p>
-<pre class="language-bash" data-language="bash"><code class="language-bash">yum <span class="token function">install</span> -y gcc gcc-c++ perl pcre-devel openssl openssl-devel
-<span class="token builtin class-name">cd</span> /soft/bak
-<span class="token function">wget</span> https://www.openssl.org/source/openssl-1.1.1g.tar.gz
-<span class="token function">tar</span> zxvf openssl-1.1.1g.tar.gz
-<span class="token function">mv</span> openssl-1.1.1g /soft/openssl
-<span class="token builtin class-name">cd</span> /soft/openssl
-./config
-<span class="token function">make</span> <span class="token operator">&amp;&amp;</span> <span class="token function">make</span> <span class="token function">install</span>
-<span class="token function">ln</span> -s /usr/local/lib64/libssl.so.1.1 /usr/lib64/
-<span class="token function">ln</span> -s /usr/local/lib64/libcrypto.so.1.1 /usr/lib64/
-openssl version</code></pre>
-
+    <title>kali无线相关</title>
+    <url>/kali-wu-xian-xiang-guan.html</url>
+    <content><![CDATA[<h4 id="安装vmware"><a href="#安装vmware" class="headerlink" title="安装vmware"></a>安装vmware</h4><ul>
+<li>1.主程序</li>
+<li>2.开启桥接/nat无线网卡</li>
+<li>3.开启USB服务<br>win10确认开启vmware相关服务<br><img src="/kali-wu-xian-xiang-guan.htm/1.jpg" alt="info"><br>虚拟机 -&gt; 可移动设备 -&gt; 选择无线网卡 -&gt; 连接 -&gt; 虚拟机出现WIFI列表<br><img src="/kali-wu-xian-xiang-guan.htm/2.jpg" alt="info"><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">ifconfig</span> //显示无线网卡</code></pre>
+<img src="/kali-wu-xian-xiang-guan.htm/3.jpg" alt="info"></li>
+</ul>
 <hr>
-<h4 id="安装ngx-brotli"><a href="#安装ngx-brotli" class="headerlink" title="安装ngx_brotli"></a>安装ngx_brotli</h4><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> /soft
-<span class="token function">git</span> clone https://github.com/google/ngx_brotli.git
-<span class="token builtin class-name">cd</span> /soft/ngx_brotli
-<span class="token function">git</span> submodule update --init</code></pre>
-
-<hr>
-<h4 id="安装nginx"><a href="#安装nginx" class="headerlink" title="安装nginx"></a>安装nginx</h4><p><a href="https://www.nginx.cn/install">官方安装方法</a><br><a href="https://www.cnblogs.com/jinjiyese153/p/13396918.html">安装TSL1.3 泛域名证书</a><br>分别为每个域名手工生成证书<br><code>certbot certonly --nginx --nginx-server-root=/soft/nginx/conf</code><br>尽量保证页面中全部连接使用https 例如js/css等 否则在监控台和地址栏证书位置可能会报错<br>-j2表示两个线程并行 提高编译效率 但是对makefile文件有要求 必须依赖关系明确 否则某一线程会找不到依赖</p>
-<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> /soft/bak
-<span class="token function">wget</span> http://nginx.org/download/nginx-1.18.0.tar.gz
-<span class="token function">tar</span> -zxvf nginx-1.18.0.tar.gz
-<span class="token builtin class-name">cd</span> /soft/bak/nginx-1.18.0
-./configure  --prefix<span class="token operator">=</span>/soft/nginx <span class="token punctuation">\</span>
---with-http_gzip_static_module <span class="token punctuation">\</span>
---with-http_stub_status_module <span class="token punctuation">\</span>
---with-http_v2_module <span class="token punctuation">\</span>
---with-file-aio <span class="token punctuation">\</span>
---with-http_realip_module <span class="token punctuation">\</span>
---with-http_ssl_module <span class="token punctuation">\</span>
---with-openssl<span class="token operator">=</span>/soft/openssl <span class="token punctuation">\</span>
---with-openssl-opt<span class="token operator">=</span>enable-tls1_3 <span class="token punctuation">\</span>
---add-module<span class="token operator">=</span>/soft/ngx_brotli
-<span class="token function">make</span> -j2<span class="token operator">&amp;&amp;</span> <span class="token function">make</span> <span class="token function">install</span>
-<span class="token function">mv</span> /www/conf.d /soft/nginx/web</code></pre>
-<p>vi /etc/profile</p>
-<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token environment constant">$PATH</span>:/soft/nginx/sbin</code></pre>
-<p>source /etc/profile</p>
+<h4 id="使用airmon-ng"><a href="#使用airmon-ng" class="headerlink" title="使用airmon-ng"></a>使用airmon-ng</h4><pre class="language-bash" data-language="bash"><code class="language-bash">airmon-ng start wlan0</code></pre>
+<p><img src="/kali-wu-xian-xiang-guan.htm/4.jpg" alt="info"><br>输入iwconfig命令查看网卡信息， wlan0mon网卡名加了mon则表示成功<br><img src="/kali-wu-xian-xiang-guan.htm/5.jpg" alt="info"></p>
 ]]></content>
       <categories>
-        <category>服务端</category>
+        <category>kali</category>
       </categories>
       <tags>
-        <tag>nginx</tag>
+        <tag>kali</tag>
+        <tag>wifi</tag>
       </tags>
   </entry>
   <entry>
@@ -746,6 +695,27 @@ http &#123;
       </categories>
       <tags>
         <tag>nginx</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>php7.2安装</title>
+    <url>/php7-2-an-zhuang.html</url>
+    <content><![CDATA[<h4 id="php7-2安装"><a href="#php7-2安装" class="headerlink" title="php7.2安装"></a>php7.2安装</h4><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">rpm</span> -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+<span class="token function">rpm</span> -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
+yum <span class="token function">install</span> php72w-fpm php72w-gd php72w php72w-mysqlnd php72w-pdo php72w-mcrypt php72w-mbstring php72w-xmlrpc php72w-bcmath php72w-xml php72w-devel -y
+<span class="token function">sed</span> -i <span class="token string">'s/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/'</span> /etc/php.ini
+<span class="token function">groupadd</span> nginx
+<span class="token function">useradd</span> -g nginx nginx
+<span class="token function">sed</span> -i -e <span class="token string">'/nobody/ s/;//'</span> -e <span class="token string">'s/apache\|nobody/nginx/g'</span> /etc/php-fpm.d/www.conf
+systemctl start php-fpm
+systemctl <span class="token builtin class-name">enable</span> php-fpm</code></pre>
+]]></content>
+      <categories>
+        <category>服务端</category>
+      </categories>
+      <tags>
+        <tag>php</tag>
+        <tag>php7.2</tag>
       </tags>
   </entry>
   <entry>
@@ -860,24 +830,54 @@ kill -USR2 `cat /soft/php/var/run/php-fpm.pid`   #php-fpm平滑重启</code></pr
       </tags>
   </entry>
   <entry>
-    <title>php7.2安装</title>
-    <url>/php7-2-an-zhuang.html</url>
-    <content><![CDATA[<h4 id="php7-2安装"><a href="#php7-2安装" class="headerlink" title="php7.2安装"></a>php7.2安装</h4><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">rpm</span> -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-<span class="token function">rpm</span> -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
-yum <span class="token function">install</span> php72w-fpm php72w-gd php72w php72w-mysqlnd php72w-pdo php72w-mcrypt php72w-mbstring php72w-xmlrpc php72w-bcmath php72w-xml php72w-devel -y
-<span class="token function">sed</span> -i <span class="token string">'s/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/'</span> /etc/php.ini
-<span class="token function">groupadd</span> nginx
-<span class="token function">useradd</span> -g nginx nginx
-<span class="token function">sed</span> -i -e <span class="token string">'/nobody/ s/;//'</span> -e <span class="token string">'s/apache\|nobody/nginx/g'</span> /etc/php-fpm.d/www.conf
-systemctl start php-fpm
-systemctl <span class="token builtin class-name">enable</span> php-fpm</code></pre>
+    <title>nginx安装</title>
+    <url>/nginx-an-zhuang.html</url>
+    <content><![CDATA[<h4 id="安装openssl-nginx开启tsl1-3"><a href="#安装openssl-nginx开启tsl1-3" class="headerlink" title="安装openssl nginx开启tsl1.3"></a>安装openssl nginx开启tsl1.3</h4><p><a href="https://ilouis.cn/centos/upgrade_openssl.html">参考1</a>   <a href="https://ilouis.cn/practice/nginx_enable_tls_1_3.html">参考2</a></p>
+<pre class="language-bash" data-language="bash"><code class="language-bash">yum <span class="token function">install</span> -y gcc gcc-c++ perl pcre-devel openssl openssl-devel
+<span class="token builtin class-name">cd</span> /soft/bak
+<span class="token function">wget</span> https://www.openssl.org/source/openssl-1.1.1g.tar.gz
+<span class="token function">tar</span> zxvf openssl-1.1.1g.tar.gz
+<span class="token function">mv</span> openssl-1.1.1g /soft/openssl
+<span class="token builtin class-name">cd</span> /soft/openssl
+./config
+<span class="token function">make</span> <span class="token operator">&amp;&amp;</span> <span class="token function">make</span> <span class="token function">install</span>
+<span class="token function">ln</span> -s /usr/local/lib64/libssl.so.1.1 /usr/lib64/
+<span class="token function">ln</span> -s /usr/local/lib64/libcrypto.so.1.1 /usr/lib64/
+openssl version</code></pre>
+
+<hr>
+<h4 id="安装ngx-brotli"><a href="#安装ngx-brotli" class="headerlink" title="安装ngx_brotli"></a>安装ngx_brotli</h4><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> /soft
+<span class="token function">git</span> clone https://github.com/google/ngx_brotli.git
+<span class="token builtin class-name">cd</span> /soft/ngx_brotli
+<span class="token function">git</span> submodule update --init</code></pre>
+
+<hr>
+<h4 id="安装nginx"><a href="#安装nginx" class="headerlink" title="安装nginx"></a>安装nginx</h4><p><a href="https://www.nginx.cn/install">官方安装方法</a><br><a href="https://www.cnblogs.com/jinjiyese153/p/13396918.html">安装TSL1.3 泛域名证书</a><br>分别为每个域名手工生成证书<br><code>certbot certonly --nginx --nginx-server-root=/soft/nginx/conf</code><br>尽量保证页面中全部连接使用https 例如js/css等 否则在监控台和地址栏证书位置可能会报错<br>-j2表示两个线程并行 提高编译效率 但是对makefile文件有要求 必须依赖关系明确 否则某一线程会找不到依赖</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> /soft/bak
+<span class="token function">wget</span> http://nginx.org/download/nginx-1.18.0.tar.gz
+<span class="token function">tar</span> -zxvf nginx-1.18.0.tar.gz
+<span class="token builtin class-name">cd</span> /soft/bak/nginx-1.18.0
+./configure  --prefix<span class="token operator">=</span>/soft/nginx <span class="token punctuation">\</span>
+--with-http_gzip_static_module <span class="token punctuation">\</span>
+--with-http_stub_status_module <span class="token punctuation">\</span>
+--with-http_v2_module <span class="token punctuation">\</span>
+--with-file-aio <span class="token punctuation">\</span>
+--with-http_realip_module <span class="token punctuation">\</span>
+--with-http_ssl_module <span class="token punctuation">\</span>
+--with-openssl<span class="token operator">=</span>/soft/openssl <span class="token punctuation">\</span>
+--with-openssl-opt<span class="token operator">=</span>enable-tls1_3 <span class="token punctuation">\</span>
+--add-module<span class="token operator">=</span>/soft/ngx_brotli
+<span class="token function">make</span> -j2<span class="token operator">&amp;&amp;</span> <span class="token function">make</span> <span class="token function">install</span>
+<span class="token function">mv</span> /www/conf.d /soft/nginx/web</code></pre>
+<p>vi /etc/profile</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token environment constant">$PATH</span>:/soft/nginx/sbin</code></pre>
+<p>source /etc/profile</p>
 ]]></content>
       <categories>
         <category>服务端</category>
       </categories>
       <tags>
-        <tag>php</tag>
-        <tag>php7.2</tag>
+        <tag>nginx</tag>
       </tags>
   </entry>
   <entry>
@@ -1117,19 +1117,6 @@ pip3 <span class="token function">install</span> --upgrade pip
       </tags>
   </entry>
   <entry>
-    <title>安装v2ray</title>
-    <url>/an-zhuang-v2ray.html</url>
-    <content><![CDATA[<h4 id="安装v2ray"><a href="#安装v2ray" class="headerlink" title="安装v2ray"></a>安装v2ray</h4><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> /soft/bak
-<span class="token function">bash</span> <span class="token operator">&lt;</span><span class="token punctuation">(</span><span class="token function">curl</span> -L -s https://opt.cn2qq.com/opt-script/v2ray.sh<span class="token punctuation">)</span></code></pre>]]></content>
-      <categories>
-        <category>服务端</category>
-      </categories>
-      <tags>
-        <tag>v2ray</tag>
-        <tag>proxy</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>安装rsync</title>
     <url>/an-zhuang-rsync.html</url>
     <content><![CDATA[<h4 id="安装rsync"><a href="#安装rsync" class="headerlink" title="安装rsync"></a>安装rsync</h4><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> /soft/bak
@@ -1146,6 +1133,19 @@ pip3 <span class="token function">install</span> --upgrade pip
       </categories>
       <tags>
         <tag>rsync</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>安装v2ray</title>
+    <url>/an-zhuang-v2ray.html</url>
+    <content><![CDATA[<h4 id="安装v2ray"><a href="#安装v2ray" class="headerlink" title="安装v2ray"></a>安装v2ray</h4><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> /soft/bak
+<span class="token function">bash</span> <span class="token operator">&lt;</span><span class="token punctuation">(</span><span class="token function">curl</span> -L -s https://opt.cn2qq.com/opt-script/v2ray.sh<span class="token punctuation">)</span></code></pre>]]></content>
+      <categories>
+        <category>服务端</category>
+      </categories>
+      <tags>
+        <tag>v2ray</tag>
+        <tag>proxy</tag>
       </tags>
   </entry>
   <entry>
