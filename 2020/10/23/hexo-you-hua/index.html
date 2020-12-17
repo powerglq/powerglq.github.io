@@ -1,0 +1,1427 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="hexo优化-锦上添花, 敲黑板,划重点,资源分享,食用方法,程序开发,,网络技术,软件推荐">
+    <meta name="description" content="敲黑板,划重点,记录工作与生活">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>hexo优化-锦上添花 | 敲黑板</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="敲黑板" type="application/atom+xml">
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">敲黑板</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">敲黑板</div>
+        <div class="logo-desc">
+            
+            敲黑板,划重点,记录工作与生活
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/powerglq/powerglq.github.io" rel="external nofollow noreferrer" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/powerglq/powerglq.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">hexo优化-锦上添花</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                <span class="chip bg-color">前端</span>
+                            </a>
+                        
+                            <a href="/tags/hexo/">
+                                <span class="chip bg-color">hexo</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                web前端
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-10-23
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2020-10-23
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    3.6k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    14 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h4 id="关键词与描述"><a href="#关键词与描述" class="headerlink" title="关键词与描述"></a>关键词与描述</h4><p>搜索引擎除了主要抓取标题外，页面的关键词和描述也会抓取。<br>在\scaffolds\post.md中添加如下代码，用于生成的文章中添加关键字和描述。</p>
+<pre class="language-md" data-language="md"><code class="language-md">keywords: 
+description: </code></pre>
+
+<hr>
+<h4 id="开启压缩文件-不成功，以后填坑"><a href="#开启压缩文件-不成功，以后填坑" class="headerlink" title="开启压缩文件(不成功，以后填坑)"></a>开启压缩文件(不成功，以后填坑)</h4><p>因为hexo生成的文件是静态html，里面占用了大量的空白符。使用gulp进行压缩接口提高访问速度并且降低内存。</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> gulp -g
+<span class="token function">npm</span> <span class="token function">install</span> gulp-minify-css gulp-uglify gulp-htmlmin gulp-htmlclean gulp --save
+<span class="token function">npm</span> <span class="token function">install</span> gulp-concat
+<span class="token function">npm</span> <span class="token function">install</span> gulp-imagemin</code></pre>
+<p>在hexo blog文件夹下创建gulpfile.js:</p>
+<pre class="language-js" data-language="js"><code class="language-js"><span class="token keyword">var</span> gulp <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'gulp'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    uglify <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'gulp-uglify'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    cssmin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'gulp-minify-css'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    imagemin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'gulp-imagemin'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    htmlmin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'gulp-htmlmin'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    htmlclean <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'gulp-htmlclean'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    concat <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'gulp-concat'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//JS压缩</span>
+gulp<span class="token punctuation">.</span><span class="token function">task</span><span class="token punctuation">(</span><span class="token string">'uglify'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> gulp<span class="token punctuation">.</span><span class="token function">src</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'./public/js/**/.js'</span><span class="token punctuation">,</span><span class="token string">'!./public/js/**/*min.js'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token comment">//只是排除min.js文件还是不严谨，一般不会有问题，根据自己博客的修改我的修改为return gulp.src(['./public/**/*.js','!./public/zuoxi/**/*.js',,'!./public/radio/**/*.js'])</span>
+        <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span><span class="token function">uglify</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span>gulp<span class="token punctuation">.</span><span class="token function">dest</span><span class="token punctuation">(</span><span class="token string">'./public/js'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//对应修改为./public即可</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//public-fancybox-js压缩</span>
+gulp<span class="token punctuation">.</span><span class="token function">task</span><span class="token punctuation">(</span><span class="token string">'fancybox:js'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> gulp<span class="token punctuation">.</span><span class="token function">src</span><span class="token punctuation">(</span><span class="token string">'./public/vendors/fancybox/source/jquery.fancybox.js'</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span><span class="token function">uglify</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span>gulp<span class="token punctuation">.</span><span class="token function">dest</span><span class="token punctuation">(</span><span class="token string">'./public/vendors/fancybox/source/'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 合并 JS</span>
+gulp<span class="token punctuation">.</span><span class="token function">task</span><span class="token punctuation">(</span><span class="token string">'jsall'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> gulp<span class="token punctuation">.</span><span class="token function">src</span><span class="token punctuation">(</span><span class="token string">'./public/**/*.js'</span><span class="token punctuation">)</span>
+    <span class="token comment">// 压缩后重命名</span>
+        <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span><span class="token function">concat</span><span class="token punctuation">(</span><span class="token string">'app.js'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span>gulp<span class="token punctuation">.</span><span class="token function">dest</span><span class="token punctuation">(</span><span class="token string">'./public'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//public-fancybox-css压缩</span>
+gulp<span class="token punctuation">.</span><span class="token function">task</span><span class="token punctuation">(</span><span class="token string">'fancybox:css'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> gulp<span class="token punctuation">.</span><span class="token function">src</span><span class="token punctuation">(</span><span class="token string">'./public/vendors/fancybox/source/jquery.fancybox.css'</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span><span class="token function">cssmin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span>gulp<span class="token punctuation">.</span><span class="token function">dest</span><span class="token punctuation">(</span><span class="token string">'./public/vendors/fancybox/source/'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//CSS压缩</span>
+gulp<span class="token punctuation">.</span><span class="token function">task</span><span class="token punctuation">(</span><span class="token string">'cssmin'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> gulp<span class="token punctuation">.</span><span class="token function">src</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'./public/css/main.css'</span><span class="token punctuation">,</span><span class="token string">'!./public/css/*min.css'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>   
+        <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span><span class="token function">cssmin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span>gulp<span class="token punctuation">.</span><span class="token function">dest</span><span class="token punctuation">(</span><span class="token string">'./public/css/'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//图片压缩</span>
+gulp<span class="token punctuation">.</span><span class="token function">task</span><span class="token punctuation">(</span><span class="token string">'images'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    gulp<span class="token punctuation">.</span><span class="token function">src</span><span class="token punctuation">(</span><span class="token string">'./public/uploads/*.*'</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span><span class="token function">imagemin</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+            progressive<span class="token operator">:</span> <span class="token boolean">false</span>
+        <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span>gulp<span class="token punctuation">.</span><span class="token function">dest</span><span class="token punctuation">(</span><span class="token string">'./public/uploads/'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 压缩 public 目录 html文件 public/**/*.hmtl 表示public下所有文件夹中html，包括当前目录</span>
+    gulp<span class="token punctuation">.</span><span class="token function">task</span><span class="token punctuation">(</span><span class="token string">'minify-html'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token keyword">return</span> gulp<span class="token punctuation">.</span><span class="token function">src</span><span class="token punctuation">(</span><span class="token string">'./public/**/*.html'</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span><span class="token function">htmlclean</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span><span class="token function">htmlmin</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+             removeComments<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+             minifyJS<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+             minifyCSS<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+             minifyURLs<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span>gulp<span class="token punctuation">.</span><span class="token function">dest</span><span class="token punctuation">(</span><span class="token string">'./public'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+gulp<span class="token punctuation">.</span><span class="token function">task</span><span class="token punctuation">(</span><span class="token string">'build'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'uglify'</span><span class="token punctuation">,</span> <span class="token string">'cssmin'</span><span class="token punctuation">,</span> <span class="token string">'fancybox:js'</span><span class="token punctuation">,</span> <span class="token string">'fancybox:css'</span><span class="token punctuation">,</span> <span class="token string">'jsall'</span><span class="token punctuation">,</span><span class="token string">'images'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//, 'minify-html'</span></code></pre>
+<p>在根目录下的package.json文件中生成写入scripts</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token string">"scripts"</span><span class="token builtin class-name">:</span> <span class="token punctuation">&#123;</span>
+  <span class="token string">"build"</span><span class="token builtin class-name">:</span> <span class="token string">"hexo clean &amp;&amp; hexo g &amp;&amp; gulp build"</span>
+<span class="token punctuation">&#125;</span></code></pre>
+<p>这样每次输入 <code>npm run build</code> 就会自动清理上次生成的文件，然后生成新的文件，最后压缩文件</p>
+<hr>
+<h4 id="开启推送"><a href="#开启推送" class="headerlink" title="开启推送"></a>开启推送</h4><p>将网站链接提交到百度，<a target="_blank" rel="noopener external nofollow noreferrer" href="http://www.sousuoyinqingtijiao.com/baidu/tijiao/">百度搜索引擎提交入口</a> ,然后验证你的网站，这一点网上有很详细的教程我就不复述了，验证确认你的网站后，继续验证你的网站的robots.txt和sitemap文件是否可用，一般都是可用的。</p>
+<p>然后就可以开始推送了，基本上推送有三种方式：主动推送&gt;自动推送&gt;sitemap三种，一般主动提交比手动提交效果好。</p>
+<p>自动推送<br>把下面的代码放到D:\hexo\themes\next\source\js\src目录下，文件名为bai.js</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token operator">&lt;</span>script<span class="token operator">></span>
+<span class="token punctuation">(</span><span class="token function-name function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+    var bp <span class="token operator">=</span> document.createElement<span class="token punctuation">(</span><span class="token string">'script'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    bp.src <span class="token operator">=</span> <span class="token string">'//push.zhanzhang.baidu.com/push.js'</span><span class="token punctuation">;</span>
+    var s <span class="token operator">=</span> document.getElementsByTagName<span class="token punctuation">(</span><span class="token string">"script"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    s.parentNode.insertBefore<span class="token punctuation">(</span>bp, s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span>/script<span class="token operator">></span></code></pre>
+<p>然后在D:\hexo\scaffolds目录下的post.md文件（模板文件中加入这么一行）<br><code>&lt;script type=&quot;text/javascript&quot; src=&quot;/js/src/bai.js&quot;&gt;&lt;/script&gt;</code><br>这样只要访问你的这个页面，就会自动向百度推送你的这个网页。</p>
+<h4 id="手动推送"><a href="#手动推送" class="headerlink" title="手动推送"></a>手动推送</h4><p>用Python写了一个自动推送的脚本，首先你要在百度站长平台获取你的网址的token</p>
+<pre class="language-python" data-language="python"><code class="language-python"><span class="token comment">#coding:utf-8</span>
+<span class="token keyword">import</span> requests
+<span class="token keyword">import</span> time
+<span class="token keyword">from</span> bs4 <span class="token keyword">import</span> BeautifulSoup <span class="token keyword">as</span> bp
+
+<span class="token keyword">print</span> <span class="token builtin">unicode</span><span class="token punctuation">(</span><span class="token string">'Langzi.Fun 自动推送开启....'</span><span class="token punctuation">,</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span>
+time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">0.5</span><span class="token punctuation">)</span>
+site_url <span class="token operator">=</span> <span class="token string">'http://www.这里改写成你的网站.com/baidusitemap.xml'</span>
+
+<span class="token keyword">try</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span> <span class="token builtin">unicode</span><span class="token punctuation">(</span><span class="token string">'Langzi.Fun 获取sitemap链接....'</span><span class="token punctuation">,</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span>
+    data_ <span class="token operator">=</span> bp<span class="token punctuation">(</span>requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>site_url<span class="token punctuation">)</span><span class="token punctuation">.</span>content<span class="token punctuation">,</span><span class="token string">'lxml'</span><span class="token punctuation">)</span>
+<span class="token keyword">except</span> Exception<span class="token punctuation">.</span>e<span class="token punctuation">:</span>
+    <span class="token keyword">print</span> e
+
+list_url<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span>
+
+<span class="token keyword">def</span> <span class="token function">get_</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    headers<span class="token operator">=</span><span class="token punctuation">&#123;</span><span class="token string">'User-Agent'</span><span class="token punctuation">:</span><span class="token string">'curl/7.12.1 '</span><span class="token punctuation">,</span>
+             <span class="token string">'Content-Type'</span><span class="token punctuation">:</span><span class="token string">'text/plain '</span><span class="token punctuation">&#125;</span>
+    <span class="token keyword">try</span><span class="token punctuation">:</span>
+        r <span class="token operator">=</span> requests<span class="token punctuation">.</span>post<span class="token punctuation">(</span>url<span class="token operator">=</span><span class="token string">'http://data.zz.baidu.com/urls?site=www.这里改写成你的网站.com&amp;token=这里改写成你的token'</span><span class="token punctuation">,</span>data<span class="token operator">=</span>data<span class="token punctuation">)</span>
+        <span class="token keyword">print</span> r<span class="token punctuation">.</span>status_code
+        <span class="token keyword">print</span> r<span class="token punctuation">.</span>content
+    <span class="token keyword">except</span> Exception<span class="token punctuation">,</span>e<span class="token punctuation">:</span>
+        <span class="token keyword">print</span> e
+
+<span class="token keyword">print</span> <span class="token string">'---------------------------------'</span>
+<span class="token keyword">for</span> x<span class="token punctuation">,</span>y <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>data_<span class="token punctuation">.</span>find_all<span class="token punctuation">(</span><span class="token string">'loc'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span> x<span class="token punctuation">,</span>y<span class="token punctuation">.</span>string
+    list_url<span class="token punctuation">.</span>append<span class="token punctuation">(</span>y<span class="token punctuation">.</span>string<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'http://'</span><span class="token punctuation">,</span><span class="token string">'http://www.'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span> <span class="token string">'---------------------------------'</span>
+
+<span class="token keyword">print</span> <span class="token builtin">unicode</span><span class="token punctuation">(</span><span class="token string">'Langzi.Fun 开始推送....'</span><span class="token punctuation">,</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> x <span class="token keyword">in</span> list_url<span class="token punctuation">:</span>
+    <span class="token keyword">print</span> <span class="token builtin">unicode</span><span class="token punctuation">(</span><span class="token string">'Langzi.Fun 当前推送条目为:'</span><span class="token punctuation">,</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span> <span class="token operator">+</span> x
+    get_<span class="token punctuation">(</span>x<span class="token punctuation">)</span></code></pre>
+<p>修改完后双击启动一次即可，每次写完文章后，都启动推送一次。已经使用主动推送的站点，依然可以部署自动推送的JS代码，二者一起使用。</p>
+<hr>
+<h4 id="获取关键词"><a href="#获取关键词" class="headerlink" title="获取关键词"></a>获取关键词</h4><p>现在搜关键词全是广告，其实百度已经提供了一个接口，每次使用过百度搜索的时候下面的下拉条会出现一堆相关的关键词，这下关键词的权重是非常高的，采集这些关键词然后用在自己的文章中效果还可以，但是要记住不能堆砌关键词。</p>
+<p>接口：<br><code>https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=</code><br>例如:<br><code>https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=敲黑板</code><br>搜过结果：<br>window.baidu.sug({q:”langzi”,p:false,s:[“浪子彦”,”朗姿女装”,”朗姿”,”朗姿唯品会”,”浪子彦直播”,”浪子心声”,”浪子”,”浪子回头”,”朗姿股份”,”浪子燕青”]});<br>一般回显10个关键词</p>
+<p>提取代码如下：</p>
+<pre class="language-python" data-language="python"><code class="language-python"><span class="token comment">#coding:utf-8</span>
+<span class="token keyword">import</span> requests
+<span class="token keyword">import</span> time
+
+<span class="token keyword">print</span> <span class="token builtin">unicode</span><span class="token punctuation">(</span><span class="token string">'Langzi.Fun 关键词采集开启....'</span><span class="token punctuation">,</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span>
+<span class="token comment">#time.sleep(0.5)</span>
+
+key <span class="token operator">=</span> <span class="token builtin">raw_input</span><span class="token punctuation">(</span><span class="token builtin">unicode</span><span class="token punctuation">(</span><span class="token string">'输入关键词:'</span><span class="token punctuation">,</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+site_url <span class="token operator">=</span> <span class="token string">'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd='</span> <span class="token operator">+</span> <span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+r <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>site_url<span class="token punctuation">)</span>
+<span class="token keyword">print</span> r<span class="token punctuation">.</span>content<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'window.baidu.sug(&#123;q:'</span><span class="token punctuation">,</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'&#125;);'</span><span class="token punctuation">,</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">',p:false,s:'</span><span class="token punctuation">,</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'"'</span><span class="token punctuation">,</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">''</span><span class="token punctuation">)</span></code></pre>
+<p>网上也有很多百度下拉框工具，可以去找一下。</p>
+<hr>
+<h4 id="title优化"><a href="#title优化" class="headerlink" title="title优化"></a>title优化</h4><p>搜索引擎在抓取网页时，最先读取的就是网页标题，所以title是否正确设置极其重要。title一般不超过80个字符，而且词语间要用英文“-”隔开，因为计算机只对英语的敏感性较高，对汉语的敏感性不高。<br><code>用法：&lt;title&gt;网站标题&lt;/title&gt;</code></p>
+<p>注意点：</p>
+<p>首页title写法：首页的title写法格式一般是“总标题-特别重要的关键词或者一句话含有特别重要关键词的描述”。注意这里的“-”是英文，要问我为什么呢?这个因为互联网不是我们国内开发的，汉语不是标准，计算机只对英语敏感性较高，而对汉语敏感性不太高。<br>栏目页title写法：栏目页title的写法有两种，关键词名称命名写法是“栏目名称-总名称”，非关键词命名写法是：“栏目名称 栏目关键词-总名称”。<br>分类列表页的title写法：用关键词为这个栏目起名，然后按照下列顺序填写便可了“分类列表页名称-栏目名称-总名称”。<br>注意事项：</p>
+<p>每个标题应该是根据当前内容设置的独特不重复的。<br>字数限制。不能太长，要不然搜索引擎结果列表会显示不全。最好不超过 25 个中文字。最好是在 10~20 之间。<br>切勿堆砌关键词。这是很多人常犯的错误<br>关键词最好出现在最前面<br>标题有吸引力。毕竟有吸引力的标题才能让用户点击<br>连词符的使用。可以使用 |-&gt;<br>不要使用没有意义的句子</p>
+<hr>
+<h4 id="keywords优化"><a href="#keywords优化" class="headerlink" title="keywords优化"></a>keywords优化</h4><p>主要作用是告诉搜索引擎，这个网站内容是什么。因为，好多站长在keywords堆砌关键词，所以好多搜索引擎不太重视keywords了。建议大家还是认真填写keywords，有的搜索引擎还是很重视的，由于现在词频和密度对于 SEO 影响不大，所以只要保持你的正文中出现 4~6 次关键词就可以了。千万不能堆砌关键词。</p>
+<p>注意点：</p>
+<p>首页keywords写法：首页keywords按照选定的栏目名称，在首页的keywords中加入总名称、栏目名称和一两个关键词。<br>栏目keywords写法：栏目的keywords其栏目下所有分类列表的名称列出，加上栏目关键字，写法是“栏目名称,栏目关键字,栏目分类列表名称”<br>分类列表页keywords写法：将你这个栏目中的主要关键字写入。</p>
+<hr>
+<h4 id="Description优化"><a href="#Description优化" class="headerlink" title="Description优化"></a>Description优化</h4><p>功能让搜索引擎是判断整个页面内容的，当中要写入的内容是你页面内容的简介。description一般不超过100个字符。对于个人站点而言，描述标签最好是一句通顺的句子，如果不能的话，则宁可不要。</p>
+<p>注意点：</p>
+<p>首页description写法：description的写法就是将首页的标题、关键词和一些特殊栏目的内容融合到里面，写成简单的介绍形式，不要只写关键词。<br>栏目description写法：将栏目的标题、关键字、分类列表名称，尽量的写入description中，仍是尽量写成介绍形式。<br>分类description写法：是将你这个栏目中的主要关键字写入。</p>
+<hr>
+<h4 id="H标签优化"><a href="#H标签优化" class="headerlink" title="H标签优化"></a>H标签优化</h4><p>H 标签的重要性可能是仅次与页面标签。H1-&gt;H6 的重要性依次降低。</p>
+<p>所以建议在页面的 H1 和 H2 标签中混入关键词</p>
+<hr>
+<h4 id="图片-ALT-文字优化"><a href="#图片-ALT-文字优化" class="headerlink" title="图片 ALT 文字优化"></a>图片 ALT 文字优化</h4><p>插入图片的时候会提示输入文字，这个不能敷衍。图片 ALT 文字出现的关键词对页面相关性也有一定的影响。同样的，也不要在 ALT 上堆砌关键词。</p>
+<hr>
+<h4 id="内部链接及锚文字优化"><a href="#内部链接及锚文字优化" class="headerlink" title="内部链接及锚文字优化"></a>内部链接及锚文字优化</h4><p>内部链接对于爬行和收录具有很重要的意义。内部链接对页面关键词相关性也有影响，最主要的就是在内部链接中使用锚文字。</p>
+<p>锚文字是告诉搜索引擎被链接页面主题内容的最重要依据之一。我们有时候可能无法控制外部链接的锚文字，但是对于站内的内部链接锚文字我们可以控制。不过有几点需要注意：</p>
+<p>适当出现匹配关键词的锚文字<br>锚文字不能集中导航或者页尾，要分散在正文中<br>不要过度优化锚文字，要不然有可能会被搜索引擎惩罚</p>
+<hr>
+<h4 id="搜索引擎食用方法"><a href="#搜索引擎食用方法" class="headerlink" title="搜索引擎食用方法"></a>搜索引擎食用方法</h4><p>首先给你的文章生成sitemap文件</p>
+<ul>
+<li>谷歌<br>npm install hexo-generator-sitemap –save #sitemap.xml适合提交给谷歌搜素引擎</li>
+<li>百度<br>npm install hexo-generator-baidu-sitemap –save #baidusitemap.xml适合提交百度搜索引擎<br>然后在站点配置文件_config.yml中添加以下代码<pre class="language-yml" data-language="yml"><code class="language-yml">自动生成sitemap
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml</code></pre>
+最后修改站点配置文件_config.yml<pre class="language-yml" data-language="yml"><code class="language-yml"># URL
+## If your site is put in a subdirectory, set url as &#39;http:&#x2F;&#x2F;yoursite.com&#x2F;child&#39; and root as &#39;&#x2F;child&#x2F;&#39;
+url: http:&#x2F;&#x2F;你的网站</code></pre>
+每次hexo g后都会在/public目录下生成sitemap.xml和baidusitemap.xml，这就是你的站点地图。</li>
+</ul>
+<hr>
+<h4 id="robots-txt"><a href="#robots-txt" class="headerlink" title="robots.txt:"></a>robots.txt:</h4><p>robots.txt 是一种存放于网站根目录下的 ASCII 编码的文本文件，它的作用是告诉搜索引擎此网站中哪些内容是可以被爬取的，哪些是禁止爬取的。robots.txt 放在博客目录下的 source 文件夹中，博客生成后在站点目录 /public/ 下。<br>我的 robots.txt 文件内容如下：</p>
+<pre class="language-txt" data-language="txt"><code class="language-txt">User-agent: *
+Allow: &#x2F;
+Allow: &#x2F;archives&#x2F;
+Allow: &#x2F;categories&#x2F;
+Allow: &#x2F;about&#x2F;
+Disallow: &#x2F;js&#x2F;
+Disallow: &#x2F;css&#x2F;
+Disallow: &#x2F;fonts&#x2F;
+Disallow: &#x2F;vendors&#x2F;</code></pre>
+<p>robots.txt 文件更新至网站后可进入 Google Search Console - 抓取 - robots.txt 测试工具进行测试。</p>
+<hr>
+<h4 id="其他SEO优化"><a href="#其他SEO优化" class="headerlink" title="其他SEO优化"></a>其他SEO优化</h4><p>SEO优化应该说是一个收益延迟的行为，可能你做的优化短期内看不到什么效果，但是一定要坚持，seo优化也是有很深的可以研究的东西，从我们最初的网站设计，和最基础的标签的选择都有很大的关系，网站设计就如我们刚刚说的，要让用户点击三次可以到达网站的任何一个页面，要增加高质量的外链，增加相关推荐（比如说我们经常见到右侧本站的最高阅读的排名列表），然后就是给每一个页面加上keyword和描述</p>
+<p>在代码中，我们应该写出能让浏览器识别的语义化HTML，这样有助于爬虫抓取更多的有效信息：爬虫依赖于标签来确定上下文和各个关键字的权重；并且对外链设置nofollow标签，避免spider爬着爬着就爬出去了（减少网站的跳出率），并且我们要尽量在一些比较大的网站增加我们站点的曝光率，因为spider会经常访问大站，比如我们在掘金等技术社区发表文章中带有我们的站点，这样spider是很有可能爬到我们中的站点的，所以说,重要的还是:</p>
+<p>网站外链的推广度、数量和质量<br>网站的内链足够强大<br>网站的原创质量<br>网站的年龄时间<br>网站的更新频率（更新次数越多越好）<br>网站的服务器<br>网站的流量：流量越高网站的权重越高<br>网站的关键词排名：关键词排名越靠前，网站的权重越高<br>网站的收录数量：网站百度收录数量越多，网站百度权重越高<br>网站的浏览量及深度：用户体验越好，网站的百度权重越高</p>
+<hr>
+<h4 id="每篇文字独立生成文件夹"><a href="#每篇文字独立生成文件夹" class="headerlink" title="每篇文字独立生成文件夹"></a>每篇文字独立生成文件夹</h4><pre class="language-npm" data-language="npm"><code class="language-npm">npm install https:&#x2F;&#x2F;github.com&#x2F;CodeFalling&#x2F;hexo-asset-image --save</code></pre>
+
+<hr>
+<h4 id="优化hexo的url"><a href="#优化hexo的url" class="headerlink" title="优化hexo的url"></a>优化hexo的url</h4><p>SEO搜索引擎优化认为，网站的最佳结构是用户从首页点击三次就可以到达任何一个页面，但是我们使用hexo编译的站点打开文章的url是：sitename/year/mounth/day/title四层的结构，这样的url结构很不利于seo，爬虫就会经常爬不到我们的文章，于是，我们需要优化一下网站文章url<br>方案一：<br>我们可以将url直接改成sitename/title的形式，并且title最好是用英文，在根目录的配置文件下修改permalink如下：</p>
+<pre class="language-YAML" data-language="YAML"><code class="language-YAML">url: https:&#x2F;&#x2F;www.zdyn.cn
+root: &#x2F;
+permalink: :title.html
+permalink_defaults:</code></pre>
+<p>方案二：<br>使用插件优化url<br>插件hexo-abbrlink实现了这个功能，它将原来的URL地址重新进行了进制转换和再编码。<br>安装hexo-abbrlink:</p>
+<pre class="language-npm" data-language="npm"><code class="language-npm">npm install hexo-abbrlink --save</code></pre>
+<p>配置博客根目录下的_config.yml文件:</p>
+<pre class="language-YAML" data-language="YAML"><code class="language-YAML"># permalink: :title&#x2F;
+permalink: archives&#x2F;:abbrlink.html
+abbrlink:
+  alg: crc32  # 算法：crc16(default) and crc32
+  rep: hex    # 进制：dec(default) and hex</code></pre>
+            </div>
+            <hr/>
+
+            
+    <div class="reprint" id="reprint-statement" style="padding:20px;text-align:center;">
+		<img src="/medias/reward/thanks.gif"></img>
+    </div>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">GLQ</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://www.qiaoheiban.tk/2020/10/23/hexo-you-hua/">https://www.qiaoheiban.tk/2020/10/23/hexo-you-hua/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">GLQ</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+            
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                    <span class="chip bg-color">前端</span>
+                                </a>
+                            
+                                <a href="/tags/hexo/">
+                                    <span class="chip bg-color">hexo</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red" style="font-size:50px;width:100px;height:100px;line-height:100px;">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2020/10/23/hexo-bu-shu-dao-yun-fu-wu-qi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="hexo部署到云服务器">
+                        
+                        <span class="card-title">hexo部署到云服务器</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            解决速度过慢由于GitHub服务器没有在国内，而hexo博客部署是默认在GitHub上，访问速度特别慢，一个小网页也要加载很久，这时候我便想能不能放在自己的云服务器上，查阅了很多资料后便发现这种想法是可以的。首先，需要一台云服务器和一个已经
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-23
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF/" class="post-category">
+                                    服务端
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
+                    </a>
+                    
+                    <a href="/tags/hexo/">
+                        <span class="chip bg-color">hexo</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/10/23/hexo-tui-jian-cha-jian/">
+                    <div class="card-image">
+                        
+                        <img src="/source/images/xxx.jpg" class="responsive-img" alt="hexo推荐插件">
+                        
+                        <span class="card-title">hexo推荐插件</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            让hexo出彩
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-23
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    web前端
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
+                    </a>
+                    
+                    <a href="/tags/hexo/">
+                        <span class="chip bg-color">hexo</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='true'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.5'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="/about" target="_blank">GLQ</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" rel="external nofollow noreferrer" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" rel="external nofollow noreferrer" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">14.3k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2020";
+                    var startMonth = "10";
+                    var startDate = "20";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/powerglq/powerglq.github.io" rel="external nofollow noreferrer" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:86819215@qq.com" rel="external nofollow noreferrer" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=86819215" rel="external nofollow noreferrer" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 86819215" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+<script type="text/javascript"> var OriginTitile = document.title, st; document.addEventListener("visibilitychange", function () { document.hidden ? (document.title = "Σ(っ °Д °;)っ你真丑！", clearTimeout(st)) : (document.title = "φ(゜▽゜*)♪你真美！", st = setTimeout(function () { document.title = OriginTitile }, 3e3)) }) </script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
+
+</html>
