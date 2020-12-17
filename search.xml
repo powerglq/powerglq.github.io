@@ -506,47 +506,6 @@ npm add hexo-symbols-count-time</code></pre>
       </tags>
   </entry>
   <entry>
-    <title>hexo部署到云服务器</title>
-    <url>/hexo-bu-shu-dao-yun-fu-wu-qi.html</url>
-    <content><![CDATA[<p>解决速度过慢<br>由于GitHub服务器没有在国内，而hexo博客部署是默认在GitHub上，访问速度特别慢，一个小网页也要加载很久，这时候我便想能不能放在自己的云服务器上，查阅了很多资料后便发现这种想法是可以的。<br>首先，需要一台云服务器和一个已经备案的域名（没有备案的直接用公网IP进行访问），我的服务器是centos7的，第一步就是配置ssh公钥登陆（避免每次更新文章都要输入密码）。</p>
-<hr>
-<h4 id="1-安装git和nginx"><a href="#1-安装git和nginx" class="headerlink" title="1.安装git和nginx"></a>1.安装git和nginx</h4><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">apt-get</span> update
-<span class="token function">apt-get</span> <span class="token function">install</span> git-core nginx</code></pre>
-<hr>
-<h4 id="2-配置nginx-用于存放生成的静态文件"><a href="#2-配置nginx-用于存放生成的静态文件" class="headerlink" title="2.配置nginx,用于存放生成的静态文件"></a>2.配置nginx,用于存放生成的静态文件</h4><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">mkdir</span> /www/wwwroot/blog</code></pre>
-<hr>
-<h4 id="3-配置Git-Hooks"><a href="#3-配置Git-Hooks" class="headerlink" title="3.配置Git Hooks"></a>3.配置Git Hooks</h4><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">mkdir</span> ~/blog.git <span class="token operator">&amp;&amp;</span> <span class="token builtin class-name">cd</span> ~/blog.git
-<span class="token function">git</span> init --bare</code></pre>
-<hr>
-<h4 id="4-配置hooks脚本-post-recevive脚本将在blog-git仓库收到push时执行。"><a href="#4-配置hooks脚本-post-recevive脚本将在blog-git仓库收到push时执行。" class="headerlink" title="4.配置hooks脚本,post-recevive脚本将在blog.git仓库收到push时执行。"></a>4.配置hooks脚本,post-recevive脚本将在blog.git仓库收到push时执行。</h4><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">vim</span> ./hooks/post-receive</code></pre>
-<p>脚本的原理，删除原有的 /www/wwwroot/blog目录，然后从blog.git克隆新的博客静态文件</p>
-<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token shebang important">#!/bin/bash</span>
-<span class="token function">rm</span> -rf /www/wwwroot/blog
-<span class="token function">git</span> clone /root/blog.git /www/wwwroot/blog</code></pre>
-<p>给post-receive脚本执行权限</p>
-<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">chmod</span> +x ./hooks/post-receive</code></pre>
-<hr>
-<h4 id="5-部署hexo博客"><a href="#5-部署hexo博客" class="headerlink" title="5.部署hexo博客"></a>5.部署hexo博客</h4><p>修改_config.yml</p>
-<pre class="language-markdown" data-language="markdown"><code class="language-markdown">deploy:
-   type:git
-   repo:root@192.168.1.1:/root/blog.git
-   branch: master</code></pre>
-<hr>
-<h4 id="6-部署博客"><a href="#6-部署博客" class="headerlink" title="6.部署博客"></a>6.部署博客</h4><p>hexo成新的博客静态文件，然后通过Git将其同步到云服务器的blog.git仓库</p>
-<pre class="language-hexo" data-language="hexo"><code class="language-hexo">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></pre>
-<h2 id="然后通过自己的域名即可访问。"><a href="#然后通过自己的域名即可访问。" class="headerlink" title="然后通过自己的域名即可访问。"></a>然后通过自己的域名即可访问。</h2><h4 id="7-报错"><a href="#7-报错" class="headerlink" title="7.报错"></a>7.报错</h4><p>如果不能部署报错,请执行</p>
-<pre class="language-npm" data-language="npm"><code class="language-npm">npm install hexo-deployer-git --save</code></pre>
-<p>再进行部署</p>
-]]></content>
-      <categories>
-        <category>服务端</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>hexo疑难杂症</title>
     <url>/hexo-yi-nan-za-zheng.html</url>
     <content><![CDATA[<h4 id="标签页面不显示标签列表"><a href="#标签页面不显示标签列表" class="headerlink" title="标签页面不显示标签列表"></a>标签页面不显示标签列表</h4><h5 id="step-one"><a href="#step-one" class="headerlink" title="step one:"></a>step one:</h5><p>scaffolds/draft.md</p>
@@ -586,6 +545,47 @@ npm add hexo-symbols-count-time</code></pre>
 ]]></content>
       <categories>
         <category>web前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo部署到云服务器</title>
+    <url>/hexo-bu-shu-dao-yun-fu-wu-qi.html</url>
+    <content><![CDATA[<p>解决速度过慢<br>由于GitHub服务器没有在国内，而hexo博客部署是默认在GitHub上，访问速度特别慢，一个小网页也要加载很久，这时候我便想能不能放在自己的云服务器上，查阅了很多资料后便发现这种想法是可以的。<br>首先，需要一台云服务器和一个已经备案的域名（没有备案的直接用公网IP进行访问），我的服务器是centos7的，第一步就是配置ssh公钥登陆（避免每次更新文章都要输入密码）。</p>
+<hr>
+<h4 id="1-安装git和nginx"><a href="#1-安装git和nginx" class="headerlink" title="1.安装git和nginx"></a>1.安装git和nginx</h4><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">apt-get</span> update
+<span class="token function">apt-get</span> <span class="token function">install</span> git-core nginx</code></pre>
+<hr>
+<h4 id="2-配置nginx-用于存放生成的静态文件"><a href="#2-配置nginx-用于存放生成的静态文件" class="headerlink" title="2.配置nginx,用于存放生成的静态文件"></a>2.配置nginx,用于存放生成的静态文件</h4><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">mkdir</span> /www/wwwroot/blog</code></pre>
+<hr>
+<h4 id="3-配置Git-Hooks"><a href="#3-配置Git-Hooks" class="headerlink" title="3.配置Git Hooks"></a>3.配置Git Hooks</h4><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">mkdir</span> ~/blog.git <span class="token operator">&amp;&amp;</span> <span class="token builtin class-name">cd</span> ~/blog.git
+<span class="token function">git</span> init --bare</code></pre>
+<hr>
+<h4 id="4-配置hooks脚本-post-recevive脚本将在blog-git仓库收到push时执行。"><a href="#4-配置hooks脚本-post-recevive脚本将在blog-git仓库收到push时执行。" class="headerlink" title="4.配置hooks脚本,post-recevive脚本将在blog.git仓库收到push时执行。"></a>4.配置hooks脚本,post-recevive脚本将在blog.git仓库收到push时执行。</h4><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">vim</span> ./hooks/post-receive</code></pre>
+<p>脚本的原理，删除原有的 /www/wwwroot/blog目录，然后从blog.git克隆新的博客静态文件</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token shebang important">#!/bin/bash</span>
+<span class="token function">rm</span> -rf /www/wwwroot/blog
+<span class="token function">git</span> clone /root/blog.git /www/wwwroot/blog</code></pre>
+<p>给post-receive脚本执行权限</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">chmod</span> +x ./hooks/post-receive</code></pre>
+<hr>
+<h4 id="5-部署hexo博客"><a href="#5-部署hexo博客" class="headerlink" title="5.部署hexo博客"></a>5.部署hexo博客</h4><p>修改_config.yml</p>
+<pre class="language-markdown" data-language="markdown"><code class="language-markdown">deploy:
+   type:git
+   repo:root@192.168.1.1:/root/blog.git
+   branch: master</code></pre>
+<hr>
+<h4 id="6-部署博客"><a href="#6-部署博客" class="headerlink" title="6.部署博客"></a>6.部署博客</h4><p>hexo成新的博客静态文件，然后通过Git将其同步到云服务器的blog.git仓库</p>
+<pre class="language-hexo" data-language="hexo"><code class="language-hexo">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></pre>
+<h2 id="然后通过自己的域名即可访问。"><a href="#然后通过自己的域名即可访问。" class="headerlink" title="然后通过自己的域名即可访问。"></a>然后通过自己的域名即可访问。</h2><h4 id="7-报错"><a href="#7-报错" class="headerlink" title="7.报错"></a>7.报错</h4><p>如果不能部署报错,请执行</p>
+<pre class="language-npm" data-language="npm"><code class="language-npm">npm install hexo-deployer-git --save</code></pre>
+<p>再进行部署</p>
+]]></content>
+      <categories>
+        <category>服务端</category>
       </categories>
       <tags>
         <tag>前端</tag>
@@ -686,27 +686,6 @@ openssl version</code></pre>
       </tags>
   </entry>
   <entry>
-    <title>php7.2安装</title>
-    <url>/php7-2-an-zhuang.html</url>
-    <content><![CDATA[<h4 id="php7-2安装"><a href="#php7-2安装" class="headerlink" title="php7.2安装"></a>php7.2安装</h4><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">rpm</span> -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-<span class="token function">rpm</span> -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
-yum <span class="token function">install</span> php72w-fpm php72w-gd php72w php72w-mysqlnd php72w-pdo php72w-mcrypt php72w-mbstring php72w-xmlrpc php72w-bcmath php72w-xml php72w-devel -y
-<span class="token function">sed</span> -i <span class="token string">'s/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/'</span> /etc/php.ini
-<span class="token function">groupadd</span> nginx
-<span class="token function">useradd</span> -g nginx nginx
-<span class="token function">sed</span> -i -e <span class="token string">'/nobody/ s/;//'</span> -e <span class="token string">'s/apache\|nobody/nginx/g'</span> /etc/php-fpm.d/www.conf
-systemctl start php-fpm
-systemctl <span class="token builtin class-name">enable</span> php-fpm</code></pre>
-]]></content>
-      <categories>
-        <category>服务端</category>
-      </categories>
-      <tags>
-        <tag>php</tag>
-        <tag>php7.2</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>nginx配置文件</title>
     <url>/nginx-pei-zhi-wen-jian.html</url>
     <content><![CDATA[<h4 id="nginx基础配置"><a href="#nginx基础配置" class="headerlink" title="nginx基础配置"></a>nginx基础配置</h4><p>nginx.conf</p>
@@ -767,6 +746,27 @@ http &#123;
       </categories>
       <tags>
         <tag>nginx</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>php7.2安装</title>
+    <url>/php7-2-an-zhuang.html</url>
+    <content><![CDATA[<h4 id="php7-2安装"><a href="#php7-2安装" class="headerlink" title="php7.2安装"></a>php7.2安装</h4><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">rpm</span> -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+<span class="token function">rpm</span> -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
+yum <span class="token function">install</span> php72w-fpm php72w-gd php72w php72w-mysqlnd php72w-pdo php72w-mcrypt php72w-mbstring php72w-xmlrpc php72w-bcmath php72w-xml php72w-devel -y
+<span class="token function">sed</span> -i <span class="token string">'s/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/'</span> /etc/php.ini
+<span class="token function">groupadd</span> nginx
+<span class="token function">useradd</span> -g nginx nginx
+<span class="token function">sed</span> -i -e <span class="token string">'/nobody/ s/;//'</span> -e <span class="token string">'s/apache\|nobody/nginx/g'</span> /etc/php-fpm.d/www.conf
+systemctl start php-fpm
+systemctl <span class="token builtin class-name">enable</span> php-fpm</code></pre>
+]]></content>
+      <categories>
+        <category>服务端</category>
+      </categories>
+      <tags>
+        <tag>php</tag>
+        <tag>php7.2</tag>
       </tags>
   </entry>
   <entry>
@@ -1090,25 +1090,6 @@ pip3 <span class="token function">install</span> --upgrade pip
       </tags>
   </entry>
   <entry>
-    <title>安装rsync</title>
-    <url>/an-zhuang-rsync.html</url>
-    <content><![CDATA[<h4 id="安装rsync"><a href="#安装rsync" class="headerlink" title="安装rsync"></a>安装rsync</h4><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> /soft/bak
-<span class="token function">wget</span> https://download.samba.org/pub/rsync/rsync-3.2.3.tar.gz
-<span class="token function">tar</span> zxvf rsync-3.2.3.tar.gz
-<span class="token builtin class-name">cd</span> rsync-3.2.3
-./configure --prefix<span class="token operator">=</span>/soft/rsync  -disable-ipv6
-<span class="token function">make</span> <span class="token operator">&amp;&amp;</span> <span class="token function">make</span> <span class="token function">install</span></code></pre>
-<h4 id="开机启动"><a href="#开机启动" class="headerlink" title="开机启动"></a>开机启动</h4><p><code>rsync  --daemon --config=/soft/rsync/rsync.conf &amp;</code></p>
-<h4 id="拉取-or-推送"><a href="#拉取-or-推送" class="headerlink" title="拉取 or 推送"></a>拉取 or 推送</h4><p><code>rsync -e &#39;ssh -p 13193 -i /pem&#39; -avzh user@ip:/www/ /www/</code></p>
-]]></content>
-      <categories>
-        <category>服务端</category>
-      </categories>
-      <tags>
-        <tag>rsync</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>安装redis5.0.9</title>
     <url>/an-zhuang-redis5-0-9.html</url>
     <content><![CDATA[<h4 id="安装redis5-0-9"><a href="#安装redis5-0-9" class="headerlink" title="安装redis5.0.9"></a>安装redis5.0.9</h4><p>6.0需要升级gcc 避免麻烦 暂且用5.0</p>
@@ -1133,6 +1114,25 @@ pip3 <span class="token function">install</span> --upgrade pip
       <tags>
         <tag>redis</tag>
         <tag>redis5.0.9</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>安装rsync</title>
+    <url>/an-zhuang-rsync.html</url>
+    <content><![CDATA[<h4 id="安装rsync"><a href="#安装rsync" class="headerlink" title="安装rsync"></a>安装rsync</h4><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> /soft/bak
+<span class="token function">wget</span> https://download.samba.org/pub/rsync/rsync-3.2.3.tar.gz
+<span class="token function">tar</span> zxvf rsync-3.2.3.tar.gz
+<span class="token builtin class-name">cd</span> rsync-3.2.3
+./configure --prefix<span class="token operator">=</span>/soft/rsync  -disable-ipv6
+<span class="token function">make</span> <span class="token operator">&amp;&amp;</span> <span class="token function">make</span> <span class="token function">install</span></code></pre>
+<h4 id="开机启动"><a href="#开机启动" class="headerlink" title="开机启动"></a>开机启动</h4><p><code>rsync  --daemon --config=/soft/rsync/rsync.conf &amp;</code></p>
+<h4 id="拉取-or-推送"><a href="#拉取-or-推送" class="headerlink" title="拉取 or 推送"></a>拉取 or 推送</h4><p><code>rsync -e &#39;ssh -p 13193 -i /pem&#39; -avzh user@ip:/www/ /www/</code></p>
+]]></content>
+      <categories>
+        <category>服务端</category>
+      </categories>
+      <tags>
+        <tag>rsync</tag>
       </tags>
   </entry>
   <entry>
