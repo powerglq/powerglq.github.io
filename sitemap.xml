@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.qiaoheiban.tk/2020/10/22/hexo-yi-nan-za-zheng/</loc>
+    
+    <lastmod>2020-12-17</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.qiaoheiban.tk/2020/12/17/kali-wu-xian-xiang-guan/</loc>
     
     <lastmod>2020-12-17</lastmod>
@@ -24,13 +31,6 @@
   
   <url>
     <loc>https://www.qiaoheiban.tk/2020/10/23/ben-di-sheng-cheng-ssl-zheng-shu/</loc>
-    
-    <lastmod>2020-10-23</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.qiaoheiban.tk/2020/10/22/hexo-yi-nan-za-zheng/</loc>
     
     <lastmod>2020-10-23</lastmod>
     
@@ -368,14 +368,14 @@
   </url>
   
   <url>
-    <loc>https://www.qiaoheiban.tk/tags/php7-4/</loc>
+    <loc>https://www.qiaoheiban.tk/tags/php7-2/</loc>
     <lastmod>2020-12-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.qiaoheiban.tk/tags/php7-2/</loc>
+    <loc>https://www.qiaoheiban.tk/tags/php7-4/</loc>
     <lastmod>2020-12-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -473,6 +473,13 @@
   </url>
   
   <url>
+    <loc>https://www.qiaoheiban.tk/tags/proxy/</loc>
+    <lastmod>2020-12-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.qiaoheiban.tk/tags/%E6%95%B0%E5%AD%97%E8%B4%A7%E5%B8%81/</loc>
     <lastmod>2020-12-17</lastmod>
     <changefreq>daily</changefreq>
@@ -488,13 +495,6 @@
   
   <url>
     <loc>https://www.qiaoheiban.tk/tags/%E4%BB%A5%E5%A4%AA%E5%9D%8A/</loc>
-    <lastmod>2020-12-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.qiaoheiban.tk/tags/proxy/</loc>
     <lastmod>2020-12-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
